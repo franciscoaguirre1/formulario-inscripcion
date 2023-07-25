@@ -1,341 +1,350 @@
 
 <div class="container my-5">
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex">
-            <h5 class="mr-3">1 - CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE</h5>
-        </div>
-        <hr>
-        <div class="container border border-dark-subtle p-3">
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">1</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">2</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">3</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">4</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">5</label>
-            </div>
-            <div class="form-check">
-                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                <label class="form-check-label" for="inlineRadio1">6</label>
-            </div>
-        </div>
-    </div>
+    <div class="submit">
+        <button class="btn btn-warning" (click)="onFormSubmit()">Enviar</button>
 
-
-    
-
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex">
-            <h5 class="mr-3">2 - DATOS DE IDENTIFICACIÓN</h5>
-        </div>
-        <hr>
-        <div>
-            <div class=" mb-3">
-                <label for="basic-url" class="form-label">Your vanity URL</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                </div>
-            </div>
-            <div class=" mb-3">
-                <label for="basic-url" class="form-label">Your vanity URL</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                </div>
-            </div>
-            <div class=" mb-3">
-                <label for="basic-url" class="form-label">Your vanity URL</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                </div>
-            </div>
-            <div class=" mb-3">
-                <label for="basic-url" class="form-label">Your vanity URL</label>
-                <div class="input-group">
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                </div>
-            </div>
-        </div>
     </div>
     
+    <form [formGroup]="formularioEconomiaPopular">
 
-
-
-
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex">
-            <h5 class="mr-3">3 - DATOS DE IDENTIFICACIÓN</h5>
-        </div>
-        <hr>
-        <div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">1</label>
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex">
+                <h5 class="mr-3">1 - CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE</h5>
             </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">2</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                <label class="form-check-label" for="inlineCheckbox1">1</label>
-            </div>
-            <div class="form-check form-check-inline">
-                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                <label class="form-check-label" for="inlineCheckbox2">2</label>
-            </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex mt-3">
-            <h5 class="mr-3">4 - OBJETO SOCIAL</h5>
-        </div>
-        <hr>
-        <div class="container">
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Describir rubro...</label>
-              </div>
-        </div>
-    </div>
-
-
-
-
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex mt-3">
-            <h5 class="mr-3">5 - DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
-        </div>
-        <hr>
-        <div class="container">
-            <div class="row">
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+            <hr>
+            <div class="container border border-dark-subtle p-3">
+                <div class="form-check">
+                    <input formControlName="caracterUnidadProductivaSolicitante" class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Cooperativa con Matrícula">
+                    <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+                <div class="form-check">
+                    <input formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
+                    <label class="form-check-label" for="inlineRadio1">Asociación Civil - Fundación Inscripta en IPJ</label>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+                <div class="form-check">
+                    <input formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
+                    <label class="form-check-label" for="inlineRadio1">Unidad Productiva Asociativa Informal</label>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+                <div class="form-check">
+                    <input formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio4" value="Unidad Productiva Familiar">
+                    <label class="form-check-label" for="inlineRadio1">Unidad Productiva Familiar</label>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+                <div class="form-check">
+                    <input formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio5" value="Cooperativa en Formación">
+                    <label class="form-check-label" for="inlineRadio1">Cooperativa en Formación</label>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+                <div class="form-check">
+                    <input formControlName="caracterUnidadProductivaSolicitante" class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio6" value="Asociación Civil - Fundación en Formación">
+                    <label class="form-check-label" for="inlineRadio1">Asociación Civil - Fundación en Formación</label>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+                <div class="form-check">
+                    <input formControlName="caracterUnidadProductivaSolicitante" class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio6" value="Asociación Solidaria Asociativa Informal">
+                    <label class="form-check-label" for="inlineRadio1">Asociación Solidaria Asociativa Informal</label>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
+                <div class="form-check">
+                    <input formControlName="caracterUnidadProductivaSolicitante" class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio6" value="Persona Física (Unidad Productiva Unipersonal)">
+                    <label class="form-check-label" for="inlineRadio1">Persona Física (Unidad Productiva Unipersonal)</label>
                 </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Your vanity URL</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
+                <div class=" mb-3">
+                    <label for="basic-url" class="form-label">Otra ¿Cuál?</label>
+                    <div class="input-group">
+                        <input type="text" formControlName="caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
+        
 
-
-
-
-
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex mt-3">
-            <h5 class="mr-3">6 - CONDICIÓN FISCAL</h5>
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex">
+                <h5 class="mr-3">2 - DATOS DE IDENTIFICACIÓN</h5>
+            </div>
+            <hr>
+            <div>
+                <div class=" mb-3">
+                    <label for="basic-url" class="form-label">Your vanity URL</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                </div>
+                <div class=" mb-3">
+                    <label for="basic-url" class="form-label">Your vanity URL</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                </div>
+                <div class=" mb-3">
+                    <label for="basic-url" class="form-label">Your vanity URL</label>
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    </div>
+                </div>
+                <div class="mb-3 d-flex">
+                    <label for="basic-url" class="form-label">Your vanity URL</label>
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    <div class="input-group">
+                    </div>
+                </div>
+            </div>
         </div>
-        <hr>
-        <div class="container d-flex">
-            <div class="row">
-                <div class="border border-dark-subtle p-3 my-3">
+        
+
+
+
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex">
+                <h5 class="mr-3">3 - DATOS DE IDENTIFICACIÓN</h5>
+            </div>
+            <hr>
+            <div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex mt-3">
+                <h5 class="mr-3">4 - OBJETO SOCIAL</h5>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Describir rubro...</label>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex mt-3">
+                <h5 class="mr-3">5 - DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="row">
                     <div class="col-4">
-                            <h6>I.V.A</h6>      
-                            <div class="form-check">        
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                             </div>
-                            <div class="form-check">        
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Responsable Exento</label>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                             </div>
-                            <div class="form-check">        
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">Monotributista</label>
-                            </div>                    
-                            <div class="form-check">        
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <label class="form-check-label" for="inlineRadio1">No inscripto</label>
-                            </div>                    
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-
-
-
-
-
-
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex mt-3">
-            <h5 class="mr-3">7 - REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex mt-3">
+                <h5 class="mr-3">6 - CONDICIÓN FISCAL</h5>
+            </div>
+            <hr>
+            <div class="container d-flex">
+                <div class="row">
+                    <div class="border border-dark-subtle p-3 my-3">
+                        <div class="col-4">
+                                <h6>I.V.A</h6>      
+                                <div class="form-check">        
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
+                                </div>
+                                <div class="form-check">        
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Responsable Exento</label>
+                                </div>
+                                <div class="form-check">        
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Monotributista</label>
+                                </div>                    
+                                <div class="form-check">        
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">No inscripto</label>
+                                </div>                    
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <hr>
-        <div class="container container-7">
+
+
+
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex mt-3">
+                <h5 class="mr-3">7 - REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
+            </div>
+            <hr>
+            <div class="container container-7">
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Apellido</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Nombres</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Tipo de Documento</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Apellido</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    <button (click)="agregarNuevoRepresentante()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex mt-3">
+                <h5 class="mr-3">8 - INFORMACIÓN COMPLEMENTARIA</h5>
+            </div>
+            <hr>
+            <div class="container">
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Describir rubro...</label>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+            <div class="subheading-title d-flex mt-3">
+                <h5 class="mr-3">9 - PERSONAS RESPONSABLES DE LA INSCRIPCIÓN</h5>
+            </div>
+            <hr>
+            <div class="container container-9">
+                <div class="row">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Apellido</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>                        
                         </div>
                     </div>
-                </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Nombres</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Tipo de Documento</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                    <div class="col-6">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Apellido</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>                        
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <button (click)="agregarNuevoRepresentante()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex mt-3">
-            <h5 class="mr-3">8 - INFORMACIÓN COMPLEMENTARIA</h5>
-        </div>
-        <hr>
-        <div class="container">
-            <div class="form-floating">
-                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
-                <label for="floatingTextarea2">Describir rubro...</label>
-              </div>
-        </div>
-    </div>
-
-
-
-
-
-    <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-        <div class="subheading-title d-flex mt-3">
-            <h5 class="mr-3">9 - PERSONAS RESPONSABLES DE LA INSCRIPCIÓN</h5>
-        </div>
-        <hr>
-        <div class="container container-9">
             <div class="row">
-                <div class="col-6">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Apellido</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>                        
-                    </div>
-                </div>
-                <div class="col-6">
-                    <div class="mb-3">
-                        <label for="basic-url" class="form-label">Apellido</label>
-                        <div class="input-group">                        
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                        </div>                        
-                    </div>
+                <div class="col-4">
+                    <button (click)="agregarNuevoResponsable()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <button (click)="agregarNuevoResponsable()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
-            </div>
-        </div>
-    </div>
+    </form>
+</div>

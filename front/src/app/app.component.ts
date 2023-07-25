@@ -9,16 +9,31 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class AppComponent implements OnInit{
 
     title = 'front';
-    formularioEconomíaPopular!: FormGroup
+    formularioEconomiaPopular!: FormGroup
+
+    textInputs = document.querySelectorAll("input[type='text']");
+    radioButtons = document.querySelectorAll("[type='radio']");
+
+
 
     constructor(private fb: FormBuilder) {
 
     }
 
+
+
+
     
 
     ngOnInit(): void {
-      this.formularioEconomíaPopular = this.fb.group({
+      this.formularioEconomiaPopular = this.fb.group({
+
+
+
+
+
+
+        
 
         // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
         caracterUnidadProductivaSolicitante: ['', Validators.required],
@@ -198,6 +213,28 @@ export class AppComponent implements OnInit{
 
     }
 
+
+    onFormSubmit(): void {
+      console.log(this.formularioEconomiaPopular.value);
+  } 
+
+
+  controlarCampo1() {
+    const textInputs = document.querySelectorAll("input[type='text']");
+    const radioButtons = document.querySelectorAll("[type='radio']");
+    
+    // Agregar eventos de entrada (input) a los inputs type "text"
+    textInputs.forEach((textInput) => {
+        textInput.addEventListener("input", () => {
+            // Si el input tiene algún valor, deseleccionar todos los radio buttons
+            if (textInput.value.trim() !== "") {
+                radioButtons.forEach((radio) => {
+                    radio.checked = false;
+                });
+            }
+        });
+    });
+  }
 
 
 
