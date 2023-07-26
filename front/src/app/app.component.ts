@@ -190,37 +190,192 @@ export class AppComponent implements OnInit{
 
 
 
+
+
+
     agregarNuevoRepresentante() {
-    
       const newRowDiv = document.createElement("div");
       newRowDiv.classList.add("row");
     
-      for (let i = 0; i < 6; i++) {
-        const colDiv = document.createElement("div");
-        colDiv.classList.add("col-4");
-
-
-
-
-    
-        const inputGroup = `
+      const inputGroup = `
+        <div class="col-4">
           <div class="mb-3">
-            <label for="input-${i}" class="form-label">Campo ${i + 1}</label>
-            <div class="input-group">
-              <input type="text" class="form-control" id="input-${i}" aria-describedby="basic-addon3 basic-addon4">
+            <label for="basic-url" class="form-label">Apellido</label>
+            <div class="input-group">                        
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
             </div>
           </div>
-        `;
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="basic-url" class="form-label">Nombres</label>
+            <div class="input-group">                        
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="basic-url" class="form-label">Tipo de Documento</label>
+            <div class="input-group">                        
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="basic-url" class="form-label">N°</label>
+            <div class="input-group">                        
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="basic-url" class="form-label">Tiene CiDi</label>
+            <div class="input-group">                        
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+          </div>
+        </div>
+        <div class="col-4">
+          <div class="mb-3">
+            <label for="basic-url" class="form-label">Nivel de CiDi</label>
+            <div class="input-group">                        
+              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+          </div>
+        </div>
+      `;
     
-        colDiv.innerHTML = inputGroup;
-        newRowDiv.appendChild(colDiv);
-      }
-    
-      const containers = document.getElementsByClassName("container-7");
-      if (containers.length > 0) {
-        containers[0].appendChild(newRowDiv);
+      newRowDiv.innerHTML = inputGroup;
+      const container = document.querySelector(".container-7");
+       // Check if the container element exists before appending the new row
+      if (container) {
+        container.appendChild(newRowDiv);
+      } else {
+        console.error("Container with class 'container-7' not found.");
       }
     }
+    
+
+
+
+    
+
+
+
+    // agregarNuevoRepresentante() {
+    
+    //   const newRowDiv = document.createElement("div");
+    //   newRowDiv.classList.add("row");
+    
+      
+    //     const colDiv = document.createElement("div");
+    //     colDiv.classList.add("col-4");
+
+
+
+
+    
+    //     const inputGroup = `
+    //     <div class="row">
+    //       <div class="col-4">
+    //         <div class="mb-3">
+    //             <label for="basic-url" class="form-label">Apellido</label>
+    //             <div class="input-group">                        
+    //                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+    //             </div>
+    //         </div>
+    //       </div>
+    //       <div class="col-4">
+    //         <div class="mb-3">
+    //             <label for="basic-url" class="form-label">Nombres</label>
+    //             <div class="input-group">                        
+    //                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+    //             </div>
+    //         </div>
+    //       </div>
+    //       <div class="col-4">
+    //         <div class="mb-3">
+    //             <label for="basic-url" class="form-label">Tipo de Documento</label>
+    //             <div class="input-group">                        
+    //                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+    //             </div>
+    //         </div>
+    //       </div>
+    //     </div>
+    //     <div class="row">
+    //       <div class="col-4">
+    //         <div class="mb-3">
+    //             <label for="basic-url" class="form-label">N°</label>
+    //             <div class="input-group">                        
+    //                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+    //             </div>
+    //           </div>
+    //         </div>
+    //       <div class="col-4">
+    //         <div class="mb-3">
+    //             <label for="basic-url" class="form-label">Tiene CiDi</label>
+    //             <div class="input-group">                        
+    //                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+    //             </div>
+    //         </div>
+    //     </div>
+    //     <div class="col-4">
+    //         <div class="mb-3">
+    //             <label for="basic-url" class="form-label">Nivel de CiDi</label>
+    //             <div class="input-group">                        
+    //                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+    //             </div>
+    //         </div>
+    //     </div>
+    //   </div>`
+    
+    //     colDiv.innerHTML = inputGroup;
+    //     newRowDiv.appendChild(colDiv);
+      
+    
+    //   const containers = document.getElementsByClassName("container-7");
+    //   containers[0].appendChild.(inputGroup);
+
+    // }
+
+
+
+
+
+    // agregarNuevoRepresentante() {
+    
+    //   const newRowDiv = document.createElement("div");
+    //   newRowDiv.classList.add("row");
+    
+    //   for (let i = 0; i < 6; i++) {
+    //     const colDiv = document.createElement("div");
+    //     colDiv.classList.add("col-4");
+
+
+
+
+    
+    //     const inputGroup = `
+    //       <div class="mb-3">
+    //         <label for="input-${i}" class="form-label">Campo ${i + 1}</label>
+    //         <div class="input-group">
+    //           <input type="text" class="form-control" id="input-${i}" aria-describedby="basic-addon3 basic-addon4">
+    //         </div>
+    //       </div>
+    //     `;
+    
+    //     colDiv.innerHTML = inputGroup;
+    //     newRowDiv.appendChild(colDiv);
+    //   }
+    
+    //   const containers = document.getElementsByClassName("container-7");
+    //   if (containers.length > 0) {
+    //     containers[0].appendChild(newRowDiv);
+    //   }
+    // }
 
 
     agregarNuevoResponsable() {
