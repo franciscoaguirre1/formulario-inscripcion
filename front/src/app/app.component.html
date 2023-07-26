@@ -103,11 +103,11 @@
             <div *ngIf="!tieneRegistroSection3" class="d-flex ">
                 <label for="basic-url" class="form-label">¿Su actividad es Agropecuaria?:</label>
                 <div class="form-check mx-3">
-                    <input (click)="cambioInscripcionesLegales()" [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
+                    <input [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input (click)="cambioInscripcionesLegales()" [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
+                    <input  [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -117,15 +117,16 @@
 
 
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-            <div class="subheading-title d-flex mt-3">
+            <div class="subheading-title mt-3">
                 <h5 class="mr-3">4 - OBJETO SOCIAL</h5>
+                <span>Actividades Productivas</span>
             </div>
             <hr>
             <div class="container">
                 <div class="form-floating">
                     <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Describir rubro...</label>
-                </div>
+                </div>                
             </div>
         </div>
 
@@ -140,7 +141,7 @@
                 <div class="row">
                     <div class="col-4">
                         <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <label for="basic-url" class="form-label">Calle:</label>
                             <div class="input-group">                        
                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                             </div>
@@ -148,7 +149,7 @@
                     </div>
                     <div class="col-4">
                         <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <label for="basic-url" class="form-label">N°:</label>
                             <div class="input-group">                        
                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                             </div>
@@ -156,33 +157,7 @@
                     </div>
                     <div class="col-4">
                         <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
-                            <div class="input-group">                        
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
-                            <div class="input-group">                        
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
-                            <div class="input-group">                        
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <label for="basic-url" class="form-label">CP.:</label>
                             <div class="input-group">                        
                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                             </div>
@@ -192,7 +167,7 @@
                 <div class="row">
                     <div class="col-4">
                         <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <label for="basic-url" class="form-label">Barrio:</label>
                             <div class="input-group">                        
                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                             </div>
@@ -200,7 +175,7 @@
                     </div>
                     <div class="col-4">
                         <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <label for="basic-url" class="form-label">Localidad:</label>
                             <div class="input-group">                        
                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                             </div>
@@ -208,9 +183,145 @@
                     </div>
                     <div class="col-4">
                         <div class="mb-3">
-                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                            <label for="basic-url" class="form-label">Departamento:</label>
                             <div class="input-group">                        
                                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Correo electrónico:</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Confirme correo electrónico:</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Teléfono</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Cantidad de asociados que trabajan en la sede productiva:</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="mb-3">
+                    <label for="basic-url" class="form-label">¿El domicilio del predio productivo es el mismo?:</label>
+                </div>
+                <div class="d-flex ">
+                    <div class="form-check mx-3">
+                        <input (click)="cambioDomicilioPredioProductivo()" [(ngModel)]="domicilioPredioProductivoSection5" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
+                        <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                    </div>
+                    <div class="form-check mx-3">
+                        <input (click)="cambioDomicilioPredioProductivo()" [(ngModel)]="domicilioPredioProductivoSection5" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
+                        <label class="form-check-label" for="flexRadioDefault2">No</label>
+                    </div>
+                </div>
+                <div *ngIf="domicilioPredioProductivoSection5">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">Calle:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">N°:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">CP.:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">Barrio:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">Localidad:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">Departamento:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">Correo electrónico:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">Confirme correo electrónico:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">Teléfono</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label for="basic-url" class="form-label">Cantidad de asociados que trabajan en la sede productiva:</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
                             </div>
                         </div>
                     </div>

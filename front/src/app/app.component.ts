@@ -13,6 +13,8 @@ export class AppComponent implements OnInit{
     radioButtonsArray: any[] = []
     inputSectionOneValue!:any
     tieneRegistroSection3: boolean = false
+    domicilioPredioProductivoSection5: boolean = false
+
 
 
 
@@ -29,14 +31,19 @@ export class AppComponent implements OnInit{
       this.tieneRegistroSection3 = !this.tieneRegistroSection3
     }
 
+    cambioDomicilioPredioProductivo() {
+      this.domicilioPredioProductivoSection5 = !this.domicilioPredioProductivoSection5
+    }
+
 
     checkStatus(event:any){
 
       // Check if radio button is checked
-      if(event.target.checked == true){  
+      if(event.target.checked == true){
         
         // Reset the input value when a radio button is checked        
         this.inputSectionOneValue = '';
+
         // Get checked radio button's value
         let radioValue = event.target.value;
 
@@ -44,10 +51,10 @@ export class AppComponent implements OnInit{
         this.radioButtonsArray.push(radioValue)
 
         //consologuear
-        console.log("array", this.radioButtonsArray);
+        // console.log("array", this.radioButtonsArray);
 
         // consologuear
-        console.log("radiovalue", radioValue + ' is Selected');
+        // console.log("radiovalue", radioValue + ' is Selected');
       }
     }
 
@@ -169,7 +176,7 @@ export class AppComponent implements OnInit{
       //   caracterUnidadProductivaSolicitante: ['', Validators.required],
 
 
-       })
+      })
       
     }
 
