@@ -13,7 +13,7 @@ export class AppComponent implements OnInit{
     radioButtonsArray: any[] = []
     inputSectionOneValue!:any
     tieneRegistroSection3: boolean = false
-    domicilioPredioProductivoSection5: boolean = false
+    domicilioPredioProductivoSection5: boolean = true
 
 
 
@@ -27,12 +27,20 @@ export class AppComponent implements OnInit{
     }
 
 
-    cambioInscripcionesLegales() {
-      this.tieneRegistroSection3 = !this.tieneRegistroSection3
+    cambioInscripcionesLegalesSi() {
+      this.tieneRegistroSection3 = true
     }
 
-    cambioDomicilioPredioProductivo() {
-      this.domicilioPredioProductivoSection5 = !this.domicilioPredioProductivoSection5
+    cambioInscripcionesLegalesNo() {
+      this.tieneRegistroSection3 = false
+    }
+
+    cambioDomicilioPredioProductivoNo() {
+      this.domicilioPredioProductivoSection5 = false
+    }
+
+    cambioDomicilioPredioProductivoSi() {
+      this.domicilioPredioProductivoSection5 = true
     }
 
 
@@ -182,15 +190,18 @@ export class AppComponent implements OnInit{
 
 
 
-
     agregarNuevoRepresentante() {
     
       const newRowDiv = document.createElement("div");
       newRowDiv.classList.add("row");
     
-      for (let i = 0; i < 3; i++) {
+      for (let i = 0; i < 6; i++) {
         const colDiv = document.createElement("div");
         colDiv.classList.add("col-4");
+
+
+
+
     
         const inputGroup = `
           <div class="mb-3">
