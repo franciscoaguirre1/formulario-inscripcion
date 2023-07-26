@@ -1,7 +1,8 @@
 
 <div class="container my-5">
     <div class="submit">
-        <button class="btn btn-warning" (click)="onFormSubmit()">Enviar</button>
+        <button class="btn btn-warning mx-3" (click)="onFormSubmit()">Consologuear formulario</button>
+        <button class="btn btn-warning mx-3" (click)="controlarCampo1()">Enviar propiedades</button>
 
     </div>
     
@@ -14,109 +15,105 @@
             <hr>
             <div class="container border border-dark-subtle p-3">
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSolicitante" class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Cooperativa con Matrícula">
+                    <input  (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
+                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
                     <label class="form-check-label" for="inlineRadio1">Asociación Civil - Fundación Inscripta en IPJ</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
+                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio1">Unidad Productiva Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio4" value="Unidad Productiva Familiar">
+                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio4" value="Unidad Productiva Familiar">
                     <label class="form-check-label" for="inlineRadio1">Unidad Productiva Familiar</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio5" value="Cooperativa en Formación">
+                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio5" value="Cooperativa en Formación">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSolicitante" class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio6" value="Asociación Civil - Fundación en Formación">
+                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio6" value="Asociación Civil - Fundación en Formación">
                     <label class="form-check-label" for="inlineRadio1">Asociación Civil - Fundación en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSolicitante" class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio6" value="Asociación Solidaria Asociativa Informal">
+                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio7" value="Asociación Solidaria Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio1">Asociación Solidaria Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSolicitante" class="form-check-input" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio6" value="Persona Física (Unidad Productiva Unipersonal)">
+                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio8" value="Persona Física (Unidad Productiva Unipersonal)">
                     <label class="form-check-label" for="inlineRadio1">Persona Física (Unidad Productiva Unipersonal)</label>
                 </div>
-                <div class=" mb-3">
-                    <label for="basic-url" class="form-label">Otra ¿Cuál?</label>
+                <fieldset [attr.disabled]="radioButtonsArray.length ? true : null" class=" mb-3">
+                    <label for="basic-url" class="form-label" >Otra ¿Cuál?</label>
                     <div class="input-group">
-                        <input type="text" formControlName="caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                        <input id="input-text-section-1"  type="text" formControlName="caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante" class="form-control input-text-section-1" aria-describedby="basic-addon3 basic-addon4">
                     </div>
-                </div>
+                </fieldset>
             </div>
         </div>
 
-        
+
+
 
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
             <div class="subheading-title d-flex">
                 <h5 class="mr-3">2 - DATOS DE IDENTIFICACIÓN</h5>
             </div>
-            <hr>
-            <div>
-                <div class=" mb-3">
-                    <label for="basic-url" class="form-label">Your vanity URL</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                    </div>
-                </div>
-                <div class=" mb-3">
-                    <label for="basic-url" class="form-label">Your vanity URL</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                    </div>
-                </div>
-                <div class=" mb-3">
-                    <label for="basic-url" class="form-label">Your vanity URL</label>
-                    <div class="input-group">
-                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                    </div>
-                </div>
-                <div class="mb-3 d-flex">
-                    <label for="basic-url" class="form-label">Your vanity URL</label>
-                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                    <div class="input-group">
-                    </div>
-                </div>
-            </div>
         </div>
-        
+
 
 
 
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
             <div class="subheading-title d-flex">
-                <h5 class="mr-3">3 - DATOS DE IDENTIFICACIÓN</h5>
+                <h5 class="mr-3">3 - INSCRIPCIONES LEGALES (INAE - IPJ - Otros)</h5>
             </div>
             <hr>
-            <div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+            <div class="d-flex ">
+                <div class="form-check mx-3">
+                    <input (click)="cambioInscripcionesLegales()" [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
+                    <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                <div class="form-check mx-3">
+                    <input (click)="cambioInscripcionesLegales()" [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
+                    <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+            </div>
+            <div class="row" *ngIf="tieneRegistroSection3">
+                <div class="col-6">
+                    <div class="my-3">
+                        <label for="basic-url" class="form-label">Nro. Inscripción-Matrícula</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                        </div>
+                    </div>
                 </div>
-                <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                <div class="col-6">
+                    <div class="my-3">
+                        <label for="basic-url" class="form-label">Repartición que la otorga</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="!tieneRegistroSection3" class="d-flex ">
+                <label for="basic-url" class="form-label">¿Su actividad es Agropecuaria?:</label>
+                <div class="form-check mx-3">
+                    <input (click)="cambioInscripcionesLegales()" [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
+                    <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                </div>
+                <div class="form-check mx-3">
+                    <input (click)="cambioInscripcionesLegales()" [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
+                    <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
         </div>
 
+    
 
 
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
@@ -348,3 +345,49 @@
         </div>
     </form>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+    <div class="subheading-title d-flex">
+        <h5 class="mr-3">2 - DATOS DE IDENTIFICACIÓN</h5>
+    </div>
+    <hr>
+    <div>
+        <div class=" mb-3">
+            <label for="basic-url" class="form-label">Your vanity URL</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+        </div>
+        <div class=" mb-3">
+            <label for="basic-url" class="form-label">Your vanity URL</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+        </div>
+        <div class=" mb-3">
+            <label for="basic-url" class="form-label">Your vanity URL</label>
+            <div class="input-group">
+                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            </div>
+        </div>
+        <div class="mb-3 d-flex">
+            <label for="basic-url" class="form-label">Your vanity URL</label>
+            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+            <div class="input-group">
+            </div>
+        </div>
+    </div>
+</div> -->

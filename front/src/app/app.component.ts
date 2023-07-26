@@ -10,9 +10,13 @@ export class AppComponent implements OnInit{
 
     title = 'front';
     formularioEconomiaPopular!: FormGroup
+    radioButtonsArray: any[] = []
+    inputSectionOneValue!:any
+    tieneRegistroSection3: boolean = false
 
-    textInputs = document.querySelectorAll("input[type='text']");
-    radioButtons = document.querySelectorAll("[type='radio']");
+
+
+
 
 
 
@@ -21,19 +25,38 @@ export class AppComponent implements OnInit{
     }
 
 
+    cambioInscripcionesLegales() {
+      this.tieneRegistroSection3 = !this.tieneRegistroSection3
+    }
 
+
+    checkStatus(event:any){
+
+      // Check if radio button is checked
+      if(event.target.checked == true){  
+        
+        // Reset the input value when a radio button is checked        
+        this.inputSectionOneValue = '';
+        // Get checked radio button's value
+        let radioValue = event.target.value;
+
+        //push into the radioButtonsArray 
+        this.radioButtonsArray.push(radioValue)
+
+        //consologuear
+        console.log("array", this.radioButtonsArray);
+
+        // consologuear
+        console.log("radiovalue", radioValue + ' is Selected');
+      }
+    }
 
     
 
     ngOnInit(): void {
+
       this.formularioEconomiaPopular = this.fb.group({
 
-
-
-
-
-
-        
 
         // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
         caracterUnidadProductivaSolicitante: ['', Validators.required],
@@ -220,25 +243,15 @@ export class AppComponent implements OnInit{
 
 
   controlarCampo1() {
-    const textInputs = document.querySelectorAll("input[type='text']");
-    const radioButtons = document.querySelectorAll("[type='radio']");
-    
-    // Agregar eventos de entrada (input) a los inputs type "text"
-    textInputs.forEach((textInput) => {
-        textInput.addEventListener("input", () => {
-            // Si el input tiene algún valor, deseleccionar todos los radio buttons
-            if (textInput.value.trim() !== "") {
-                radioButtons.forEach((radio) => {
-                    radio.checked = false;
-                });
-            }
-        });
-    });
-  }
+
+    const radioButtonsSection1 = document.getElementsByClassName("radio-section-1");
+    const textInputSection1 = document.getElementsByClassName("input-text-section-1");
+
+    console.log("radio",radioButtonsSection1);
+    console.log("input",textInputSection1);
 
 
 
-
-
+    } 
 
 }
