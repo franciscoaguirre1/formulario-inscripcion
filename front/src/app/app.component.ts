@@ -166,13 +166,12 @@ export class AppComponent implements OnInit{
     }
 
 
-
-
     agregarNuevoRepresentanteSection7() {
       const newRowDiv = document.createElement("div");
       newRowDiv.classList.add("row");
     
       const inputGroup = `
+      <hr>
       <div class="col-4">
           <div class="mb-3">
               <label for="basic-url" class="form-label">Apellido</label>
@@ -261,6 +260,131 @@ export class AppComponent implements OnInit{
         console.error("Container with class 'container-7' not found.");
       }
     }
+
+
+
+    agregarPersonaFisica9b() {
+      const newRowDiv = document.createElement("div");
+      newRowDiv.classList.add("row");
+    
+      const inputGroup = `
+      <hr>
+      <div class="col-2">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Apellido</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Nombre</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Documento</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Fecha de Nacimiento</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Vínculo</label>
+              <div class="input-group">                        
+                  <select class="form-select" aria-label="Default select example">
+                      <option selected>-</option>
+                      <option value="ABUELO/A">ABUELO/A</option>
+                      <option value="ADHERENTE">ADHERENTE</option>
+                      <option value="ADOPCION">ADOPCION</option>
+                      <option value="CONVIVIENTE (CONCUBINO)">CONVIVIENTE (CONCUBINO)</option>
+                      <option value="CONYUGE">CONYUGE</option>
+                      <option value="DESCONOCIDO">DESCONOCIDO</option>
+                      <option value="HERMANO/A">HERMANO/A</option>
+                      <option value="HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.">HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.</option>
+                      <option value="HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.">HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.</option>
+                      <option value="HIJO/A">HIJO/A</option>
+                      <option value="JEFE/A FAMILIA">JEFE/A FAMILIA</option>
+                      <option value="MENOR BAJO GUARDA O TUTELA">MENOR BAJO GUARDA O TUTELA</option>
+                      <option value="NIETO/A">NIETO/A</option>
+                      <option value="OTROS FAMILIARES">OTROS FAMILIARES</option>
+                      <option value="OTROS NO FAMILIARES">OTROS NO FAMILIARES</option>
+                      <option value="PADRE/MADRE">PADRE/MADRE</option>
+                      <option value="PRENATAL">PRENATAL</option>
+                      <option value="SOBRINO/A">SOBRINO/A</option>
+                      <option value="TIO/A">TIO/A</option>
+                      <option value="TITULAR EXCLUSIVAMENTE">TITULAR EXCLUSIVAMENTE</option>
+                      <option value="TUTOR/A">TUTOR/A</option>
+                  </select>
+              </div>
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Escolaridad/label></label>
+              <div class="input-group">                        
+                  <select class="form-select" aria-label="Default select example">
+                      <option selected>-</option>
+                      <option value="Inicial y Preescolar">Inicial y Preescolar</option>
+                      <option value="Primaria incompleta">Primaria incompleta</option>
+                      <option value="Primaria completa">Primaria completa</option>
+                      <option value="Secundaria incompleta">Secundaria incompleta</option>
+                      <option value="Secundaria completa">Secundaria completa</option>
+                      <option value="Terciaria incompleta">Terciaria incompleta</option>
+                      <option value="Terciaria completa">Terciaria completa</option>
+                      <option value="Universitaria incompleta">Universitaria incompleta</option>
+                      <option value="Universitaria completa">Universitaria completa</option>
+                  </select>
+              </div>                            
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Ocupación</label>
+              <div class="input-group">                        
+                  <select class="form-select" aria-label="Default select example">
+                      <option selected>-</option>
+                      <option value="Empleado">Empleado</option>
+                      <option value="Desocupado">Desocupado</option>
+                      <option value="Autoempleo (emprendimiento)">Autoempleo (emprendimiento)</option>
+                      <option value="Jubilado - Pensionado">Jubilado - Pensionado</option>
+                      <option value="No trabaja">No trabaja</option>
+                  </select>
+              </div>
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Está cursando</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      `;
+    
+      newRowDiv.innerHTML = inputGroup;
+      const container = document.querySelector(".container-9b");
+       // Check if the container element exists before appending the new row
+      if (container) {
+        container.appendChild(newRowDiv);
+      } else {
+        console.error("Container with class 'container-7' not found.");
+      }
+    }
     
 
 
@@ -269,6 +393,7 @@ export class AppComponent implements OnInit{
       newRowDiv.classList.add("row");
     
       const inputGroup = `
+      <hr>
       <div class="col-4">
           <div class="mb-3">
               <label for="basic-url" class="form-label">Nombre del Responsable</label>
@@ -326,10 +451,6 @@ export class AppComponent implements OnInit{
     onFormSubmit(): void {
       console.log(this.formularioEconomiaPopular.value);
   }
-  
-  
-
-
 
 
   unidadProductivaUnipersonal() {
@@ -345,12 +466,6 @@ export class AppComponent implements OnInit{
 
   }
 
-  habilitarInputSection1() {
-
-
-
-  }
-
 
   controlarCampo1() {
 
@@ -363,5 +478,9 @@ export class AppComponent implements OnInit{
 
 
     } 
+
+    agregarNuevoResponsableSection9b() {
+
+    }
 
 }

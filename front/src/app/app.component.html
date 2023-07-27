@@ -3,7 +3,6 @@
     <div class="submit">
         <button class="btn btn-warning mx-3" (click)="onFormSubmit()">Consologuear formulario</button>
         <button class="btn btn-warning mx-3" (click)="controlarCampo1()">Enviar propiedades</button>
-        <button class="btn btn-warning mx-3">Destildar radio buttons</button>
 
     </div>
     
@@ -235,11 +234,11 @@
             <hr>
             <div class="d-flex ">
                 <div class="form-check mx-3">
-                    <input (click)="cambioInscripcionesLegalesSi()" [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
+                    <input (click)="cambioInscripcionesLegalesSi()" [(ngModel)]="tieneRegistroSection3" [ngModelOptions]="{standalone: true}" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input (click)="cambioInscripcionesLegalesNo()" [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
+                    <input (click)="cambioInscripcionesLegalesNo()" [(ngModel)]="tieneRegistroSection3" [ngModelOptions]="{standalone: true}" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -264,11 +263,11 @@
             <div class="d-flex mt-3">
                 <label for="basic-url" class="form-label">¿Su actividad es Agropecuaria?:</label>
                 <div class="form-check mx-3">
-                    <input [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
+                    <input [(ngModel)]="tieneRegistroSection3" [ngModelOptions]="{standalone: true}" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input  [(ngModel)]="tieneRegistroSection3" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
+                    <input  [(ngModel)]="tieneRegistroSection3" [ngModelOptions]="{standalone: true}" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -736,7 +735,144 @@
                     <button (click)="agregarNuevoResponsableSection9()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
                 </div>
             </div>
+            <hr>
+
+
+
+            <!-- Sección 9 Para las Personas Físicas -->
+
+
+            <br>
+            <br>        
+            <div class="subheading-title d-flex mt-3">
+                <h5 class="mr-3">Para las personas físicas</h5>
+            </div>
+            <hr>
+            <div class="container container-9b">
+                <div class="row">
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Apellido</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Nombre</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Documento</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Fecha de Nacimiento</label>
+                            <div class="input-group">                        
+                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            </div>                        
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Vínculo</label>
+                            <div class="input-group">                        
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>-</option>
+                                    <option value="ABUELO/A">ABUELO/A</option>
+                                    <option value="ADHERENTE">ADHERENTE</option>
+                                    <option value="ADOPCION">ADOPCION</option>
+                                    <option value="CONVIVIENTE (CONCUBINO)">CONVIVIENTE (CONCUBINO)</option>
+                                    <option value="CONYUGE">CONYUGE</option>
+                                    <option value="DESCONOCIDO">DESCONOCIDO</option>
+                                    <option value="HERMANO/A">HERMANO/A</option>
+                                    <option value="HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.">HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.</option>
+                                    <option value="HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.">HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.</option>
+                                    <option value="HIJO/A">HIJO/A</option>
+                                    <option value="JEFE/A FAMILIA">JEFE/A FAMILIA</option>
+                                    <option value="MENOR BAJO GUARDA O TUTELA">MENOR BAJO GUARDA O TUTELA</option>
+                                    <option value="NIETO/A">NIETO/A</option>
+                                    <option value="OTROS FAMILIARES">OTROS FAMILIARES</option>
+                                    <option value="OTROS NO FAMILIARES">OTROS NO FAMILIARES</option>
+                                    <option value="PADRE/MADRE">PADRE/MADRE</option>
+                                    <option value="PRENATAL">PRENATAL</option>
+                                    <option value="SOBRINO/A">SOBRINO/A</option>
+                                    <option value="TIO/A">TIO/A</option>
+                                    <option value="TITULAR EXCLUSIVAMENTE">TITULAR EXCLUSIVAMENTE</option>
+                                    <option value="TUTOR/A">TUTOR/A</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Escolaridad/label></label>
+                            <div class="input-group">                        
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>-</option>
+                                    <option value="Inicial y Preescolar">Inicial y Preescolar</option>
+                                    <option value="Primaria incompleta">Primaria incompleta</option>
+                                    <option value="Primaria completa">Primaria completa</option>
+                                    <option value="Secundaria incompleta">Secundaria incompleta</option>
+                                    <option value="Secundaria completa">Secundaria completa</option>
+                                    <option value="Terciaria incompleta">Terciaria incompleta</option>
+                                    <option value="Terciaria completa">Terciaria completa</option>
+                                    <option value="Universitaria incompleta">Universitaria incompleta</option>
+                                    <option value="Universitaria completa">Universitaria completa</option>
+                                </select>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label class="form-label">Está cuesando?</label>
+                            <div class="input-group">                        
+                                <div class="form-check mx-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">Si</label>
+                                </div>
+                                <div class="form-check mx-3">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">No</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="mb-3">
+                            <label for="basic-url" class="form-label">Ocupación</label>
+                            <div class="input-group">                        
+                                <select class="form-select" aria-label="Default select example">
+                                    <option selected>-</option>
+                                    <option value="Empleado">Empleado</option>
+                                    <option value="Desocupado">Desocupado</option>
+                                    <option value="Autoempleo (emprendimiento)">Autoempleo (emprendimiento)</option>
+                                    <option value="Jubilado - Pensionado">Jubilado - Pensionado</option>
+                                    <option value="No trabaja">No trabaja</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <button (click)="agregarPersonaFisica9b()" class="btn btn-primary">Agregar nuevo<i class="fa-sharp fa-solid fa-plus"></i></button>
+                </div>
+            </div>
         </div>
+
+
+
     </form>
 </div>
 
