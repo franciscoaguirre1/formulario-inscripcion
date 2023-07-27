@@ -289,6 +289,63 @@ export class AppComponent implements OnInit{
     
 
 
+    agregarNuevoResponsable() {
+      const newRowDiv = document.createElement("div");
+      newRowDiv.classList.add("row");
+    
+      const inputGroup = `
+      <div class="col-4">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Nombre del Responsable</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">DNI</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Cargo</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Teléfono</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="mb-3">
+              <label for="basic-url" class="form-label">Correo para recibir notificaciones</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>                        
+          </div>
+      </div>
+      `;
+    
+      newRowDiv.innerHTML = inputGroup;
+      const container = document.querySelector(".container-9");
+       // Check if the container element exists before appending the new row
+      if (container) {
+        container.appendChild(newRowDiv);
+      } else {
+        console.error("Container with class 'container-7' not found.");
+      }
+    }
+
 
     
 
@@ -407,7 +464,7 @@ export class AppComponent implements OnInit{
     // }
 
 
-    agregarNuevoResponsable() {
+    agregarNuevoResposable() {
 
       const newRowDiv = document.createElement("div");
       newRowDiv.classList.add("row");
