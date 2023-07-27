@@ -1,5 +1,10 @@
 import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatNativeDateModule} from '@angular/material/core';
+
 
 @Component({
   selector: 'app-root',
@@ -157,7 +162,10 @@ export class AppComponent implements OnInit{
 
 
       })
-      
+
+
+
+
     }
 
     changeInputsectionOne() {
@@ -353,6 +361,21 @@ export class AppComponent implements OnInit{
       </div>
       <div class="col-2">
           <div class="mb-3">
+              <label class="form-label">Está cuesando?</label>
+              <div class="input-group">                        
+                  <div class="form-check mx-3">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">Si</label>
+                  </div>
+                  <div class="form-check mx-3">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">No</label>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-2">
+          <div class="mb-3">
               <label for="basic-url" class="form-label">Ocupación</label>
               <div class="input-group">                        
                   <select class="form-select" aria-label="Default select example">
@@ -364,14 +387,6 @@ export class AppComponent implements OnInit{
                       <option value="No trabaja">No trabaja</option>
                   </select>
               </div>
-          </div>
-      </div>
-      <div class="col-2">
-          <div class="mb-3">
-              <label for="basic-url" class="form-label">Está cursando</label>
-              <div class="input-group">                        
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-              </div>                        
           </div>
       </div>
       `;
