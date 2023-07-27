@@ -198,54 +198,83 @@ export class AppComponent implements OnInit{
       newRowDiv.classList.add("row");
     
       const inputGroup = `
-        <div class="col-4">
+      <div class="col-4">
           <div class="mb-3">
-            <label for="basic-url" class="form-label">Apellido</label>
-            <div class="input-group">                        
-              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
+              <label for="basic-url" class="form-label">Apellido</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>
           </div>
-        </div>
-        <div class="col-4">
+      </div>
+      <div class="col-4">
           <div class="mb-3">
-            <label for="basic-url" class="form-label">Nombres</label>
-            <div class="input-group">                        
-              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
+              <label for="basic-url" class="form-label">Nombres</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>
           </div>
-        </div>
-        <div class="col-4">
+      </div>
+      <div class="col-4">
           <div class="mb-3">
-            <label for="basic-url" class="form-label">Tipo de Documento</label>
-            <div class="input-group">                        
-              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
+              <label class="form-label">Tipo de Documento</label>
+              <div class="input-group">                        
+                  <select class="form-select" aria-label="Default select example">
+                      <option selected>-</option>
+                      <option value="AGRUPACION">AGRUPACION</option>
+                      <option value="CEDULA DE IDENTIDAD">CEDULA DE IDENTIDAD</option>
+                      <option value="CERTIFICADO MIGRATORIO">CERTIFICADO MIGRATORIO</option>
+                      <option value="CUIL">CUIL</option>
+                      <option value="CUIT">CUIT</option>
+                      <option value="DOCUMENTO NACIONAL DE IDENTIDAD">DOCUMENTO NACIONAL DE IDENTIDAD</option>
+                      <option value="EXTRANJERO CON CERTIF. DE POLICIA">EXTRANJERO CON CERTIF. DE POLICIA</option>
+                      <option value="EXTRANJERO SIN DOCUMENTO">EXTRANJERO SIN DOCUMENTO</option>
+                      <option value="IDENTIFICACION EMPRESA M4">IDENTIFICACION EMPRESA M4</option>
+                      <option value="INDOCUMENTADO">INDOCUMENTADO</option>
+                      <option value="LIBRETA CIVICA">LIBRETA CIVICA</option>
+                      <option value="LIBRETA DE ENROLAMIENTO">LIBRETA DE ENROLAMIENTO</option>
+                      <option value="NRO. DNRP">NRO. DNRP</option>
+                      <option value="NUMEROS ESPECIALES">NUMEROS ESPECIALES</option>
+                      <option value="PASAPORTE">PASAPORTE</option>
+                      <option value="POLICIA FEDERAL">POLICIA FEDERAL</option>
+                  </select>
+              </div>
           </div>
-        </div>
-        <div class="col-4">
+      </div>
+      <div class="col-4">
           <div class="mb-3">
-            <label for="basic-url" class="form-label">N°</label>
-            <div class="input-group">                        
-              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
+              <label for="basic-url" class="form-label">N° de Documento</label>
+              <div class="input-group">                        
+                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+              </div>
           </div>
-        </div>
-        <div class="col-4">
+      </div>
+      <div class="col-4">
           <div class="mb-3">
-            <label for="basic-url" class="form-label">Tiene CiDi</label>
-            <div class="input-group">                        
-              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
+              <label  class="form-label">¿Tiene CiDi?</label>
+              <div class="input-group">                        
+                  <div class="form-check mx-3">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">Si</label>
+                  </div>
+                  <div class="form-check mx-3">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">No</label>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="col-4">
+      </div>
+      <div class="col-4">
           <div class="mb-3">
-            <label for="basic-url" class="form-label">Nivel de CiDi</label>
-            <div class="input-group">                        
-              <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-            </div>
+              <label class="form-label">Nivel de CiDi</label>
+              <div class="input-group">                        
+                  <select class="form-select" aria-label="Default select example">
+                      <option selected>-</option>
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                  </select>
+              </div>
           </div>
-        </div>
+      </div>
       `;
     
       newRowDiv.innerHTML = inputGroup;
