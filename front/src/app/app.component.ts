@@ -11,16 +11,12 @@ export class AppComponent implements OnInit{
     title = 'front';
     formularioEconomiaPopular!: FormGroup
     radioButtonsArray: any[] = []
-    inputSectionOneValue!:any
+    inputSectionOneValue:boolean = false
     tieneRegistroSection3: boolean = false
     domicilioPredioProductivoSection5: boolean = true
-
-
-
-
-
-
-
+    esPersonaFisica : boolean = false
+    esUnidadAsociativaProductiva: boolean = false
+    
 
     constructor(private fb: FormBuilder) {
 
@@ -42,30 +38,6 @@ export class AppComponent implements OnInit{
     cambioDomicilioPredioProductivoSi() {
       this.domicilioPredioProductivoSection5 = true
     }
-
-
-    checkStatus(event:any){
-
-      // Check if radio button is checked
-      if(event.target.checked == true){
-        
-        // Reset the input value when a radio button is checked        
-        this.inputSectionOneValue = '';
-
-        // Get checked radio button's value
-        let radioValue = event.target.value;
-
-        //push into the radioButtonsArray 
-        this.radioButtonsArray.push(radioValue)
-
-        //consologuear
-        // console.log("array", this.radioButtonsArray);
-
-        // consologuear
-        // console.log("radiovalue", radioValue + ' is Selected');
-      }
-    }
-
     
 
     ngOnInit(): void {
@@ -188,12 +160,15 @@ export class AppComponent implements OnInit{
       
     }
 
+    changeInputsectionOne() {
+      this.inputSectionOneValue = !this.inputSectionOneValue
+
+    }
 
 
 
 
-
-    agregarNuevoRepresentante() {
+    agregarNuevoRepresentanteSection7() {
       const newRowDiv = document.createElement("div");
       newRowDiv.classList.add("row");
     
@@ -289,7 +264,7 @@ export class AppComponent implements OnInit{
     
 
 
-    agregarNuevoResponsable() {
+    agregarNuevoResponsableSection9() {
       const newRowDiv = document.createElement("div");
       newRowDiv.classList.add("row");
     
@@ -350,7 +325,31 @@ export class AppComponent implements OnInit{
 
     onFormSubmit(): void {
       console.log(this.formularioEconomiaPopular.value);
-  } 
+  }
+  
+  
+
+
+
+
+  unidadProductivaUnipersonal() {
+
+    this.esPersonaFisica = true
+    this.esUnidadAsociativaProductiva = false
+
+  }
+
+  UnidadesAsociativasProductivas() {
+    this.esUnidadAsociativaProductiva = true
+    this.esPersonaFisica = false
+
+  }
+
+  habilitarInputSection1() {
+
+
+
+  }
 
 
   controlarCampo1() {

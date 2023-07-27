@@ -3,6 +3,7 @@
     <div class="submit">
         <button class="btn btn-warning mx-3" (click)="onFormSubmit()">Consologuear formulario</button>
         <button class="btn btn-warning mx-3" (click)="controlarCampo1()">Enviar propiedades</button>
+        <button class="btn btn-warning mx-3">Destildar radio buttons</button>
 
     </div>
     
@@ -17,43 +18,47 @@
             <hr>
             <div class="container border border-dark-subtle p-3">
                 <div class="form-check">
-                    <input  (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Cooperativa con Matrícula">
+                    <input (click)="UnidadesAsociativasProductivas()"  formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1 minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
                 </div>
                 <div class="form-check">
-                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
+                    <input (click)="UnidadesAsociativasProductivas()" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Asociación Civil - Fundación Inscripta en IPJ">
                     <label class="form-check-label" for="inlineRadio1">Asociación Civil - Fundación Inscripta en IPJ</label>
                 </div>
                 <div class="form-check">
-                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
+                    <input (click)="UnidadesAsociativasProductivas()" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Unidad Productiva Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio1">Unidad Productiva Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio4" value="Unidad Productiva Familiar">
+                    <input (click)="UnidadesAsociativasProductivas()" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Unidad Productiva Familiar">
                     <label class="form-check-label" for="inlineRadio1">Unidad Productiva Familiar</label>
                 </div>
                 <div class="form-check">
-                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio5" value="Cooperativa en Formación">
+                    <input (click)="UnidadesAsociativasProductivas()" formControlName="caracterUnidadProductivaSolicitante"  class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Cooperativa en Formación">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio6" value="Asociación Civil - Fundación en Formación">
+                    <input (click)="UnidadesAsociativasProductivas()" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Asociación Civil - Fundación en Formación">
                     <label class="form-check-label" for="inlineRadio1">Asociación Civil - Fundación en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio7" value="Asociación Solidaria Asociativa Informal">
+                    <input (click)="UnidadesAsociativasProductivas()"  formControlName="caracterUnidadProductivaSolicitante" class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Asociación Solidaria Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio1">Asociación Solidaria Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input (change)="checkStatus($event)" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input radio-section-1" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio8" value="Persona Física (Unidad Productiva Unipersonal)">
+                    <input (click)="unidadProductivaUnipersonal()" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Persona Física (Unidad Productiva Unipersonal)">
                     <label class="form-check-label" for="inlineRadio1">Persona Física (Unidad Productiva Unipersonal)</label>
                 </div>
-                <fieldset [attr.disabled]="radioButtonsArray.length ? true : null" class=" mb-3">
-                    <label for="basic-url" class="form-label" >Otra ¿Cuál?</label>
-                    <div class="input-group">
-                        <input id="input-text-section-1"  type="text" formControlName="caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante" class="form-control input-text-section-1" aria-describedby="basic-addon3 basic-addon4">
+                <div class="form-check">
+                    <input (click)="changeInputsectionOne()" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Persona Física (Unidad Productiva Unipersonal)">
+                    <label class="form-check-label" for="inlineRadio1">Otra</label>
+                </div>
+                <div *ngIf="inputSectionOneValue" class="my-3">
+                    <label for="basic-url" class="form-label">¿Cuál?</label>
+                    <div class="input-group">                        
+                        <input  type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                     </div>
-                </fieldset>
+                </div>
             </div>
         </div>
 
@@ -66,12 +71,12 @@
                 <h5 class="mr-3">2 - DATOS DE IDENTIFICACIÓN</h5>
             </div>
             <hr>
-            <div class="section-2-1">
+            <div *ngIf="esPersonaFisica" class="section-2-1">
                 <div class="subheading-title d-flex">
                     <h5 class="mr-3">2.1 - Unidad Productiva Unipersonal</h5>
                 </div>
                 <hr>
-                <div class="container">
+                <div class="container container-2-1">
                     <div class="row">
                         <div class="col-4">
                             <div class="mb-3">
@@ -181,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            <div class="section-2-2">
+            <div *ngIf="esUnidadAsociativaProductiva" class="section-2-2">
                 <div class="subheading-title d-flex">
                     <h5 class="mr-3">2.2 Unidades Asociativas Productivas (incluye las familiares)</h5>
                 </div>
@@ -651,7 +656,7 @@
             </div>
             <div class="row">
                 <div class="col-4">
-                    <button (click)="agregarNuevoRepresentante()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
+                    <button (click)="agregarNuevoRepresentanteSection7()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
                 </div>
             </div>
         </div>
@@ -728,7 +733,7 @@
             </div>
             <div class="row">
                 <div class="col-4">
-                    <button (click)="agregarNuevoResponsable()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
+                    <button (click)="agregarNuevoResponsableSection9()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
                 </div>
             </div>
         </div>
