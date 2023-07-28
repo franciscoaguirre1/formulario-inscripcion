@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
@@ -18,7 +18,7 @@ export class AppComponent implements OnInit{
     esPersonaFisica : boolean = false
     esUnidadAsociativaProductiva: boolean = false
     esActividadAgropecuaria: boolean = false
-    tieneCiDi: boolean = false;
+    tieneCiDi: boolean = false
     tieneObraSocial: boolean = false
 
     
@@ -26,6 +26,133 @@ export class AppComponent implements OnInit{
     constructor(private fb: FormBuilder) {
 
     }
+
+
+
+    ngOnInit(): void {
+
+        this.formularioEconomiaPopular = this.fb.group({
+    
+    
+            // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
+            caracterUnidadProductivaSolicitante: ['', Validators.required],
+            inscripcionesLegales: ['', Validators.required],
+            esactividadAgropecuaria: ['', Validators.required],
+            obraSocial: ['', Validators.required],
+            
+    
+          //   // 2.- DATOS DE IDENTIFICACIÓN        
+          //   //2.1.- Unidad Productiva Unipersonal
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+          //   // 3.- INSCRIPCIONES LEGALES
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+    
+          //   // 4.- OBJETO SOCIAL
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+    
+          //   // 5.- DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+          //   // 6.- CONDICIÓN FISCAL
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+          //   // 7.- REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL
+    
+          //   // primer persona
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+          //   // puede haber más personas
+    
+    
+    
+          //   // 8.- INFORMACIÓN COMPLEMENTARIA
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+    
+          //   // 9.- PERSONAS RESPONSABLES DE LA INSCRIPCIÓN
+    
+          //   // primer persona
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+          //   // puede haber más personas
+    
+    
+          //   // Para las personas físicas
+          //   // primer persona
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+          //   // puede haber más personas
+    
+    
+    
+          //   // Situación habitacional
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+    
+    
+        })
+    
+    
+        }
 
 
     cambioInscripcionesLegalesSi() {
@@ -65,132 +192,7 @@ export class AppComponent implements OnInit{
 
     
 
-    ngOnInit(): void {
 
-    this.formularioEconomiaPopular = this.fb.group({
-
-
-        // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
-        caracterUnidadProductivaSolicitante: ['', Validators.required],
-        inscripcionesLegales: ['', Validators.required],
-        esactividadAgropecuaria: ['', Validators.required],
-        obraSocial: ['', Validators.required],
-        
-
-      //   // 2.- DATOS DE IDENTIFICACIÓN        
-      //   //2.1.- Unidad Productiva Unipersonal
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-      //   // 3.- INSCRIPCIONES LEGALES
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-
-      //   // 4.- OBJETO SOCIAL
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-
-      //   // 5.- DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-      //   // 6.- CONDICIÓN FISCAL
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-      //   // 7.- REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL
-
-      //   // primer persona
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-      //   // puede haber más personas
-
-
-
-      //   // 8.- INFORMACIÓN COMPLEMENTARIA
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-
-      //   // 9.- PERSONAS RESPONSABLES DE LA INSCRIPCIÓN
-
-      //   // primer persona
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-      //   // puede haber más personas
-
-
-      //   // Para las personas físicas
-      //   // primer persona
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-      //   // puede haber más personas
-
-
-
-      //   // Situación habitacional
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-      //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-
-
-    })
-
-
-
-
-    }
 
     changeInputsectionOne() {
     this.inputSectionOneValue = !this.inputSectionOneValue
