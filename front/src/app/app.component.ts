@@ -1,9 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatNativeDateModule} from '@angular/material/core';
 
 
 @Component({
@@ -22,6 +18,9 @@ export class AppComponent implements OnInit{
     esPersonaFisica : boolean = false
     esUnidadAsociativaProductiva: boolean = false
     esActividadAgropecuaria: boolean = false
+    tieneCiDi: boolean = false;
+    tieneObraSocial: boolean = false
+
     
 
     constructor(private fb: FormBuilder) {
@@ -30,19 +29,27 @@ export class AppComponent implements OnInit{
 
 
     cambioInscripcionesLegalesSi() {
-      this.tieneRegistroSection3 = true
+    this.tieneRegistroSection3 = true
     }
 
     cambioInscripcionesLegalesNo() {
-      this.tieneRegistroSection3 = false
+    this.tieneRegistroSection3 = false
+    }
+
+    tieneObraSocialSi() {
+    this.tieneObraSocial = true
+    }
+
+    tieneObraSocialNo() {
+    this.tieneObraSocial = false
     }
 
     cambioDomicilioPredioProductivoNo() {
-      this.domicilioPredioProductivoSection5 = false
+    this.domicilioPredioProductivoSection5 = false
     }
 
     cambioDomicilioPredioProductivoSi() {
-      this.domicilioPredioProductivoSection5 = true
+    this.domicilioPredioProductivoSection5 = true
     }
 
     cambioActividadAgropecuariaSi() {
@@ -52,17 +59,23 @@ export class AppComponent implements OnInit{
     cambioActividadAgropecuariaNo() {
         this.esActividadAgropecuaria = false
     }
+    setTieneCiDi(value: boolean) {
+        this.tieneCiDi = value;
+      }
+
     
 
     ngOnInit(): void {
 
-      this.formularioEconomiaPopular = this.fb.group({
+    this.formularioEconomiaPopular = this.fb.group({
 
 
         // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
         caracterUnidadProductivaSolicitante: ['', Validators.required],
         inscripcionesLegales: ['', Validators.required],
         esactividadAgropecuaria: ['', Validators.required],
+        obraSocial: ['', Validators.required],
+        
 
       //   // 2.- DATOS DE IDENTIFICACIÓN        
       //   //2.1.- Unidad Productiva Unipersonal
@@ -172,7 +185,7 @@ export class AppComponent implements OnInit{
       //   caracterUnidadProductivaSolicitante: ['', Validators.required],
 
 
-      })
+    })
 
 
 
@@ -180,7 +193,7 @@ export class AppComponent implements OnInit{
     }
 
     changeInputsectionOne() {
-      this.inputSectionOneValue = !this.inputSectionOneValue
+    this.inputSectionOneValue = !this.inputSectionOneValue
 
     }
 
@@ -193,7 +206,7 @@ export class AppComponent implements OnInit{
       <hr>
       <div class="col-4">
           <div class="mb-3">
-              <label for="basic-url" class="form-label">Apellido</label>
+              <label  class="form-label">Apellido</label>
               <div class="input-group">                        
                   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
               </div>
@@ -201,7 +214,7 @@ export class AppComponent implements OnInit{
       </div>
       <div class="col-4">
           <div class="mb-3">
-              <label for="basic-url" class="form-label">Nombres</label>
+              <label  class="form-label">Nombres</label>
               <div class="input-group">                        
                   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
               </div>
@@ -209,7 +222,7 @@ export class AppComponent implements OnInit{
       </div>
       <div class="col-4">
           <div class="mb-3">
-              <label class="form-label">Tipo de Documento</label>
+              <label  class="form-label">Tipo de Documento</label>
               <div class="input-group">                        
                   <select class="form-select" aria-label="Default select example">
                       <option selected>-</option>
@@ -235,7 +248,7 @@ export class AppComponent implements OnInit{
       </div>
       <div class="col-4">
           <div class="mb-3">
-              <label for="basic-url" class="form-label">N° de Documento</label>
+              <label  class="form-label">N° de Documento</label>
               <div class="input-group">                        
                   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
               </div>
@@ -243,14 +256,14 @@ export class AppComponent implements OnInit{
       </div>
       <div class="col-4">
           <div class="mb-3">
-              <label  class="form-label">¿Tiene CiDi?</label>
+              <label class="form-label">¿Tiene CiDi?</label>
               <div class="input-group">                        
                   <div class="form-check mx-3">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tieneCiDiSi" value="Si" (click)="setTieneCiDi(true)">
                       <label class="form-check-label" for="inlineRadio1">Si</label>
                   </div>
                   <div class="form-check mx-3">
-                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tieneCiDiNo" value="No" (click)="setTieneCiDi(false)">
                       <label class="form-check-label" for="inlineRadio2">No</label>
                   </div>
               </div>
@@ -260,7 +273,7 @@ export class AppComponent implements OnInit{
           <div class="mb-3">
               <label class="form-label">Nivel de CiDi</label>
               <div class="input-group">                        
-                  <select class="form-select" aria-label="Default select example">
+                  <select [disabled]="!tieneCiDi" class="form-select" aria-label="Default select example">
                       <option selected>-</option>
                       <option value="1">1</option>
                       <option value="2">2</option>
@@ -281,7 +294,64 @@ export class AppComponent implements OnInit{
     }
 
 
-
+    
+    agregarNuevoResponsableSection9() {
+        const newRowDiv = document.createElement("div");
+        newRowDiv.classList.add("row");
+      
+        const inputGroup = `
+        <hr>
+        <div class="col-4">
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">Nombre del Responsable</label>
+                <div class="input-group">                        
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                </div>                        
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">DNI</label>
+                <div class="input-group">                        
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                </div>                        
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">Cargo</label>
+                <div class="input-group">                        
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                </div>                        
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">Teléfono</label>
+                <div class="input-group">                        
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                </div>                        
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="mb-3">
+                <label for="basic-url" class="form-label">Correo para recibir notificaciones</label>
+                <div class="input-group">                        
+                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                </div>                        
+            </div>
+        </div>
+        `;
+      
+        newRowDiv.innerHTML = inputGroup;
+        const container = document.querySelector(".container-9");
+         // Check if the container element exists before appending the new row
+        if (container) {
+          container.appendChild(newRowDiv);
+        } else {
+          console.error("Container with class 'container-7' not found.");
+        }
+      }
 
 
 
@@ -356,7 +426,7 @@ export class AppComponent implements OnInit{
       </div>
       <div class="col-2">
           <div class="mb-3">
-              <label for="basic-url" class="form-label">Escolaridad/label></label>
+              <label for="basic-url" class="form-label">Escolaridad</label>
               <div class="input-group">                        
                   <select class="form-select" aria-label="Default select example">
                       <option selected>-</option>
@@ -375,7 +445,7 @@ export class AppComponent implements OnInit{
       </div>
       <div class="col-2">
           <div class="mb-3">
-              <label class="form-label">Está cuesando?</label>
+              <label class="form-label">Está cursando?</label>
               <div class="input-group">                        
                   <div class="form-check mx-3">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
@@ -417,83 +487,26 @@ export class AppComponent implements OnInit{
     
 
 
-    agregarNuevoResponsableSection9() {
-      const newRowDiv = document.createElement("div");
-      newRowDiv.classList.add("row");
-    
-      const inputGroup = `
-      <hr>
-      <div class="col-4">
-          <div class="mb-3">
-              <label for="basic-url" class="form-label">Nombre del Responsable</label>
-              <div class="input-group">                        
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-              </div>                        
-          </div>
-      </div>
-      <div class="col-4">
-          <div class="mb-3">
-              <label for="basic-url" class="form-label">DNI</label>
-              <div class="input-group">                        
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-              </div>                        
-          </div>
-      </div>
-      <div class="col-4">
-          <div class="mb-3">
-              <label for="basic-url" class="form-label">Cargo</label>
-              <div class="input-group">                        
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-              </div>                        
-          </div>
-      </div>
-      <div class="col-4">
-          <div class="mb-3">
-              <label for="basic-url" class="form-label">Teléfono</label>
-              <div class="input-group">                        
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-              </div>                        
-          </div>
-      </div>
-      <div class="col-4">
-          <div class="mb-3">
-              <label for="basic-url" class="form-label">Correo para recibir notificaciones</label>
-              <div class="input-group">                        
-                  <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-              </div>                        
-          </div>
-      </div>
-      `;
-    
-      newRowDiv.innerHTML = inputGroup;
-      const container = document.querySelector(".container-9");
-       // Check if the container element exists before appending the new row
-      if (container) {
-        container.appendChild(newRowDiv);
-      } else {
-        console.error("Container with class 'container-7' not found.");
-      }
-    }
 
 
 
     onFormSubmit(): void {
-      console.log(this.formularioEconomiaPopular.value);
-  }
+    console.log(this.formularioEconomiaPopular.value);
+    }
 
 
-  unidadProductivaUnipersonal() {
+    unidadProductivaUnipersonal() {
 
     this.esPersonaFisica = true
     this.esUnidadAsociativaProductiva = false
 
-  }
+    }
 
-  UnidadesAsociativasProductivas() {
+    UnidadesAsociativasProductivas() {
     this.esUnidadAsociativaProductiva = true
     this.esPersonaFisica = false
 
-  }
+    }
 
 
   controlarCampo1() {

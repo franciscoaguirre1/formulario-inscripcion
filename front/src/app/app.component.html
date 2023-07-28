@@ -3,7 +3,7 @@
     <div class="submit">
         <button class="btn btn-warning mx-3" (click)="onFormSubmit()">Consologuear formulario</button>
         <button class="btn btn-warning mx-3" (click)="controlarCampo1()">Enviar propiedades</button>
-        <button class="btn btn-warning mx-3" (click)="consologuearPersonaFisicaSeccion1()">Propiedades Chekbox</button>
+        <button class="btn btn-warning mx-3" (click)="consologuearPersonaFisicaSeccion1()">Propiedades Checkbox</button>
 
     </div>
     
@@ -14,7 +14,7 @@
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
             <div class="subheading-title">
                 <h5 class="mr-3">1 - CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE</h5>
-                <small>(Seleccione sólo una opción)</small>
+                <small>(Indicar el casillero correspondiente) Obligatoria*</small>
             </div>
             <hr>
             <div class="container border border-dark-subtle p-3">
@@ -189,6 +189,14 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="col-12">
+                            <div class="mb-3">
+                                <label  class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -206,7 +214,7 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-3">
-                                <label  class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona -Obligatoria –</label>
+                                <label  class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona (Obligatoria*)</label>
                                 <div class="input-group">                        
                                     <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
@@ -240,8 +248,9 @@
 
 
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-            <div class="subheading-title d-flex">
+            <div class="subheading-title">
                 <h5 class="mr-3">3 - INSCRIPCIONES LEGALES (INAE - IPJ - Otros)</h5>
+                <small>INAE - IPJ - Otros</small>
             </div>
             <hr>
             <div class="d-flex ">
@@ -326,7 +335,7 @@
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">4 - OBJETO SOCIAL</h5>
-                <span>Actividades Productivas</span>
+                <small>Actividades Productivas</small>
             </div>
             <hr>
             <div class="container">
@@ -510,23 +519,7 @@
                         </div>
                         <div class="col-4">
                             <div class="mb-3">
-                                <label  class="form-label">Confirme correo electrónico:</label>
-                                <div class="input-group">                        
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="mb-3">
                                 <label  class="form-label">Teléfono</label>
-                                <div class="input-group">                        
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="mb-3">
-                                <label  class="form-label">Cantidad de asociados que trabajan en la sede productiva:</label>
                                 <div class="input-group">                        
                                     <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
@@ -542,8 +535,9 @@
 
 
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-            <div class="subheading-title d-flex mt-3">
+            <div class="subheading-title mt-3">
                 <h5 class="mr-3">6 - CONDICIÓN FISCAL</h5>
+                <small>(Obligatoria)</small>
             </div>
             <hr>
             <div class=" container justify-content-space-between">
@@ -568,7 +562,7 @@
                         </div>
                     </div>
                     <div class="border border-dark-subtle p-3 mx-3 my-3 col-lg-4 ">
-                        <h6>I.V.A</h6>      
+                        <h6>Ingresos Brutos</h6>      
                         <div class="form-check">        
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
@@ -587,7 +581,7 @@
                         </div>
                     </div>
                     <div class="border border-dark-subtle p-3 mx-3 my-3 col-lg-4 ">
-                        <h6>I.V.A</h6>      
+                        <h6>Tasa Comercio e Industria Municipal</h6>      
                         <div class="form-check">        
                             <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
@@ -612,8 +606,9 @@
         <!-- Sección 7 -->
 
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-            <div class="subheading-title d-flex mt-3">
+            <div class="subheading-title  mt-3">
                 <h5 class="mr-3">7 - REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
+                <small>(Si es persona física por favor repetir los datos del titular)</small>
             </div>
             <hr>
             <div class="container container-7">
@@ -675,11 +670,11 @@
                             <label class="form-label">¿Tiene CiDi?</label>
                             <div class="input-group">                        
                                 <div class="form-check mx-3">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tieneCiDiSi" value="Si" (click)="setTieneCiDi(true)">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check mx-3">
-                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tieneCiDiNo" value="No" (click)="setTieneCiDi(false)">
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </div>
@@ -689,7 +684,7 @@
                         <div class="mb-3">
                             <label class="form-label">Nivel de CiDi</label>
                             <div class="input-group">                        
-                                <select class="form-select" aria-label="Default select example">
+                                <select [disabled]="!tieneCiDi" class="form-select" aria-label="Default select example">
                                     <option selected>-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -710,8 +705,9 @@
         <!-- Sección 8 -->
 
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-            <div class="subheading-title d-flex mt-3">
+            <div class="subheading-title mt-3">
                 <h5 class="mr-3">8 - INFORMACIÓN COMPLEMENTARIA</h5>
+                <small>Espacio para efectuar las aclaraciones y ampliaciones que se consideren necesarias</small>
             </div>
             <hr>
             <div class="container">
@@ -725,9 +721,10 @@
 
         <!-- Sección 9 -->
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
-            <div class="subheading-title d-flex mt-3">
+        <div class="input-section my-5 border border-dark-subtle p-5 my-3">
+            <div class="subheading-title mt-3">
                 <h5 class="mr-3">9 - PERSONAS RESPONSABLES DE LA INSCRIPCIÓN</h5>
+                <small>Se responsabilizan de la veracidad de la información consignada y a facilitar su verificación. Repetir los datos si es persona física.</small>
             </div>
             <hr>
             <div class="container container-9">
@@ -789,113 +786,175 @@
 
 
             <br>
-            <br>        
-            <div class="subheading-title d-flex mt-3">
-                <h5 class="mr-3">Para las personas físicas</h5>
-            </div>
-            <hr>
-            <div class="container container-9b">
-                <div class="row">
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label  class="form-label">Apellido</label>
-                            <div class="input-group">                        
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>                        
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label  class="form-label">Nombre</label>
-                            <div class="input-group">                        
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>                        
-                        </div>
-                    </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label  class="form-label">Documento</label>
-                            <div class="input-group">                        
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-                            </div>                        
-                        </div>
-                    </div>
-                    <!-- <div class="col-2">
-                        <div class="mb-3">
-                            <div class="input-group date" data-provide="datepicker">
-                                <mat-form-field>
-                                    <mat-label>Choose a date</mat-label>
-                                    <input matInput [matDatepicker]="picker">
-                                    <mat-hint>MM/DD/YYYY</mat-hint>
-                                    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
-                                    <mat-datepicker #picker></mat-datepicker>
-                                  </mat-form-field>                                                
+            <br>
+            <div class="border border-dark-subtle p-5">
+                <div class="subheading-title mt-3">
+                    <h5 class="mr-3">Para las personas físicas</h5>
+                    <small>Datos del grupo conviviente (identificar todas las personas que conviven en ese domicilio y comparten comida, incluido el postulante)</small>
+                </div>
+                <hr>
+                <div class="container container-9b">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Apellido</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
                             </div>
                         </div>
-                    </div> -->
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <div class="input-group date" data-provide="datepicker">
-                                <label class="form-label" for="meeting-time">Fecha de nacimiento:</label>
-                                <input type="datetime-local" id="meeting-time"name="meeting-time" value=""min="" max="">                                                  
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Nombre</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Documento</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <div class="input-group date" data-provide="datepicker">
+                                    <label class="form-label" for="meeting-time">Fecha de nacimiento:</label>
+                                    <input type="datetime-local" id="meeting-time"name="meeting-time" value=""min="" max="">                                                  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Vínculo</label>
+                                <div class="input-group">                        
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="ABUELO/A">ABUELO/A</option>
+                                        <option value="ADHERENTE">ADHERENTE</option>
+                                        <option value="ADOPCION">ADOPCION</option>
+                                        <option value="CONVIVIENTE (CONCUBINO)">CONVIVIENTE (CONCUBINO)</option>
+                                        <option value="CONYUGE">CONYUGE</option>
+                                        <option value="DESCONOCIDO">DESCONOCIDO</option>
+                                        <option value="HERMANO/A">HERMANO/A</option>
+                                        <option value="HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.">HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.</option>
+                                        <option value="HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.">HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.</option>
+                                        <option value="HIJO/A">HIJO/A</option>
+                                        <option value="JEFE/A FAMILIA">JEFE/A FAMILIA</option>
+                                        <option value="MENOR BAJO GUARDA O TUTELA">MENOR BAJO GUARDA O TUTELA</option>
+                                        <option value="NIETO/A">NIETO/A</option>
+                                        <option value="OTROS FAMILIARES">OTROS FAMILIARES</option>
+                                        <option value="OTROS NO FAMILIARES">OTROS NO FAMILIARES</option>
+                                        <option value="PADRE/MADRE">PADRE/MADRE</option>
+                                        <option value="PRENATAL">PRENATAL</option>
+                                        <option value="SOBRINO/A">SOBRINO/A</option>
+                                        <option value="TIO/A">TIO/A</option>
+                                        <option value="TITULAR EXCLUSIVAMENTE">TITULAR EXCLUSIVAMENTE</option>
+                                        <option value="TUTOR/A">TUTOR/A</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Escolaridad</label>
+                                <div class="input-group">                        
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Inicial y Preescolar">Inicial y Preescolar</option>
+                                        <option value="Primaria incompleta">Primaria incompleta</option>
+                                        <option value="Primaria completa">Primaria completa</option>
+                                        <option value="Secundaria incompleta">Secundaria incompleta</option>
+                                        <option value="Secundaria completa">Secundaria completa</option>
+                                        <option value="Terciaria incompleta">Terciaria incompleta</option>
+                                        <option value="Terciaria completa">Terciaria completa</option>
+                                        <option value="Universitaria incompleta">Universitaria incompleta</option>
+                                        <option value="Universitaria completa">Universitaria completa</option>
+                                    </select>
+                                </div>                            
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label class="form-label">Está cursando?</label>
+                                <div class="input-group">                        
+                                    <div class="form-check mx-3">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <label class="form-check-label" for="inlineRadio1">Si</label>
+                                    </div>
+                                    <div class="form-check mx-3">
+                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <label class="form-check-label" for="inlineRadio2">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Ocupación</label>
+                                <div class="input-group">                        
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Empleado">Empleado</option>
+                                        <option value="Desocupado">Desocupado</option>
+                                        <option value="Autoempleo (emprendimiento)">Autoempleo (emprendimiento)</option>
+                                        <option value="Jubilado - Pensionado">Jubilado - Pensionado</option>
+                                        <option value="No trabaja">No trabaja</option>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label  class="form-label">Vínculo</label>
-                            <div class="input-group">                        
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>-</option>
-                                    <option value="ABUELO/A">ABUELO/A</option>
-                                    <option value="ADHERENTE">ADHERENTE</option>
-                                    <option value="ADOPCION">ADOPCION</option>
-                                    <option value="CONVIVIENTE (CONCUBINO)">CONVIVIENTE (CONCUBINO)</option>
-                                    <option value="CONYUGE">CONYUGE</option>
-                                    <option value="DESCONOCIDO">DESCONOCIDO</option>
-                                    <option value="HERMANO/A">HERMANO/A</option>
-                                    <option value="HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.">HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.</option>
-                                    <option value="HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.">HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.</option>
-                                    <option value="HIJO/A">HIJO/A</option>
-                                    <option value="JEFE/A FAMILIA">JEFE/A FAMILIA</option>
-                                    <option value="MENOR BAJO GUARDA O TUTELA">MENOR BAJO GUARDA O TUTELA</option>
-                                    <option value="NIETO/A">NIETO/A</option>
-                                    <option value="OTROS FAMILIARES">OTROS FAMILIARES</option>
-                                    <option value="OTROS NO FAMILIARES">OTROS NO FAMILIARES</option>
-                                    <option value="PADRE/MADRE">PADRE/MADRE</option>
-                                    <option value="PRENATAL">PRENATAL</option>
-                                    <option value="SOBRINO/A">SOBRINO/A</option>
-                                    <option value="TIO/A">TIO/A</option>
-                                    <option value="TITULAR EXCLUSIVAMENTE">TITULAR EXCLUSIVAMENTE</option>
-                                    <option value="TUTOR/A">TUTOR/A</option>
-                                </select>
-                            </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <button (click)="agregarPersonaFisica9b()" class="btn btn-primary">Agregar nuevo<i class="fa-sharp fa-solid fa-plus"></i></button>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label  class="form-label">Escolaridad/label></label>
-                            <div class="input-group">                        
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>-</option>
-                                    <option value="Inicial y Preescolar">Inicial y Preescolar</option>
-                                    <option value="Primaria incompleta">Primaria incompleta</option>
-                                    <option value="Primaria completa">Primaria completa</option>
-                                    <option value="Secundaria incompleta">Secundaria incompleta</option>
-                                    <option value="Secundaria completa">Secundaria completa</option>
-                                    <option value="Terciaria incompleta">Terciaria incompleta</option>
-                                    <option value="Terciaria completa">Terciaria completa</option>
-                                    <option value="Universitaria incompleta">Universitaria incompleta</option>
-                                    <option value="Universitaria completa">Universitaria completa</option>
-                                </select>
-                            </div>                            
+                </div>
+    
+    
+                <!--Cursos de Capacitación laboral realizados por el titular -->
+    
+                <div class="container my-3">
+                    <div class="subheading-title mt-3">
+                        <small>Cursos de capacitación laboral realizados por el titular:</small>
+                    </div>
+                    <div class="form-floating">
+                        <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                        <label for="floatingTextarea2">Cursos realizados por el titular...</label>
+                    </div>                
+                </div>
+    
+    
+    
+                <!-- Posee Obra Social -->
+    
+                <div class="container my-3">
+                    <div class="subheading-title">
+                        <small>Posee Obra Social?</small>
+                    </div>
+                    <div class="d-flex ">
+                        <div class="form-check mx-3">
+                            <input (click)="tieneObraSocialSi()" formControlName = "obraSocial" class="form-check-input minimal" type="radio" name="obraSocial" id="flexRadioDefault1" value="True">
+                            <label class="form-check-label" for="flexRadioDefault1">Si</label>
+                        </div>
+                        <div class="form-check mx-3">
+                            <input (click)="tieneObraSocialNo()" formControlName = "obraSocial"  class="form-check-input minimal" type="radio" name="obraSocial" id="flexRadioDefault2" value="False">
+                            <label class="form-check-label" for="flexRadioDefault2">No</label>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label class="form-label">Está cursando?</label>
+                    <div *ngIf="tieneObraSocial" class="my-3">
+                        <div class="subheading-title">
+                            <h6>¿Cubre al grupo familiar?</h6>
+                        </div>
+                        <div class="d-flex">
                             <div class="input-group">                        
-                                <div class="form-check mx-3">
+                                <div class="form-check">
                                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
@@ -906,28 +965,360 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div class="mb-3">
-                            <label  class="form-label">Ocupación</label>
-                            <div class="input-group">                        
-                                <select class="form-select" aria-label="Default select example">
-                                    <option selected>-</option>
-                                    <option value="Empleado">Empleado</option>
-                                    <option value="Desocupado">Desocupado</option>
-                                    <option value="Autoempleo (emprendimiento)">Autoempleo (emprendimiento)</option>
-                                    <option value="Jubilado - Pensionado">Jubilado - Pensionado</option>
-                                    <option value="No trabaja">No trabaja</option>
-                                </select>
+                </div>
+    
+    
+    
+    
+                <!--Situación Habitacional -->
+    
+                <div class="subheading-title my-3">
+                    <small class="mr-3 my-3">Situación Habitacional</small>
+                    <br>
+                    <small>Indique si su vivienda está en alguna de las siguientes situaciones</small>
+                </div>
+                <hr>
+                <div class="container my-3">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Posesión de la Vivienda</label>
+                                <div class="input-group">                        
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Propio">Propio</option>
+                                        <option value="Alquilado">Alquilado</option>
+                                        <option value="Ocupante gratuito (con permiso)">Ocupante gratuito (con permiso)</option>
+                                        <option value="Ocupante de hecho (sin permiso)">Ocupante de hecho (sin permiso)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Baño</label>
+                                <div class="input-group">                        
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Inodoro con botón - mochila - cadena - y arrastre de agua">Inodoro con botón - mochila - cadena - y arrastre de agua</option>
+                                        <option value="Inodoro sin botón - cadena - y con arrastre de agua (a balde)">Inodoro sin botón - cadena - y con arrastre de agua (a balde)</option>
+                                        <option value="Letrina (sin arrastre de agua)">Letrina (sin arrastre de agua)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Cantidad de dormitorios</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Techos</label>
+                                <div class="input-group">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Loza - Fibrocemento">Loza - Fibrocemento</option>
+                                        <option value="Zinc">Zinc</option>
+                                        <option value="Paja - Nylon">Paja - Nylon</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Muros</label>
+                                <div class="input-group">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Ladrillo - Bloque">Ladrillo - Bloque</option>
+                                        <option value="Chapa - Adobe">Chapa - Adobe</option>
+                                        <option value="Madera - Otro">Madera - Otro</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="mb-3">
+                                <label  class="form-label">Pisos</label>
+                                <div class="input-group">
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Cerámico - Mosaico - Madera">Cerámico - Mosaico - Madera</option>
+                                        <option value="Cemento">Cemento</option>
+                                        <option value="Tierra">Tierra</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+    
+    
+    
+    
+                <!--Acceso a servicios -->
+    
+                <div class="subheading-title my-3">
+                    <small class="mr-3">Acceso a servicios</small>
+                </div>
+                <hr>
+    
+                <div class="container my-3">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Agua</label>
+                                <div class="input-group">                        
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Red">Red</option>
+                                        <option value="Pico Externo">Pico Externo</option>
+                                        <option value="Pozo - Río - Aljibe">Pozo - Río - Aljibe</option>
+                                        <option value="Tarifa Social">Tarifa Social</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Luz</label>
+                                <div class="input-group">                        
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Eléctrica">Eléctrica</option>
+                                        <option value="Generador - Velas - Gas">Generador - Velas - Gas</option>
+                                        <option value="Tarifa Social">Tarifa Social</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Gas</label>
+                                <div class="input-group">                        
+                                    <select class="form-select" aria-label="Default select example">
+                                        <option selected>-</option>
+                                        <option value="Gas Natural">Gas Natural</option>
+                                        <option value="Garrafa - Tubo">Garrafa - Tubo</option>
+                                        <option value="Leña - Carbón">Leña - Carbón</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>       
+
+
+
+            <!--Datos referidos al predio y actividad productiva (solo productos agropecuarios) -->
+
+            <div class="border border-dark-subtle p-5 my-3">
+                <div class="subheading-title my-3">
+                    <h5 class="mr-3">Datos referidos al predio y actividad productiva</h5>
+                    <small>(solo productores agropecuarios)</small>
+                </div>
+                <hr>
+    
+                <div class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Total hectáreas</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas en secano</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas con riego</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas agrícola</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas monte</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas chacra en secano</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas pasturas naturales</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas pasturas implantadas</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas granja mixta</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas hortalizas</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Hectáreas granos</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="mb-3">
+                                <label  class="form-label">Otra</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                                <label  class="form-label">Hestáreas</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-4">
-                    <button (click)="agregarPersonaFisica9b()" class="btn btn-primary">Agregar nuevo<i class="fa-sharp fa-solid fa-plus"></i></button>
+
+
+
+
+            <!-- Cantidad de Animales -->
+
+
+            <div class="border border-dark-subtle p-5 my-3">
+                <div class="subheading-title my-3">
+                    <h5 class="mr-3">Cantidad de Animales</h5>
+                </div>
+                <hr>
+    
+                <div class="container">
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label  class="form-label">Vacunos</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label  class="form-label">Caprinos</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label  class="form-label">Porcinos</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label  class="form-label">Ovinos</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label  class="form-label">Pollos parrilleros</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label  class="form-label">Gallinas ponedores</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="mb-3">
+                                <label  class="form-label">Apicultura</label>
+                                <div class="input-group">                        
+                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                </div>                        
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
+
+
+
+
         </div>
 
 
