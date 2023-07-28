@@ -21,6 +21,7 @@ export class AppComponent implements OnInit{
     domicilioPredioProductivoSection5: boolean = true
     esPersonaFisica : boolean = false
     esUnidadAsociativaProductiva: boolean = false
+    esActividadAgropecuaria: boolean = false
     
 
     constructor(private fb: FormBuilder) {
@@ -43,6 +44,14 @@ export class AppComponent implements OnInit{
     cambioDomicilioPredioProductivoSi() {
       this.domicilioPredioProductivoSection5 = true
     }
+
+    cambioActividadAgropecuariaSi() {
+        this.esActividadAgropecuaria = true
+    }
+
+    cambioActividadAgropecuariaNo() {
+        this.esActividadAgropecuaria = false
+    }
     
 
     ngOnInit(): void {
@@ -52,6 +61,8 @@ export class AppComponent implements OnInit{
 
         // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
         caracterUnidadProductivaSolicitante: ['', Validators.required],
+        inscripcionesLegales: ['', Validators.required],
+        esactividadAgropecuaria: ['', Validators.required],
 
       //   // 2.- DATOS DE IDENTIFICACIÓN        
       //   //2.1.- Unidad Productiva Unipersonal
@@ -268,6 +279,9 @@ export class AppComponent implements OnInit{
         console.error("Container with class 'container-7' not found.");
       }
     }
+
+
+
 
 
 
@@ -489,13 +503,25 @@ export class AppComponent implements OnInit{
 
     console.log("radio",radioButtonsSection1);
     console.log("input",textInputSection1);
-
-
-
     } 
 
     agregarNuevoResponsableSection9b() {
 
     }
+
+
+    // cómo controlar cuando aparezca y desaparezca el item 2.1
+
+    
+    consologuearPersonaFisicaSeccion1() {
+        const personaFisica = document.getElementById("inlineRadio7");
+        console.log(personaFisica);
+    }
+
+
+    // cómo controlar cuando aparezca y desaparezca el item 2.2
+
+
+
 
 }
