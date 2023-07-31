@@ -2,8 +2,6 @@
     <div class="submit">
 
         <button class="btn btn-warning mx-3" (click)="consologuearFormulario()">Consologuear Formulario Completo</button>
-        <button class="btn btn-warning mx-3" (click)="obtenerValorSeccion1()">Consologuear valores Seccion 1</button>
-        <button class="btn btn-warning mx-3" (click)="imprimirValoresSeccion22()">Consologuear valores Seccion 2</button>
 
     </div>
 
@@ -684,7 +682,7 @@
                         <div class="mb-3">
                             <label class="form-label">Nivel de CiDi</label>
                             <div class="input-group">
-                                <select formControlName="nivelCiDiSeccion7" [attr.disabled]="!tieneCiDi" class="form-select">
+                                <select formControlName="nivelCiDiSeccion7" class="form-select">
                                     <option selected>-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>

@@ -33,16 +33,9 @@ export class AppComponent implements OnInit{
     }
 
 
-
-
-
-
-    
-
     constructor(private fb: FormBuilder) {
 
     }
-
 
 
     ngOnInit(): void {
@@ -239,111 +232,12 @@ export class AppComponent implements OnInit{
             apiculturaSeccion9h: ['', Validators.required],
 
 
-
-
-
-
-
-            
-            
-        
-            
-
-
-
     
     
         })
     
     
         }
-
-
-
-                // Imprimir valores de la seccion 1
-            obtenerValorSeccion1() {
-                    // const radioContainer = document.getElementsByClassName('.radio-container');
-                    const radioContainer = document.querySelector('.radio-container') as HTMLElement;
-
-            
-                    // Obtener todos los elementos "input" de tipo "radio" dentro del contenedor
-                    const radioButtons = radioContainer.querySelectorAll('input[type="radio"]');
-                
-                    // Iterar sobre los radio buttons para encontrar el seleccionado
-                    let selectedValue;
-                    radioButtons.forEach(radioButton => {
-                    if (radioButton instanceof HTMLInputElement && radioButton.checked) {
-                        selectedValue = radioButton.value;
-                        // Opcional: Puedes hacer algo más aquí con el valor seleccionado si lo necesitas.
-                    }
-                    });
-
-                    
-                    // Mostrar el valor seleccionado en la consola
-                    console.log('Valor seleccionado:', selectedValue);
-
-                    if(selectedValue == "Otra") {
-                        const inputSectionOne = document.getElementById('basic-url') as HTMLInputElement;
-                        console.log(inputSectionOne.value);                       
-                        
-                    }
-                }
-
-            
-
-                // imprimirValoresSeccion2.2
-
-
-                imprimirValoresSeccion22() {
-                    // Obtener el FormGroup
-                    const formGroup = this.formularioEconomiaPopular;
-                  
-                    // Verificar si el FormGroup es válido (no es null o undefined)
-                    if (formGroup) {
-                      // Obtener los valores de los campos individuales del FormGroup
-                  
-                      const apellidoControl = formGroup.get('apellidoSeccion21');
-                      const nombreControl = formGroup.get('nombreSeccion21');
-                      const tipoDocumentoControl = formGroup.get('tipoDocumentoSeccion21');
-                      const nroDocumentoControl = formGroup.get('nroDocumentoSeccion21');
-                      const tieneCiDiControl = formGroup.get('tieneCiDiSeccion21');
-                      const nivelCiDiControl = formGroup.get('nivelCiDiSeccion21');
-                      const cuilControl = formGroup.get('cuilSeccion21');
-                      const emailControl = formGroup.get('emailSeccion21');
-                      const telefonoControl = formGroup.get('telefonoSeccion21');
-                      const asociacionCooperativaControl = formGroup.get('asociacionCooperativaSeccion21');
-                  
-                      // Verificar si los controles son válidos (no son null o undefined)
-                      if (apellidoControl && nombreControl && tipoDocumentoControl && nroDocumentoControl &&
-                          tieneCiDiControl && nivelCiDiControl && cuilControl && emailControl &&
-                          telefonoControl && asociacionCooperativaControl) {
-                  
-                        // Acceder a las propiedades de los controles (value)
-                        const apellido = apellidoControl.value;
-                        const nombre = nombreControl.value;
-                        const tipoDocumento = tipoDocumentoControl.value;
-                        const nroDocumento = nroDocumentoControl.value;
-                        const tieneCiDi = tieneCiDiControl.value;
-                        const nivelCiDi = nivelCiDiControl.value;
-                        const cuil = cuilControl.value;
-                        const email = emailControl.value;
-                        const telefono = telefonoControl.value;
-                        const asociacionCooperativa = asociacionCooperativaControl.value;
-                  
-                        // Imprimir los valores en la consola
-                        console.log('Apellido:', apellido);
-                        console.log('Nombre:', nombre);
-                        console.log('Tipo de Documento:', tipoDocumento);
-                        console.log('N° de Documento:', nroDocumento);
-                        console.log('¿Tiene CiDi?:', tieneCiDi);
-                        console.log('Nivel de CiDi:', nivelCiDi);
-                        console.log('CUIL:', cuil);
-                        console.log('Dirección de correo electrónico:', email);
-                        console.log('Teléfono:', telefono);
-                        console.log('Asociación o Cooperativa:', asociacionCooperativa);
-                      }
-                    }
-                }
 
 
 
@@ -694,41 +588,6 @@ export class AppComponent implements OnInit{
     }
     
 
-
-
-
-
-
-
-//   controlarCampo1() {
-
-//     const radioButtonsSection1 = document.getElementsByClassName("radio-section-1");
-//     const textInputSection1 = document.getElementsByClassName("input-text-section-1");
-
-//     console.log("radio",radioButtonsSection1);
-//     console.log("input",textInputSection1);
-//     } 
-
-    // agregarNuevoResponsableSection9b() {
-
-    // }
-
-       // onFormSubmit(): void {
-    // console.log(this.formularioEconomiaPopular.value);
-    // }
-
-    
-    // consologuearPersonaFisicaSeccion1() {
-    //     const personaFisica = document.getElementById("inlineRadio7");
-    //     console.log(personaFisica);
-    // }   
-
-
-
-    // consologuearFormulario() {
-    //     console.log("hola mundo" + JSON.stringify(this.formularioEconomiaPopular));
-        
-    // }
 
 
 
