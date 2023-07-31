@@ -24,6 +24,16 @@ export class AppComponent implements OnInit{
 
 
 
+    // consologuear valores del formulario
+
+    consologuearFormulario() {
+
+        console.log('Form Value:', this.formularioEconomiaPopular.value)
+        
+    }
+
+
+
 
 
 
@@ -41,7 +51,8 @@ export class AppComponent implements OnInit{
     
     
             // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
-            caracterUnidadProductivaSolicitante: ['', Validators.required],
+            caracterUnidadProductivaSeccion1: ['', Validators.required],
+            caracterUnidadProductivaOtraSeccion1: ['', Validators.required],
 
             
 
@@ -70,9 +81,7 @@ export class AppComponent implements OnInit{
 
     
           //   3.- INSCRIPCIONES LEGALES
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-            inscripcionesLegales: ['', Validators.required],
-            esactividadAgropecuaria: ['', Validators.required],
+            inscripcionesLegalesSeccion3: ['', Validators.required],
             tieneRegistroSeccion3: ['', Validators.required],
             nroInscripcionMatriculaSeccion3: ['', Validators.required],
             reparticionSeccion3: ['', Validators.required],
@@ -85,73 +94,163 @@ export class AppComponent implements OnInit{
 
     
           //   4.- OBJETO SOCIAL
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
 
             actividadesProductivasSeccion4: ['', Validators.required],
 
           //   5.- DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
 
-          calleSeccion5: ['', Validators.required],
-          numeroCalleSeccion5: ['', Validators.required],
-          cpSeccion5: ['', Validators.required],
-          barrioSeccion5: ['', Validators.required],
-          localidadSeccion5: ['', Validators.required],
-          departamentoSeccion5: ['', Validators.required],
-          emailSeccion5: ['', Validators.required],
-          confirmeEmailSeccion5: ['', Validators.required],
-          telefonoSeccion5: ['', Validators.required],
-          cantidadAsociadosSeccion5: ['', Validators.required],
-          domicilioPredioProductivoSeccion5: ['', Validators.required],
-          callePredioProductivoSeccion5: ['', Validators.required],
-          nroCalleDomicilioSeccion5: ['', Validators.required],
-          barrioPredProdSeccion5: ['', Validators.required],
-          localidadPredProdSeccion5: ['', Validators.required],
-          departamentoPredioProdSeccion5: ['', Validators.required],
-          emailPredProdSeccion5: ['', Validators.required],
-          telefonoPredProdSeccion5: ['', Validators.required],
+            calleSeccion5: ['', Validators.required],
+            numeroCalleSeccion5: ['', Validators.required],
+            cpSeccion5: ['', Validators.required],
+            barrioSeccion5: ['', Validators.required],
+            localidadSeccion5: ['', Validators.required],
+            departamentoSeccion5: ['', Validators.required],
+            emailSeccion5: ['', Validators.required],
+            confirmeEmailSeccion5: ['', Validators.required],
+            telefonoSeccion5: ['', Validators.required],
+            cantidadAsociadosSeccion5: ['', Validators.required],
+            domicilioPredioProductivoSeccion5: ['', Validators.required],
+            callePredioProductivoSeccion5: ['', Validators.required],
+            nroCallePredProdSeccion5: ['', Validators.required],
+            cpPredProdSeccion5: ['', Validators.required],
+            barrioPredProdSeccion5: ['', Validators.required],
+            localidadPredProdSeccion5: ['', Validators.required],
+            departamentoPredioProdSeccion5: ['', Validators.required],
+            emailPredProdSeccion5: ['', Validators.required],
+            telefonoPredProdSeccion5: ['', Validators.required],
             
     
           //   // 6.- CONDICIÓN FISCAL
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+
+            ivaSeccion6: ['', Validators.required],
+            ingresosBrutosSeccion6: ['', Validators.required],
+            tasaComercioSeccion6: ['', Validators.required],
+            
 
             
     
           //   // 7.- REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL
     
-          //   // primer persona
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+
+            apellidoSeccion7: ['', Validators.required],
+            nombreSeccion7: ['', Validators.required],
+            tipoDeDocumentoSeccion7: ['', Validators.required],
+            nroDocumentoSeccion7: ['', Validators.required],
+            tieneCiDiSeccion7: ['', Validators.required],
+            nivelCiDiSeccion7: ['', Validators.required],
+
     
           //   // puede haber más personas
     
     
     
           //   // 8.- INFORMACIÓN COMPLEMENTARIA
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+
+            textInputSeccion8: ['', Validators.required], 
+
     
     
           //   // 9.- PERSONAS RESPONSABLES DE LA INSCRIPCIÓN
+
+            nombreResponsableSeccion9: ['', Validators.required],
+            dniSeccion9: ['', Validators.required],
+            cargoSeccion9: ['', Validators.required],
+            telefonoSeccion9: ['', Validators.required],
+            emailSeccion9: ['', Validators.required],
     
-          //   // primer persona
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
     
           //   // puede haber más personas
     
     
-          //   // Para las personas físicas
-          //   // primer persona
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   // 9b Para las personas físicas
 
         
-            obraSocial: ['', Validators.required],
+            apellidoSeccion9b: ['', Validators.required],
+            nombreSeccion9b: ['', Validators.required],
+            documentoSeccion9b: ['', Validators.required],
+            fechaNacSeccion9b: ['', Validators.required],
+            vinculoSeccion9b: ['', Validators.required],
+            escolaridadSeccion9b: ['', Validators.required],
+            estaCursandoSeccion9b: ['', Validators.required],
+            ocupacionSeccion9b: ['', Validators.required],
 
     
           //   // puede haber más personas
+
+
+          //  9c Cursos de Capacitación laboral realizados por el titular
+
+            cursosRealizadosSeccion9c: ['', Validators.required],
+
+            //   9d Obra Social
+
+
+            poseeObraSocialSeccion9d: ['', Validators.required],
+            cubreGrupoSeccion9d: ['', Validators.required],
+
     
-    
-    
-          //   // Situación habitacional
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+          //   9e Situación habitacional
+
+
+            posesionViviendaSeccion9e: ['', Validators.required],
+            bañoSeccion9e: ['', Validators.required],
+            dormitoriosSeccion9e: ['', Validators.required],
+            techosSeccion9e: ['', Validators.required],
+            murosSeccion9e: ['', Validators.required],
+            pisosSeccion9e: ['', Validators.required],
+
+
+          //   9f Acceso a servicios
+
+            aguaSeccion9f: ['', Validators.required],
+            luzSeccion9f: ['', Validators.required],
+            gasSeccion9f: ['', Validators.required],
+
+
+
+            // 9g Datos referidos al predio y actividad productiva (solo productos agropecuarios)
+
+            totalHectareasSeccion9g: ['', Validators.required],
+            hectareasEnSecanoSeccion9g: ['', Validators.required],
+            hectareasConRiegoSeccion9g: ['', Validators.required],
+            hectareasAgricolaSeccion9g: ['', Validators.required],
+            hectareasMonteSeccion9g: ['', Validators.required],
+            hectareaschacraEnSecanoSeccion9g: ['', Validators.required],
+            hectareasPasturasNaturalesSeccion9g: ['', Validators.required],
+            hectareasPasturasImplantadasSeccion9g: ['', Validators.required],
+            hectareasGranjaMixtaSeccion9g: ['', Validators.required],
+            hectareasHortalizasSeccion9g: ['', Validators.required],
+            hectareasGranosSeccion9g: ['', Validators.required],
+            otraSeccion9g: ['', Validators.required],
+            otraHectareasSeccion9g: ['', Validators.required],
+
+
+
+
+            // 9h Cantidad de Animales
+
+
+            vacunosSeccion9h: ['', Validators.required],
+            caprinosSeccion9h: ['', Validators.required],
+            porcinosSeccion9h: ['', Validators.required],
+            ovinosSeccion9h: ['', Validators.required],
+            pollosParrillerosSeccion9h: ['', Validators.required],
+            gallinasPonedorasSeccion9h: ['', Validators.required],
+            apiculturaSeccion9h: ['', Validators.required],
+
+
+
+
+
+
+
+            
+            
+        
+            
+
+
+
     
     
         })
@@ -623,6 +722,14 @@ export class AppComponent implements OnInit{
     //     const personaFisica = document.getElementById("inlineRadio7");
     //     console.log(personaFisica);
     // }   
+
+
+
+    // consologuearFormulario() {
+    //     console.log("hola mundo" + JSON.stringify(this.formularioEconomiaPopular));
+        
+    // }
+
 
 
 }
