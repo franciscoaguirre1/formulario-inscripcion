@@ -20,6 +20,12 @@ export class AppComponent implements OnInit{
     esActividadAgropecuaria: boolean = false
     tieneCiDi: boolean = false
     tieneObraSocial: boolean = false
+    arrayRadioButtonsSection1!: any
+
+
+
+
+
 
     
 
@@ -36,67 +42,84 @@ export class AppComponent implements OnInit{
     
             // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
             caracterUnidadProductivaSolicitante: ['', Validators.required],
-            inscripcionesLegales: ['', Validators.required],
-            esactividadAgropecuaria: ['', Validators.required],
-            obraSocial: ['', Validators.required],
+
+            
+
+
             
     
-          //   // 2.- DATOS DE IDENTIFICACIÓN        
-          //   //2.1.- Unidad Productiva Unipersonal
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+         // 2.- DATOS DE IDENTIFICACIÓN        
+            // 2.1.- Unidad Productiva Unipersonal
+            apellidoSeccion21: ['', Validators.required],
+            nombreSeccion21: ['', Validators.required],
+            tipoDocumentoSeccion21: ['', Validators.required],
+            nroDocumentoSeccion21: ['', Validators.required],
+            tieneCiDiSeccion21: ['', Validators.required],
+            nivelCiDiSeccion21: ['', Validators.required],
+            cuilSeccion21: ['', Validators.required],
+            emailSeccion21: ['', Validators.required, Validators.email],
+            telefonoSeccion21: ['', Validators.required],
+            asociacionCooperativaSeccion21: ['', Validators.required],
+
+            //2.2.- Unidades Asociativas Productivas (incluye las familiares)
+
+            nombreInstitucionPersonaSeccion22: ['', Validators.required],
+            nombreFantasiaSeccion22: ['', Validators.required],
+            asociacionCooperativaSeccion22: ['', Validators.required],
+
+
     
-          //   // 3.- INSCRIPCIONES LEGALES
+          //   3.- INSCRIPCIONES LEGALES
           //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+            inscripcionesLegales: ['', Validators.required],
+            esactividadAgropecuaria: ['', Validators.required],
+            tieneRegistroSeccion3: ['', Validators.required],
+            nroInscripcionMatriculaSeccion3: ['', Validators.required],
+            reparticionSeccion3: ['', Validators.required],
+            esActividadAgropecuariaSeccion3: ['', Validators.required],
+            renspaNroSeccion3: ['', Validators.required],
+            marcasYSeñalesSeccion3: ['', Validators.required],
+            renafSeccion3: ['', Validators.required],
+            otroCualSeccion3: ['', Validators.required],
+
+
     
-    
-          //   // 4.- OBJETO SOCIAL
+          //   4.- OBJETO SOCIAL
           //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-    
-    
-          //   // 5.- DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL
+
+            actividadesProductivasSeccion4: ['', Validators.required],
+
+          //   5.- DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL
           //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+
+          calleSeccion5: ['', Validators.required],
+          numeroCalleSeccion5: ['', Validators.required],
+          cpSeccion5: ['', Validators.required],
+          barrioSeccion5: ['', Validators.required],
+          localidadSeccion5: ['', Validators.required],
+          departamentoSeccion5: ['', Validators.required],
+          emailSeccion5: ['', Validators.required],
+          confirmeEmailSeccion5: ['', Validators.required],
+          telefonoSeccion5: ['', Validators.required],
+          cantidadAsociadosSeccion5: ['', Validators.required],
+          domicilioPredioProductivoSeccion5: ['', Validators.required],
+          callePredioProductivoSeccion5: ['', Validators.required],
+          nroCalleDomicilioSeccion5: ['', Validators.required],
+          barrioPredProdSeccion5: ['', Validators.required],
+          localidadPredProdSeccion5: ['', Validators.required],
+          departamentoPredioProdSeccion5: ['', Validators.required],
+          emailPredProdSeccion5: ['', Validators.required],
+          telefonoPredProdSeccion5: ['', Validators.required],
+            
     
           //   // 6.- CONDICIÓN FISCAL
           //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+
+            
     
           //   // 7.- REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL
     
           //   // primer persona
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
           //   caracterUnidadProductivaSolicitante: ['', Validators.required],
     
           //   // puede haber más personas
@@ -111,13 +134,6 @@ export class AppComponent implements OnInit{
     
           //   // primer persona
           //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
     
           //   // puede haber más personas
     
@@ -125,27 +141,16 @@ export class AppComponent implements OnInit{
           //   // Para las personas físicas
           //   // primer persona
           //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
+
+        
+            obraSocial: ['', Validators.required],
+
     
           //   // puede haber más personas
     
     
     
           //   // Situación habitacional
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
-          //   caracterUnidadProductivaSolicitante: ['', Validators.required],
           //   caracterUnidadProductivaSolicitante: ['', Validators.required],
     
     
@@ -154,6 +159,96 @@ export class AppComponent implements OnInit{
     
         }
 
+
+
+                // Imprimir valores de la seccion 1
+            obtenerValorSeccion1() {
+                    // const radioContainer = document.getElementsByClassName('.radio-container');
+                    const radioContainer = document.querySelector('.radio-container') as HTMLElement;
+
+            
+                    // Obtener todos los elementos "input" de tipo "radio" dentro del contenedor
+                    const radioButtons = radioContainer.querySelectorAll('input[type="radio"]');
+                
+                    // Iterar sobre los radio buttons para encontrar el seleccionado
+                    let selectedValue;
+                    radioButtons.forEach(radioButton => {
+                    if (radioButton instanceof HTMLInputElement && radioButton.checked) {
+                        selectedValue = radioButton.value;
+                        // Opcional: Puedes hacer algo más aquí con el valor seleccionado si lo necesitas.
+                    }
+                    });
+
+                    
+                    // Mostrar el valor seleccionado en la consola
+                    console.log('Valor seleccionado:', selectedValue);
+
+                    if(selectedValue == "Otra") {
+                        const inputSectionOne = document.getElementById('basic-url') as HTMLInputElement;
+                        console.log(inputSectionOne.value);                       
+                        
+                    }
+                }
+
+            
+
+                // imprimirValoresSeccion2.2
+
+
+                imprimirValoresSeccion22() {
+                    // Obtener el FormGroup
+                    const formGroup = this.formularioEconomiaPopular;
+                  
+                    // Verificar si el FormGroup es válido (no es null o undefined)
+                    if (formGroup) {
+                      // Obtener los valores de los campos individuales del FormGroup
+                  
+                      const apellidoControl = formGroup.get('apellidoSeccion21');
+                      const nombreControl = formGroup.get('nombreSeccion21');
+                      const tipoDocumentoControl = formGroup.get('tipoDocumentoSeccion21');
+                      const nroDocumentoControl = formGroup.get('nroDocumentoSeccion21');
+                      const tieneCiDiControl = formGroup.get('tieneCiDiSeccion21');
+                      const nivelCiDiControl = formGroup.get('nivelCiDiSeccion21');
+                      const cuilControl = formGroup.get('cuilSeccion21');
+                      const emailControl = formGroup.get('emailSeccion21');
+                      const telefonoControl = formGroup.get('telefonoSeccion21');
+                      const asociacionCooperativaControl = formGroup.get('asociacionCooperativaSeccion21');
+                  
+                      // Verificar si los controles son válidos (no son null o undefined)
+                      if (apellidoControl && nombreControl && tipoDocumentoControl && nroDocumentoControl &&
+                          tieneCiDiControl && nivelCiDiControl && cuilControl && emailControl &&
+                          telefonoControl && asociacionCooperativaControl) {
+                  
+                        // Acceder a las propiedades de los controles (value)
+                        const apellido = apellidoControl.value;
+                        const nombre = nombreControl.value;
+                        const tipoDocumento = tipoDocumentoControl.value;
+                        const nroDocumento = nroDocumentoControl.value;
+                        const tieneCiDi = tieneCiDiControl.value;
+                        const nivelCiDi = nivelCiDiControl.value;
+                        const cuil = cuilControl.value;
+                        const email = emailControl.value;
+                        const telefono = telefonoControl.value;
+                        const asociacionCooperativa = asociacionCooperativaControl.value;
+                  
+                        // Imprimir los valores en la consola
+                        console.log('Apellido:', apellido);
+                        console.log('Nombre:', nombre);
+                        console.log('Tipo de Documento:', tipoDocumento);
+                        console.log('N° de Documento:', nroDocumento);
+                        console.log('¿Tiene CiDi?:', tieneCiDi);
+                        console.log('Nivel de CiDi:', nivelCiDi);
+                        console.log('CUIL:', cuil);
+                        console.log('Dirección de correo electrónico:', email);
+                        console.log('Teléfono:', telefono);
+                        console.log('Asociación o Cooperativa:', asociacionCooperativa);
+                      }
+                    }
+                }
+
+
+
+    // métodos para que aparezcan y desaparezcan los elementos html dependiendo de las selecciones        
 
     cambioInscripcionesLegalesSi() {
     this.tieneRegistroSection3 = true
@@ -188,16 +283,29 @@ export class AppComponent implements OnInit{
     }
     setTieneCiDi(value: boolean) {
         this.tieneCiDi = value;
-      }
+    }
 
     
-
-
-
     changeInputsectionOne() {
     this.inputSectionOneValue = !this.inputSectionOneValue
 
     }
+
+    unidadProductivaUnipersonal() {
+
+        this.esPersonaFisica = true
+        this.esUnidadAsociativaProductiva = false
+    
+        }
+    
+        UnidadesAsociativasProductivas() {
+        this.esUnidadAsociativaProductiva = true
+        this.esPersonaFisica = false
+    
+        }
+
+
+    // métodos para agregar nuevos campos del mismo tipo
 
 
     agregarNuevoRepresentanteSection7() {
@@ -299,8 +407,7 @@ export class AppComponent implements OnInit{
     
     agregarNuevoResponsableSection9() {
         const newRowDiv = document.createElement("div");
-        newRowDiv.classList.add("row");
-      
+        newRowDiv.classList.add("row");      
         const inputGroup = `
         <hr>
         <div class="col-4">
@@ -353,7 +460,7 @@ export class AppComponent implements OnInit{
         } else {
           console.error("Container with class 'container-7' not found.");
         }
-      }
+    }
 
 
 
@@ -492,51 +599,30 @@ export class AppComponent implements OnInit{
 
 
 
-    onFormSubmit(): void {
-    console.log(this.formularioEconomiaPopular.value);
-    }
 
 
-    unidadProductivaUnipersonal() {
+//   controlarCampo1() {
 
-    this.esPersonaFisica = true
-    this.esUnidadAsociativaProductiva = false
+//     const radioButtonsSection1 = document.getElementsByClassName("radio-section-1");
+//     const textInputSection1 = document.getElementsByClassName("input-text-section-1");
 
-    }
+//     console.log("radio",radioButtonsSection1);
+//     console.log("input",textInputSection1);
+//     } 
 
-    UnidadesAsociativasProductivas() {
-    this.esUnidadAsociativaProductiva = true
-    this.esPersonaFisica = false
+    // agregarNuevoResponsableSection9b() {
 
-    }
+    // }
 
-
-  controlarCampo1() {
-
-    const radioButtonsSection1 = document.getElementsByClassName("radio-section-1");
-    const textInputSection1 = document.getElementsByClassName("input-text-section-1");
-
-    console.log("radio",radioButtonsSection1);
-    console.log("input",textInputSection1);
-    } 
-
-    agregarNuevoResponsableSection9b() {
-
-    }
-
-
-    // cómo controlar cuando aparezca y desaparezca el item 2.1
+       // onFormSubmit(): void {
+    // console.log(this.formularioEconomiaPopular.value);
+    // }
 
     
-    consologuearPersonaFisicaSeccion1() {
-        const personaFisica = document.getElementById("inlineRadio7");
-        console.log(personaFisica);
-    }
-
-
-    // cómo controlar cuando aparezca y desaparezca el item 2.2
-
-
+    // consologuearPersonaFisicaSeccion1() {
+    //     const personaFisica = document.getElementById("inlineRadio7");
+    //     console.log(personaFisica);
+    // }   
 
 
 }

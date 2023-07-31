@@ -1,8 +1,9 @@
 <div class="container my-5">
     <div class="submit">
-        <button class="btn btn-warning mx-3" (click)="onFormSubmit()">Consologuear formulario</button>
-        <button class="btn btn-warning mx-3" (click)="controlarCampo1()">Enviar propiedades</button>
-        <button class="btn btn-warning mx-3" (click)="consologuearPersonaFisicaSeccion1()">Propiedades Checkbox</button>
+        <!-- <button class="btn btn-warning mx-3" (click)="onFormSubmit()">Consologuear formulario</button>
+        <button class="btn btn-warning mx-3" (click)="controlarCampo1()">Enviar propiedades</button> -->
+        <button class="btn btn-warning mx-3" (click)="obtenerValorSeccion1()">Consologuear valores Seccion 1</button>
+        <button class="btn btn-warning mx-3" (click)="imprimirValoresSeccion22()">Consologuear valores Seccion 2</button>
 
     </div>
 
@@ -13,10 +14,10 @@
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
             <div class="subheading-title">
                 <h5 class="mr-3">1 - CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE</h5>
-                <small>(Indicar el casillero correspondiente) Obligatoria*</small>
+                <small>(Indicar el casillero correspondiente) Obligatorio</small>
             </div>
             <hr class="my-2">
-            <div class="container border border-dark-subtle p-3">
+            <div class="container radio-container border border-dark-subtle p-3">
                 <div class="form-check">
                     <input (click)="UnidadesAsociativasProductivas()" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input minimal" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
@@ -50,7 +51,7 @@
                     <label class="form-check-label" for="inlineRadio1">Persona Física (Unidad Productiva Unipersonal)</label>
                 </div>
                 <div class="form-check">
-                    <input (click)="changeInputsectionOne()" (click)="UnidadesAsociativasProductivas()" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input minimal" type="checkbox" name="caracterUnidadProductivaSolicitante" id="inlineRadio8" value="Persona Física (Unidad Productiva Unipersonal)">
+                    <input (click)="changeInputsectionOne()" (click)="UnidadesAsociativasProductivas()" formControlName="caracterUnidadProductivaSolicitante" class="form-check-input minimal" type="radio" name="caracterUnidadProductivaSolicitante" id="inlineRadio8" value="Otra">
                     <label class="form-check-label" for="inlineRadio1">Otra</label>
                 </div>
                 <div *ngIf="inputSectionOneValue" class="my-3">
@@ -87,7 +88,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Apellido</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input type="text" formControlName="apellidoSeccion21" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -95,7 +96,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombres</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input type="text" formControlName="nombreSeccion21" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -103,7 +104,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Tipo de Documento</label>
                                 <div class="input-group">
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select formControlName="tipoDocumentoSeccion21" class="form-select" aria-label="Default select example">
                                         <option selected>-</option>
                                         <option value="AGRUPACION">AGRUPACION</option>
                                         <option value="CEDULA DE IDENTIDAD">CEDULA DE IDENTIDAD</option>
@@ -131,7 +132,7 @@
                             <div class="mb-3">
                                 <label class="form-label">N° de Documento</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="nroDocumentoSeccion21" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -140,11 +141,11 @@
                                 <label class="form-label">¿Tiene CiDi?</label>
                                 <div class="input-group">
                                     <div class="form-check mx-3">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                                        <input formControlName="tieneCiDiSeccion21" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                     </div>
                                     <div class="form-check mx-3">
-                                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                                        <input formControlName="tieneCiDiSeccion21" class="form-check-input" type="radio"  id="inlineRadio2" value="option2">
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
                                 </div>
@@ -154,7 +155,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nivel de CiDi</label>
                                 <div class="input-group">
-                                    <select class="form-select" aria-label="Default select example">
+                                    <select formControlName="nivelCiDiSeccion21" class="form-select" aria-label="Default select example">
                                         <option selected>-</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -168,7 +169,7 @@
                             <div class="mb-3">
                                 <label class="form-label">CUIL</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="cuilSeccion21" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -176,7 +177,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Dirección de correo electrónico</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="emailSeccion21" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -184,7 +185,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Teléfono</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="telefonoSeccion21" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -192,7 +193,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="asociacionCooperativaSeccion21" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -213,9 +214,9 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-3">
-                                <label class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona (Obligatoria*)</label>
+                                <label class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona (Obligatoria)</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="nombreInstitucionPersonaSeccion22" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -223,7 +224,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombre de Fantasía:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="nombreFantasiaSeccion22" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -231,7 +232,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="asociacionCooperativaSeccion22" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -249,16 +250,16 @@
         <div class="input-section my-5 border border-dark-subtle p-3 my-3">
             <div class="subheading-title">
                 <h5 class="mr-3">3 - INSCRIPCIONES LEGALES (INAE - IPJ - Otros)</h5>
-                <p>INAE - IPJ - Otros</p>
             </div>
             <hr class="my-2">
             <div class="d-flex ">
+                <p>¿Tiene Registro?</p>
                 <div class="form-check mx-3">
-                    <input (click)="cambioInscripcionesLegalesSi()" formControlName="inscripcionesLegales" class="form-check-input minimal" type="radio" name="inscripcionesLegales" id="flexRadioDefault1" value="True">
+                    <input formControlName="tieneRegistroSeccion3" (click)="cambioInscripcionesLegalesSi()" formControlName="inscripcionesLegales" class="form-check-input minimal" type="radio" name="inscripcionesLegales" id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input (click)="cambioInscripcionesLegalesNo()" formControlName="inscripcionesLegales" class="form-check-input minimal" type="radio" name="inscripcionesLegales" id="flexRadioDefault2" value="False">
+                    <input formControlName="tieneRegistroSeccion3" (click)="cambioInscripcionesLegalesNo()" formControlName="inscripcionesLegales" class="form-check-input minimal" type="radio" name="inscripcionesLegales" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -267,7 +268,7 @@
                     <div class="my-3">
                         <label class="form-label">Nro. Inscripción-Matrícula</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            <input formControlName="nroInscripcionMatriculaSeccion3" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                         </div>
                     </div>
                 </div>
@@ -275,7 +276,7 @@
                     <div class="my-3">
                         <label class="form-label">Repartición que la otorga</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            <input formControlName="reparticionSeccion3" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                         </div>
                     </div>
                 </div>
@@ -283,11 +284,11 @@
             <div class="d-flex mt-3">
                 <label class="form-label">¿Su actividad es Agropecuaria?:</label>
                 <div class="form-check mx-3">
-                    <input (click)="cambioActividadAgropecuariaSi()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
+                    <input formControlName="esActividadAgropecuariaSeccion3" (click)="cambioActividadAgropecuariaSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input (click)="cambioActividadAgropecuariaNo()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
+                    <input formControlName="esActividadAgropecuariaSeccion3" (click)="cambioActividadAgropecuariaNo()" class="form-check-input" type="radio" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -296,15 +297,15 @@
                     <div class="mb-3">
                         <label class="form-label">RENSPA N°</label>
                         <div class="input-group">
-                            <input formControlName="esactividadAgropecuaria" name="esactividadAgropecuaria" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            <input formControlName="renspaNroSeccion3"  type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                         </div>
                     </div>
                 </div>
                 <div class="col-3">
                     <div class="mb-3">
-                        <label class="form-label">MARCAS Y SEÑALES</label>
+                        <label  class="form-label">MARCAS Y SEÑALES</label>
                         <div class="input-group">
-                            <input formControlName="esactividadAgropecuaria" name="esactividadAgropecuaria" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            <input formControlName="marcasYSeñalesSeccion3" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                         </div>
                     </div>
                 </div>
@@ -312,7 +313,7 @@
                     <div class="mb-3">
                         <label class="form-label">RENAF</label>
                         <div class="input-group">
-                            <input formControlName="esactividadAgropecuaria" name="esactividadAgropecuaria" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            <input formControlName="renafSeccion3" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                         </div>
                     </div>
                 </div>
@@ -320,7 +321,7 @@
                     <div class="mb-3">
                         <label class="form-label">Otro ¿Cuál?</label>
                         <div class="input-group">
-                            <input formControlName="esactividadAgropecuaria" name="esactividadAgropecuaria" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                            <input formControlName="otroCualSeccion3" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                         </div>
                     </div>
                 </div>
@@ -339,7 +340,7 @@
             <hr class="my-2">
             <div class="container">
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea formControlName="actividadesProductivasSeccion4" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Describir rubro...</label>
                 </div>
             </div>
@@ -359,7 +360,7 @@
                         <div class="mb-3">
                             <label class="form-label">Calle:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="calleSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -367,7 +368,7 @@
                         <div class="mb-3">
                             <label class="form-label">N°:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="numeroCalleSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -375,7 +376,7 @@
                         <div class="mb-3">
                             <label class="form-label">CP.:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="cpSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -385,7 +386,7 @@
                         <div class="mb-3">
                             <label class="form-label">Barrio:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="barrioSeccion5" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -393,7 +394,7 @@
                         <div class="mb-3">
                             <label class="form-label">Localidad:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="localidadSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -401,7 +402,7 @@
                         <div class="mb-3">
                             <label class="form-label">Departamento:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="departamentoSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -411,7 +412,7 @@
                         <div class="mb-3">
                             <label class="form-label">Correo electrónico:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="emailSeccion5" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -419,7 +420,7 @@
                         <div class="mb-3">
                             <label class="form-label">Confirme correo electrónico:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="confirmeEmailSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -427,7 +428,7 @@
                         <div class="mb-3">
                             <label class="form-label">Teléfono</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="telefonoSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -435,7 +436,7 @@
                         <div class="mb-3">
                             <label class="form-label">Cantidad de asociados que trabajan en la sede productiva:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                <input formControlName="cantidadAsociadosSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -446,11 +447,11 @@
                 </div>
                 <div class="d-flex ">
                     <div class="form-check mx-3">
-                        <input (click)="cambioDomicilioPredioProductivoSi()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="True">
+                        <input formControlName="domicilioPredioProductivoSeccion5" (click)="cambioDomicilioPredioProductivoSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
                         <label class="form-check-label" for="flexRadioDefault1">Si</label>
                     </div>
                     <div class="form-check mx-3">
-                        <input (click)="cambioDomicilioPredioProductivoNo()" class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="False">
+                        <input formControlName="domicilioPredioProductivoSeccion5" (click)="cambioDomicilioPredioProductivoNo()" class="form-check-input" type="radio"  id="flexRadioDefault2" value="False">
                         <label class="form-check-label" for="flexRadioDefault2">No</label>
                     </div>
                 </div>
@@ -460,7 +461,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Calle:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="callePredioProductivoSeccion5" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
                             </div>
                         </div>
@@ -468,7 +469,7 @@
                             <div class="mb-3">
                                 <label class="form-label">N°:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="nroCalleDomicilioSeccion5" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
                             </div>
                         </div>
@@ -476,7 +477,7 @@
                             <div class="mb-3">
                                 <label class="form-label">CP.:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="cpSeccion5" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
                             </div>
                         </div>
@@ -486,7 +487,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Barrio:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="barrioPredProdSeccion5" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
                             </div>
                         </div>
@@ -494,7 +495,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Localidad:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="localidadPredProdSeccion5" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
                             </div>
                         </div>
@@ -502,7 +503,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Departamento:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="departamentoPredioProdSeccion5" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
                             </div>
                         </div>
@@ -512,7 +513,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Correo electrónico:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="emailPredProdSeccion5" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
                             </div>
                         </div>
@@ -520,7 +521,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Teléfono</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
+                                    <input formControlName="telefonoPredProdSeccion5" type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
                                 </div>
                             </div>
                         </div>
