@@ -1,21 +1,33 @@
 <div class="container my-5">
-    <div class="submit">
-
-        <button class="btn btn-warning mx-3" (click)="consologuearFormulario()">Consologuear Formulario Completo</button>
-
-    </div>
+    <nav>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <img class="logo-formulario" src="../assets/img/logo-economia-popular-removebg-preview.png" alt="">
+                <img class="logo-gobierno" src="../assets/img/logo-gobierno-removebg-preview.png" alt="">
+            </div>
+        </nav>
+        <div class="container text-center">
+            <h5>REGISTRO PROVINCIAL DE TRABAJADORES DE LA ECONOMÍA POPULAR FORMULARIO DE INSCRIPCIÓN</h5>
+            <p>Importante: este documento SOLO ES VÁLIDO si se completa online.
+            <br>
+            <span style="color: red;">NO DEBE IMPRIMIRLO NI PRESENTARLO PERSONALMENTE</span></p>
+        </div>
+        <div class="submit">
+            <button class="btn btn-warning mx-3" (click)="consologuearFormulario()">Consologuear Formulario Completo</button>
+        </div>
+    </nav>
 
     <form [formGroup]="formularioEconomiaPopular">
 
         <!-- Sección 1 -->
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title">
                 <h5 class="mr-3">1 - CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE</h5>
                 <small>(Indicar el casillero correspondiente) Obligatorio</small>
             </div>
             <hr class="my-2">
-            <div class="container radio-container border border-dark-subtle p-3">
+            <div class="container radio-container border shadow-lg bg-body-tertiary rounded p-3">
                 <div class="form-check">
                     <input formControlName="caracterUnidadProductivaSeccion1" (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
@@ -65,7 +77,7 @@
         <!-- Sección 2 -->
 
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title d-flex">
                 <h5 class="mr-3">2 - DATOS DE IDENTIFICACIÓN</h5>
             </div>
@@ -77,10 +89,9 @@
 
             <div *ngIf="esPersonaFisica" class="section-2-1">
                 <div class="subheading-title d-flex">
-                    <h5 class="mr-3">2.1 - Unidad Productiva Unipersonal</h5>
+                    <h5 class="mr-3 my-3">2.1 - Unidad Productiva Unipersonal</h5>
                 </div>
-                <hr class="my-2">
-                <div class="container container-2-1">
+                <div class="container container-2-1 my-3">
                     <div class="row">
                         <div class="col-4">
                             <div class="mb-3">
@@ -205,9 +216,8 @@
 
             <div *ngIf="esUnidadAsociativaProductiva" class="section-2-2">
                 <div class="subheading-title d-flex">
-                    <h5 class="mr-3">2.2 Unidades Asociativas Productivas (incluye las familiares)</h5>
+                    <h5 class="mr-3 my-3">2.2 Unidades Asociativas Productivas (incluye las familiares)</h5>
                 </div>
-                <hr class="my-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -245,7 +255,7 @@
         <!-- Sección 3 -->
 
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title">
                 <h5 class="mr-3">3 - INSCRIPCIONES LEGALES (INAE - IPJ - Otros)</h5>
             </div>
@@ -330,7 +340,7 @@
         <!-- Sección 4 -->
 
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">4 - OBJETO SOCIAL</h5>
                 <p>Actividades Productivas</p>
@@ -347,7 +357,7 @@
         <!-- Sección 5 -->
 
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title d-flex mt-3">
                 <h5 class="mr-3">5 - DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
             </div>
@@ -532,7 +542,7 @@
         <!-- Sección 6 -->
 
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">6 - CONDICIÓN FISCAL</h5>
                 <small>(Obligatoria)</small>
@@ -540,7 +550,7 @@
             <hr class="my-2">
             <div class=" container justify-content-space-between">
                 <div class="row">
-                    <div class="border border-dark-subtle p-3 my-3 mx-3 col-lg-4">
+                    <div class="border shadow-lg bg-body-tertiary rounded p-3 my-3 mx-3 col-lg-4">
                         <h6>I.V.A</h6>
                         <div class="form-check">
                             <input formControlName="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
@@ -559,7 +569,7 @@
                             <label class="form-check-label" for="inlineRadio1">No inscripto</label>
                         </div>
                     </div>
-                    <div class="border border-dark-subtle p-3 mx-3 my-3 col-lg-4 ">
+                    <div class="border shadow-lg bg-body-tertiary rounded p-3 mx-3 my-3 col-lg-4 ">
                         <h6>Ingresos Brutos</h6>
                         <div class="form-check">
                             <input formControlName="ingresosBrutosSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
@@ -578,7 +588,7 @@
                             <label class="form-check-label" for="inlineRadio1">No inscripto</label>
                         </div>
                     </div>
-                    <div class="border border-dark-subtle p-3 mx-3 my-3 col-lg-4 ">
+                    <div class="border shadow-lg bg-body-tertiary rounded p-3 mx-3 my-3 col-lg-4 ">
                         <h6>Tasa Comercio e Industria Municipal</h6>
                         <div class="form-check">
                             <input formControlName="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
@@ -603,7 +613,7 @@
 
         <!-- Sección 7 -->
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title  mt-3">
                 <h5 class="mr-3">7 - REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
                 <small>(Si es persona física por favor repetir los datos del titular)</small>
@@ -702,7 +712,7 @@
 
         <!-- Sección 8 -->
 
-        <div class="input-section my-5 border border-dark-subtle p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">8 - INFORMACIÓN COMPLEMENTARIA</h5>
                 <small>Espacio para efectuar las aclaraciones y ampliaciones que se consideren necesarias</small>
@@ -719,7 +729,7 @@
 
         <!-- Sección 9 -->
 
-        <div class="input-section my-5 border border-dark-subtle p-5 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-5 my-3">
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">9 - PERSONAS RESPONSABLES DE LA INSCRIPCIÓN</h5>
                 <small>Se responsabilizan de la veracidad de la información consignada y a facilitar su verificación. Repetir los datos si es persona física.</small>
@@ -785,7 +795,7 @@
 
             <br>
             <br>
-            <div class="border border-dark-subtle p-5">
+            <div class="border shadow-lg bg-body-tertiary rounded p-5">
                 <div class="subheading-title mt-3">
                     <h5 class="mr-3">Para las personas físicas</h5>
                     <small>Datos del grupo conviviente (identificar todas las personas que conviven en ese domicilio y comparten comida, incluido el postulante)</small>
@@ -1124,7 +1134,7 @@
 
             <!--Datos referidos al predio y actividad productiva (solo productos agropecuarios) -->
 
-            <div class="border border-dark-subtle p-5 my-3">
+            <div class="border shadow-lg bg-body-tertiary rounded p-5 my-3">
                 <div class="subheading-title my-3">
                     <h5 class="mr-3">Datos referidos al predio y actividad productiva</h5>
                     <small>(solo productores agropecuarios)</small>
@@ -1249,7 +1259,7 @@
             <!-- Cantidad de Animales -->
 
 
-            <div class="border border-dark-subtle p-5 my-3">
+            <div class="border shadow-lg bg-body-tertiary rounded p-5 my-3">
                 <div class="subheading-title my-3">
                     <h5 class="mr-3">Cantidad de Animales</h5>
                 </div>
