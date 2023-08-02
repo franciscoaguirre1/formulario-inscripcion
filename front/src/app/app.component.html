@@ -17,7 +17,7 @@
         </div>
     </nav>
 
-    <form [formGroup]="formularioEconomiaPopular">
+    <form>
 
         <!-- Sección 1 -->
 
@@ -29,45 +29,45 @@
             <hr class="my-2">
             <div class="container radio-container border shadow-lg bg-body-tertiary rounded p-3">
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
+                    <input  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
+                    <input  (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
                     <label class="form-check-label" for="inlineRadio1">Asociación Civil - Fundación Inscripta en IPJ</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
+                    <input  (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio1">Unidad Productiva Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Familiar">
+                    <input  (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Familiar">
                     <label class="form-check-label" for="inlineRadio1">Unidad Productiva Familiar</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio4" value="Cooperativa en Formación">
+                    <input  (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio4" value="Cooperativa en Formación">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio5" value="Asociación Civil - Fundación en Formación">
+                    <input  (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio5" value="Asociación Civil - Fundación en Formación">
                     <label class="form-check-label" for="inlineRadio1">Asociación Civil - Fundación en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio6" value="Asociación Solidaria Asociativa Informal">
+                    <input  (click)="UnidadesAsociativasProductivas()" formContro class="form-check-input minimal" type="radio" id="inlineRadio6" value="Asociación Solidaria Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio1">Asociación Solidaria Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="unidadProductivaUnipersonal()" formContro class="form-check-input minimal" type="radio" id="inlineRadio7" value="Persona Física (Unidad Productiva Unipersonal)">
+                    <input  (click)="unidadProductivaUnipersonal()" formContro class="form-check-input minimal" type="radio" id="inlineRadio7" value="Persona Física (Unidad Productiva Unipersonal)">
                     <label class="form-check-label" for="inlineRadio1">Persona Física (Unidad Productiva Unipersonal)</label>
                 </div>
                 <div class="form-check">
-                    <input formControlName="caracterUnidadProductivaSeccion1" (click)="changeInputsectionOne()" (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio8" value="Otra">
+                    <input  (click)="changeInputsectionOne()" (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio8" value="Otra">
                     <label class="form-check-label" for="inlineRadio1">Otra</label>
                 </div>
                 <div *ngIf="inputSectionOneValue" class="my-3">
                     <label class="form-label">¿Cuál?</label>
                     <div class="input-group">
-                        <input formControlName="caracterUnidadProductivaOtraSeccion1" type="text" class="form-control" id="basic-url">
+                        <input type="text" class="form-control" id="basic-url">
                     </div>
                 </div>
             </div>
@@ -97,7 +97,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Apellido</label>
                                 <div class="input-group">
-                                    <input type="text" formControlName="apellidoSeccion21" class="form-control" id="basic-url">
+                                    <input type="text"  class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombres</label>
                                 <div class="input-group">
-                                    <input type="text" formControlName="nombreSeccion21" class="form-control" id="basic-url">
+                                    <input type="text"  class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -113,7 +113,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Tipo de Documento</label>
                                 <div class="input-group">
-                                    <select formControlName="tipoDocumentoSeccion21" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="AGRUPACION">AGRUPACION</option>
                                         <option value="CEDULA DE IDENTIDAD">CEDULA DE IDENTIDAD</option>
@@ -141,7 +141,7 @@
                             <div class="mb-3">
                                 <label class="form-label">N° de Documento</label>
                                 <div class="input-group">
-                                    <input formControlName="nroDocumentoSeccion21" type="text" class="form-control" id="basic-url" >
+                                    <input  type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -150,11 +150,11 @@
                                 <label class="form-label">¿Tiene CiDi?</label>
                                 <div class="input-group">
                                     <div class="form-check mx-3">
-                                        <input formControlName="tieneCiDiSeccion21" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                                        <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                     </div>
                                     <div class="form-check mx-3">
-                                        <input formControlName="tieneCiDiSeccion21" class="form-check-input" type="radio"  id="inlineRadio2" value="option2">
+                                        <input  class="form-check-input" type="radio"  id="inlineRadio2" value="option2">
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nivel de CiDi</label>
                                 <div class="input-group">
-                                    <select formControlName="nivelCiDiSeccion21" class="form-select">
+                                    <select  class="form-select">
                                         <option selected>-</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -178,7 +178,7 @@
                             <div class="mb-3">
                                 <label class="form-label">CUIL</label>
                                 <div class="input-group">
-                                    <input formControlName="cuilSeccion21" type="text" class="form-control" id="basic-url" >
+                                    <input type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Dirección de correo electrónico</label>
                                 <div class="input-group">
-                                    <input formControlName="emailSeccion21" type="text" class="form-control" id="basic-url" >
+                                    <input  type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Teléfono</label>
                                 <div class="input-group">
-                                    <input formControlName="telefonoSeccion21" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -202,7 +202,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
                                 <div class="input-group">
-                                    <input formControlName="asociacionCooperativaSeccion21" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona (Obligatoria)</label>
                                 <div class="input-group">
-                                    <input formControlName="nombreInstitucionPersonaSeccion22" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombre de Fantasía:</label>
                                 <div class="input-group">
-                                    <input formControlName="nombreFantasiaSeccion22" type="text" class="form-control" id="basic-url" >
+                                    <input type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -240,7 +240,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
                                 <div class="input-group">
-                                    <input formControlName="asociacionCooperativaSeccion22" type="text" class="form-control" id="basic-url" >
+                                    <input type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -263,11 +263,11 @@
             <div class="d-flex ">
                 <p>¿Tiene Registro?</p>
                 <div class="form-check mx-3">
-                    <input formControlName="tieneRegistroSeccion3" (click)="cambioInscripcionesLegalesSi()" formControlName="inscripcionesLegalesSeccion3" class="form-check-input minimal" type="radio" id="flexRadioDefault1" value="True">
+                    <input (click)="cambioInscripcionesLegalesSi()"  class="form-check-input minimal" type="radio" id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input formControlName="tieneRegistroSeccion3" (click)="cambioInscripcionesLegalesNo()" formControlName="inscripcionesLegalesSeccion3" class="form-check-input minimal" type="radio" id="flexRadioDefault2" value="False">
+                    <input (click)="cambioInscripcionesLegalesNo()"  class="form-check-input minimal" type="radio" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -276,7 +276,7 @@
                     <div class="my-3">
                         <label class="form-label">Nro. Inscripción-Matrícula</label>
                         <div class="input-group">
-                            <input formControlName="nroInscripcionMatriculaSeccion3" type="text" class="form-control" id="basic-url">
+                            <input type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -284,7 +284,7 @@
                     <div class="my-3">
                         <label class="form-label">Repartición que la otorga</label>
                         <div class="input-group">
-                            <input formControlName="reparticionSeccion3" type="text" class="form-control" id="basic-url">
+                            <input type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -292,11 +292,11 @@
             <div class="d-flex mt-3">
                 <label class="form-label">¿Su actividad es Agropecuaria?:</label>
                 <div class="form-check mx-3">
-                    <input formControlName="esActividadAgropecuariaSeccion3" (click)="cambioActividadAgropecuariaSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
+                    <input  (click)="cambioActividadAgropecuariaSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input formControlName="esActividadAgropecuariaSeccion3" (click)="cambioActividadAgropecuariaNo()" class="form-check-input" type="radio" id="flexRadioDefault2" value="False">
+                    <input  (click)="cambioActividadAgropecuariaNo()" class="form-check-input" type="radio" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -305,7 +305,7 @@
                     <div class="mb-3">
                         <label class="form-label">RENSPA N°</label>
                         <div class="input-group">
-                            <input formControlName="renspaNroSeccion3"  type="text" class="form-control" id="basic-url">
+                            <input  type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -313,7 +313,7 @@
                     <div class="mb-3">
                         <label  class="form-label">MARCAS Y SEÑALES</label>
                         <div class="input-group">
-                            <input formControlName="marcasYSeñalesSeccion3" type="text" class="form-control" id="basic-url">
+                            <input type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
                     <div class="mb-3">
                         <label class="form-label">RENAF</label>
                         <div class="input-group">
-                            <input formControlName="renafSeccion3" type="text" class="form-control" id="basic-url">
+                            <input type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -329,7 +329,7 @@
                     <div class="mb-3">
                         <label class="form-label">Otro ¿Cuál?</label>
                         <div class="input-group">
-                            <input formControlName="otroCualSeccion3" type="text" class="form-control" id="basic-url">
+                            <input  type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -348,7 +348,7 @@
             <hr class="my-2">
             <div class="container">
                 <div class="form-floating">
-                    <textarea formControlName="actividadesProductivasSeccion4" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea  class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Describir rubro...</label>
                 </div>
             </div>
@@ -368,7 +368,7 @@
                         <div class="mb-3">
                             <label class="form-label">Calle:</label>
                             <div class="input-group">
-                                <input formControlName="calleSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -376,7 +376,7 @@
                         <div class="mb-3">
                             <label class="form-label">N°:</label>
                             <div class="input-group">
-                                <input formControlName="numeroCalleSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -384,7 +384,7 @@
                         <div class="mb-3">
                             <label class="form-label">CP.:</label>
                             <div class="input-group">
-                                <input formControlName="cpSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -394,7 +394,7 @@
                         <div class="mb-3">
                             <label class="form-label">Barrio:</label>
                             <div class="input-group">
-                                <input formControlName="barrioSeccion5" type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -402,7 +402,7 @@
                         <div class="mb-3">
                             <label class="form-label">Localidad:</label>
                             <div class="input-group">
-                                <input formControlName="localidadSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input  type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -410,7 +410,7 @@
                         <div class="mb-3">
                             <label class="form-label">Departamento:</label>
                             <div class="input-group">
-                                <input formControlName="departamentoSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -420,7 +420,7 @@
                         <div class="mb-3">
                             <label class="form-label">Correo electrónico:</label>
                             <div class="input-group">
-                                <input formControlName="emailSeccion5" type="text" class="form-control" id="basic-url">
+                                <input  type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -428,7 +428,7 @@
                         <div class="mb-3">
                             <label class="form-label">Confirme correo electrónico:</label>
                             <div class="input-group">
-                                <input formControlName="confirmeEmailSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input  type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -436,7 +436,7 @@
                         <div class="mb-3">
                             <label class="form-label">Teléfono</label>
                             <div class="input-group">
-                                <input formControlName="telefonoSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -444,7 +444,7 @@
                         <div class="mb-3">
                             <label class="form-label">Cantidad de asociados que trabajan en la sede productiva:</label>
                             <div class="input-group">
-                                <input formControlName="cantidadAsociadosSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -455,11 +455,11 @@
                 </div>
                 <div class="d-flex ">
                     <div class="form-check mx-3">
-                        <input formControlName="domicilioPredioProductivoSeccion5" (click)="cambioDomicilioPredioProductivoSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
+                        <input  (click)="cambioDomicilioPredioProductivoSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
                         <label class="form-check-label" for="flexRadioDefault1">Si</label>
                     </div>
                     <div class="form-check mx-3">
-                        <input formControlName="domicilioPredioProductivoSeccion5" (click)="cambioDomicilioPredioProductivoNo()" class="form-check-input" type="radio"  id="flexRadioDefault2" value="False">
+                        <input  (click)="cambioDomicilioPredioProductivoNo()" class="form-check-input" type="radio"  id="flexRadioDefault2" value="False">
                         <label class="form-check-label" for="flexRadioDefault2">No</label>
                     </div>
                 </div>
@@ -469,7 +469,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Calle:</label>
                                 <div class="input-group">
-                                    <input formControlName="callePredioProductivoSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -477,7 +477,7 @@
                             <div class="mb-3">
                                 <label class="form-label">N°:</label>
                                 <div class="input-group">
-                                    <input formControlName="nroCallePredProdSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -485,7 +485,7 @@
                             <div class="mb-3">
                                 <label class="form-label">CP.:</label>
                                 <div class="input-group">
-                                    <input formControlName="cpPredProdSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -495,7 +495,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Barrio:</label>
                                 <div class="input-group">
-                                    <input formControlName="barrioPredProdSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -503,7 +503,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Localidad:</label>
                                 <div class="input-group">
-                                    <input formControlName="localidadPredProdSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -511,7 +511,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Departamento:</label>
                                 <div class="input-group">
-                                    <input formControlName="departamentoPredioProdSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -521,7 +521,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Correo electrónico:</label>
                                 <div class="input-group">
-                                    <input formControlName="emailPredProdSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -529,7 +529,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Teléfono</label>
                                 <div class="input-group">
-                                    <input formControlName="telefonoPredProdSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -553,57 +553,57 @@
                     <div class="border shadow-lg bg-body-tertiary rounded p-3 my-3 mx-3 col-lg-4">
                         <h6>I.V.A</h6>
                         <div class="form-check">
-                            <input formControlName="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable Exento</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Monotributista</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">No inscripto</label>
                         </div>
                     </div>
                     <div class="border shadow-lg bg-body-tertiary rounded p-3 mx-3 my-3 col-lg-4 ">
                         <h6>Ingresos Brutos</h6>
                         <div class="form-check">
-                            <input formControlName="ingresosBrutosSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="ingresosBrutosSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable Exento</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="ingresosBrutosSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Monotributista</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="ingresosBrutosSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">No inscripto</label>
                         </div>
                     </div>
                     <div class="border shadow-lg bg-body-tertiary rounded p-3 mx-3 my-3 col-lg-4 ">
                         <h6>Tasa Comercio e Industria Municipal</h6>
                         <div class="form-check">
-                            <input formControlName="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable Exento</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Monotributista</label>
                         </div>
                         <div class="form-check">
-                            <input formControlName="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">No inscripto</label>
                         </div>
                     </div>
@@ -618,14 +618,14 @@
                 <h5 class="mr-3">7 - REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
                 <small>(Si es persona física por favor repetir los datos del titular)</small>
             </div>
-            <hr class="my-2">
-            <div class="container container-7">
+            <div class="container container-7" *ngFor="let rep of representantes">
+                <hr class="my-2">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3">
                             <label class="form-label">Apellido</label>
                             <div class="input-group">
-                                <input formControlName="apellidoSeccion7"  type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -633,7 +633,7 @@
                         <div class="mb-3">
                             <label class="form-label">Nombres</label>
                             <div class="input-group">
-                                <input formControlName="nombreSeccion7" type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -641,7 +641,7 @@
                         <div class="mb-3">
                             <label class="form-label">Tipo de Documento</label>
                             <div class="input-group">
-                                <select formControlName="tipoDeDocumentoSeccion7" class="form-select">
+                                <select class="form-select">
                                     <option selected>-</option>
                                     <option value="AGRUPACION">AGRUPACION</option>
                                     <option value="CEDULA DE IDENTIDAD">CEDULA DE IDENTIDAD</option>
@@ -669,7 +669,7 @@
                         <div class="mb-3">
                             <label class="form-label">N° de Documento</label>
                             <div class="input-group">
-                                <input formControlName="nroDocumentoSeccion7" type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -678,11 +678,11 @@
                             <label class="form-label">¿Tiene CiDi?</label>
                             <div class="input-group">
                                 <div class="form-check mx-3">
-                                    <input formControlName="tieneCiDiSeccion7" class="form-check-input" type="radio" id="tieneCiDiSi" value="Si" (click)="setTieneCiDi(true)">
+                                    <input class="form-check-input" type="radio" id="tieneCiDiSi" value="Si" (click)="setTieneCiDi(true)">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check mx-3">
-                                    <input formControlName="tieneCiDiSeccion7" class="form-check-input" type="radio" id="tieneCiDiNo" value="No" (click)="setTieneCiDi(false)">
+                                    <input class="form-check-input" type="radio" id="tieneCiDiNo" value="No" (click)="setTieneCiDi(false)">
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </div>
@@ -692,7 +692,7 @@
                         <div class="mb-3">
                             <label class="form-label">Nivel de CiDi</label>
                             <div class="input-group">
-                                <select formControlName="nivelCiDiSeccion7" class="form-select">
+                                <select class="form-select">
                                     <option selected>-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -720,7 +720,7 @@
             <hr class="my-2">
             <div class="container">
                 <div class="form-floating">
-                    <textarea formControlName="textInputSeccion8" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Describir rubro...</label>
                 </div>
             </div>
@@ -741,7 +741,7 @@
                         <div class="mb-3">
                             <label class="form-label">Nombre del Responsable</label>
                             <div class="input-group">
-                                <input formControlName="nombreResponsableSeccion9" type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -749,7 +749,7 @@
                         <div class="mb-3">
                             <label class="form-label">DNI</label>
                             <div class="input-group">
-                                <input formControlName="dniSeccion9" type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -757,7 +757,7 @@
                         <div class="mb-3">
                             <label class="form-label">Cargo</label>
                             <div class="input-group">
-                                <input formControlName="cargoSeccion9" type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -767,7 +767,7 @@
                         <div class="mb-3">
                             <label class="form-label">Teléfono</label>
                             <div class="input-group">
-                                <input formControlName="telefonoSeccion9" type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -775,7 +775,7 @@
                         <div class="mb-3">
                             <label class="form-label">Correo para recibir notificaciones</label>
                             <div class="input-group">
-                                <input formControlName="emailSeccion9" type="text" class="form-control" id="basic-url">
+                                <input type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -807,7 +807,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Apellido</label>
                                 <div class="input-group">
-                                    <input formControlName="apellidoSeccion9b" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -815,7 +815,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombre</label>
                                 <div class="input-group">
-                                    <input formControlName="nombreSeccion9b" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -823,21 +823,21 @@
                             <div class="mb-3">
                                 <label class="form-label">Documento</label>
                                 <div class="input-group">
-                                    <input formControlName="documentoSeccion9b" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-4 col-lg-6">
                             <label for="date" class="col-form-label">Fecha de nacimiento:</label>
                             <div class="input-group date" id="datepicker">
-                                <input formControlName="fechaNacSeccion9b" type="date" class="form-control" id="date"/>
+                                <input type="date" class="form-control" id="date"/>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-4 col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label">Vínculo</label>
                                 <div class="input-group">
-                                    <select formControlName="vinculoSeccion9b" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="ABUELO/A">ABUELO/A</option>
                                         <option value="ADHERENTE">ADHERENTE</option>
@@ -868,7 +868,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Escolaridad</label>
                                 <div class="input-group">
-                                    <select formControlName="escolaridadSeccion9b" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="Inicial y Preescolar">Inicial y Preescolar</option>
                                         <option value="Primaria incompleta">Primaria incompleta</option>
@@ -889,11 +889,11 @@
                                     <label class="form-label">Está cursando?</label>
                                     <div class="input-group">
                                         <div class="form-check mx-3">
-                                            <input formControlName="estaCursandoSeccion9b" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                                             <label class="form-check-label" for="inlineRadio1">Si</label>
                                         </div>
                                         <div class="form-check mx-3">
-                                            <input formControlName="estaCursandoSeccion9b" class="form-check-input" type="radio" id="inlineRadio2" value="option2">
+                                            <input class="form-check-input" type="radio" id="inlineRadio2" value="option2">
                                             <label class="form-check-label" for="inlineRadio2">No</label>
                                         </div>
                                     </div>
@@ -903,7 +903,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Ocupación</label>
                                     <div class="input-group">
-                                        <select formControlName="ocupacionSeccion9b" class="form-select">
+                                        <select class="form-select">
                                             <option selected>-</option>
                                             <option value="Empleado">Empleado</option>
                                             <option value="Desocupado">Desocupado</option>
@@ -935,7 +935,7 @@
                         <p>Cursos de capacitación laboral realizados por el titular:</p>
                     </div>
                     <div class="form-floating">
-                        <textarea formControlName="cursosRealizadosSeccion9c" class="form-control" placeholder="Cursos..." id="floatingTextarea2" style="height: 100px"></textarea>
+                        <textarea class="form-control" placeholder="Cursos..." id="floatingTextarea2" style="height: 100px"></textarea>
                         <label for="floatingTextarea2">Cursos...</label>
                     </div>
                 </div>
@@ -952,11 +952,11 @@
                     </div>
                     <div class="d-flex">
                         <div class="form-check mx-3">
-                            <input formControlName="poseeObraSocialSeccion9d" (click)="tieneObraSocialSi()" class="form-check-input minimal" type="radio" id="flexRadioDefault1" value="True">
+                            <input (click)="tieneObraSocialSi()" class="form-check-input minimal" type="radio" id="flexRadioDefault1" value="True">
                             <label class="form-check-label" for="flexRadioDefault1">Si</label>
                         </div>
                         <div class="form-check mx-3">
-                            <input formControlName="poseeObraSocialSeccion9d" (click)="tieneObraSocialNo()" class="form-check-input minimal" type="radio" id="flexRadioDefault2" value="False">
+                            <input (click)="tieneObraSocialNo()" class="form-check-input minimal" type="radio" id="flexRadioDefault2" value="False">
                             <label class="form-check-label" for="flexRadioDefault2">No</label>
                         </div>
                     </div>
@@ -967,11 +967,11 @@
                         <div class="d-flex">
                             <div class="input-group">
                                 <div class="form-check">
-                                    <input formControlName="cubreGrupoSeccion9d" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                                    <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check mx-3">
-                                    <input formControlName="cubreGrupoSeccion9d" class="form-check-input" type="radio" id="inlineRadio2" value="option2">
+                                    <input class="form-check-input" type="radio" id="inlineRadio2" value="option2">
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </div>
@@ -980,7 +980,6 @@
                 </div>
 
                 <hr class="my-2">
-
 
 
 
@@ -998,7 +997,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Posesión de la Vivienda</label>
                                 <div class="input-group">
-                                    <select formControlName="posesionViviendaSeccion9e" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="Propio">Propio</option>
                                         <option value="Alquilado">Alquilado</option>
@@ -1012,7 +1011,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Baño</label>
                                 <div class="input-group">
-                                    <select formControlName="bañoSeccion9e" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="Inodoro con botón - mochila - cadena - y arrastre de agua">Inodoro con botón - mochila - cadena - y arrastre de agua</option>
                                         <option value="Inodoro sin botón - cadena - y con arrastre de agua (a balde)">Inodoro sin botón - cadena - y con arrastre de agua (a balde)</option>
@@ -1025,7 +1024,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Cantidad de dormitorios</label>
                                 <div class="input-group">
-                                    <input formControlName="dormitoriosSeccion9e" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1033,7 +1032,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Techos</label>
                                 <div class="input-group">
-                                    <select formControlName="techosSeccion9e" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="Loza - Fibrocemento">Loza - Fibrocemento</option>
                                         <option value="Zinc">Zinc</option>
@@ -1047,7 +1046,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Muros</label>
                                     <div class="input-group">
-                                        <select formControlName="murosSeccion9e" class="form-select">
+                                        <select class="form-select">
                                             <option selected>-</option>
                                             <option value="Ladrillo - Bloque">Ladrillo - Bloque</option>
                                             <option value="Chapa - Adobe">Chapa - Adobe</option>
@@ -1060,7 +1059,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Pisos</label>
                                     <div class="input-group">
-                                        <select formControlName="pisosSeccion9e" class="form-select">
+                                        <select class="form-select">
                                             <option selected>-</option>
                                             <option value="Cerámico - Mosaico - Madera">Cerámico - Mosaico - Madera</option>
                                             <option value="Cemento">Cemento</option>
@@ -1090,7 +1089,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Agua</label>
                                 <div class="input-group">
-                                    <select formControlName="aguaSeccion9f" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="Red">Red</option>
                                         <option value="Pico Externo">Pico Externo</option>
@@ -1104,7 +1103,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Luz</label>
                                 <div class="input-group">
-                                    <select formControlName="luzSeccion9f" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="Eléctrica">Eléctrica</option>
                                         <option value="Generador - Velas - Gas">Generador - Velas - Gas</option>
@@ -1117,7 +1116,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Gas</label>
                                 <div class="input-group">
-                                    <select formControlName="gasSeccion9f" class="form-select">
+                                    <select class="form-select">
                                         <option selected>-</option>
                                         <option value="Gas Natural">Gas Natural</option>
                                         <option value="Garrafa - Tubo">Garrafa - Tubo</option>
@@ -1147,7 +1146,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Total hectáreas</label>
                                 <div class="input-group">
-                                    <input formControlName="totalHectareasSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1155,7 +1154,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas en secano</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasEnSecanoSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1163,7 +1162,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas con riego</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasConRiegoSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1173,7 +1172,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas agrícola</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasAgricolaSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1181,7 +1180,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas monte</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasMonteSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1189,7 +1188,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas chacra en secano</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareaschacraEnSecanoSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1199,7 +1198,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas pasturas naturales</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasPasturasNaturalesSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1207,7 +1206,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas pasturas implantadas</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasPasturasImplantadasSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1215,7 +1214,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas granja mixta</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasGranjaMixtaSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1225,7 +1224,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas hortalizas</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasHortalizasSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1233,7 +1232,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas granos</label>
                                 <div class="input-group">
-                                    <input formControlName="hectareasGranosSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1241,11 +1240,11 @@
                             <div class="mb-3">
                                 <label class="form-label">Otra</label>
                                 <div class="input-group">
-                                    <input formControlName="otraSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                                 <label class="form-label">Hectáreas</label>
                                 <div class="input-group">
-                                    <input formControlName="otraHectareasSeccion9g" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1271,7 +1270,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Vacunos</label>
                                 <div class="input-group">
-                                    <input formControlName="vacunosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1279,7 +1278,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Caprinos</label>
                                 <div class="input-group">
-                                    <input formControlName="caprinosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1287,7 +1286,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Porcinos</label>
                                 <div class="input-group">
-                                    <input formControlName="porcinosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1295,7 +1294,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Ovinos</label>
                                 <div class="input-group">
-                                    <input formControlName="ovinosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1305,7 +1304,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Pollos parrilleros</label>
                                 <div class="input-group">
-                                    <input formControlName="pollosParrillerosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1313,7 +1312,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Gallinas ponedores</label>
                                 <div class="input-group">
-                                    <input formControlName="gallinasPonedorasSeccion9h" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1321,7 +1320,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Apicultura</label>
                                 <div class="input-group">
-                                    <input formControlName="apiculturaSeccion9h" type="text" class="form-control" id="basic-url">
+                                    <input type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1336,3 +1335,23 @@
 
     </form>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
