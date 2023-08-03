@@ -66,16 +66,8 @@ export class AppComponent implements OnInit{
         // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
     
     
-            cooperativaConMatricula: '',
-            asociacionCivilFundacionInscriptaIPJ: '',
-            unidadProductivaAsociativaInformal: '',
-            unidadProductivaFamiliar: '',
-            cooperativaenFormacion: '',
-            asociacionCivilFundaciónFormacion: '',
-            asociaciónSolidariaAsociativaInformal: '',
-            personaFisicaUnidadProductivaUnipersonal: '',
-            caracterUnidadProductivaOtraSeccion1: '',
-            caracterUnidadProductivaOtraInputSeccion1: '',
+            caracterUnidadProductivaSolicitante: '',
+            caracterUnidadProductivaSolicitanteOtra: '',
             
             // 2.- DATOS DE IDENTIFICACIÓN
             // 2.1.- Unidad Productiva Unipersonal

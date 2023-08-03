@@ -141,7 +141,7 @@
                             <div class="mb-3">
                                 <label class="form-label">N° de Documento</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url" >
+                                    <input [(ngModel)]="formularioEconomiaPopular.nroDocumentoSeccion21" name="nroDocumentoSeccion21"  type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -150,11 +150,11 @@
                                 <label class="form-label">¿Tiene CiDi?</label>
                                 <div class="input-group">
                                     <div class="form-check mx-3">
-                                        <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                                        <input [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21" name="tieneCiDiSeccion21"  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                     </div>
                                     <div class="form-check mx-3">
-                                        <input  class="form-check-input" type="radio"  id="inlineRadio2" value="option2">
+                                        <input [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21" name="tieneCiDiSeccion21" class="form-check-input" type="radio"  id="inlineRadio2" value="option2">
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
                                 </div>
@@ -164,7 +164,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nivel de CiDi</label>
                                 <div class="input-group">
-                                    <select  class="form-select">
+                                    <select [(ngModel)]="formularioEconomiaPopular.nivelCiDiSeccion21" name="nivelCiDiSeccion21"  class="form-select">
                                         <option selected>-</option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -178,7 +178,7 @@
                             <div class="mb-3">
                                 <label class="form-label">CUIL</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" >
+                                    <input [(ngModel)]="formularioEconomiaPopular.cuilSeccion21" name="cuilSeccion21" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -186,7 +186,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Dirección de correo electrónico</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url" >
+                                    <input [(ngModel)]="formularioEconomiaPopular.emailSeccion21" name="emailSeccion21"  type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -194,7 +194,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Teléfono</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.telefonoSeccion21" name="telefonoSeccion21"  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -202,7 +202,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.asociacionCooperativaSeccion21" name="asociacionCooperativaSeccion21"  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona (Obligatoria)</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.nombreInstitucionPersonaSeccion22" name="nombreInstitucionPersonaSeccion22" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -232,7 +232,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombre de Fantasía:</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" >
+                                    <input [(ngModel)]="formularioEconomiaPopular.nombreFantasiaSeccion22" name="nombreFantasiaSeccion22" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -240,7 +240,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url" >
+                                    <input [(ngModel)]="formularioEconomiaPopular.asociacionCooperativaSeccion22" name="asociacionCooperativaSeccion22" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -263,11 +263,11 @@
             <div class="d-flex ">
                 <p>¿Tiene Registro?</p>
                 <div class="form-check mx-3">
-                    <input (click)="cambioInscripcionesLegalesSi()"  class="form-check-input minimal" type="radio" id="flexRadioDefault1" value="True">
+                    <input [(ngModel)]="formularioEconomiaPopular.tieneRegistroSeccion3" name="tieneRegistroSeccion3" (click)="cambioInscripcionesLegalesSi()"  class="form-check-input minimal" type="radio" id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input (click)="cambioInscripcionesLegalesNo()"  class="form-check-input minimal" type="radio" id="flexRadioDefault2" value="False">
+                    <input [(ngModel)]="formularioEconomiaPopular.tieneRegistroSeccion3" name="tieneRegistroSeccion3" (click)="cambioInscripcionesLegalesNo()"  class="form-check-input minimal" type="radio" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -276,7 +276,7 @@
                     <div class="my-3">
                         <label class="form-label">Nro. Inscripción-Matrícula</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="basic-url">
+                            <input [(ngModel)]="formularioEconomiaPopular.nroInscripcionMatriculaSeccion3" name="nroInscripcionMatriculaSeccion3" type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -284,7 +284,7 @@
                     <div class="my-3">
                         <label class="form-label">Repartición que la otorga</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="basic-url">
+                            <input [(ngModel)]="formularioEconomiaPopular.reparticionSeccion3" name="reparticionSeccion3" type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -292,11 +292,11 @@
             <div class="d-flex mt-3">
                 <label class="form-label">¿Su actividad es Agropecuaria?:</label>
                 <div class="form-check mx-3">
-                    <input  (click)="cambioActividadAgropecuariaSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
+                    <input [(ngModel)]="formularioEconomiaPopular.esActividadAgropecuariaSeccion3" name="esActividadAgropecuariaSeccion3"  (click)="cambioActividadAgropecuariaSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
                     <label class="form-check-label" for="flexRadioDefault1">Si</label>
                 </div>
                 <div class="form-check mx-3">
-                    <input  (click)="cambioActividadAgropecuariaNo()" class="form-check-input" type="radio" id="flexRadioDefault2" value="False">
+                    <input [(ngModel)]="formularioEconomiaPopular.esActividadAgropecuariaSeccion3" name="esActividadAgropecuariaSeccion3"  (click)="cambioActividadAgropecuariaNo()" class="form-check-input" type="radio" id="flexRadioDefault2" value="False">
                     <label class="form-check-label" for="flexRadioDefault2">No</label>
                 </div>
             </div>
@@ -305,7 +305,7 @@
                     <div class="mb-3">
                         <label class="form-label">RENSPA N°</label>
                         <div class="input-group">
-                            <input  type="text" class="form-control" id="basic-url">
+                            <input [(ngModel)]="formularioEconomiaPopular.renspaNroSeccion3" name="renspaNroSeccion3"  type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -313,7 +313,7 @@
                     <div class="mb-3">
                         <label  class="form-label">MARCAS Y SEÑALES</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="basic-url">
+                            <input [(ngModel)]="formularioEconomiaPopular.marcasYSenalesSeccion3" name="marcasYSenalesSeccion3"   type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
                     <div class="mb-3">
                         <label class="form-label">RENAF</label>
                         <div class="input-group">
-                            <input type="text" class="form-control" id="basic-url">
+                            <input [(ngModel)]="formularioEconomiaPopular.renafSeccion3" name="renafSeccion3" type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -329,7 +329,7 @@
                     <div class="mb-3">
                         <label class="form-label">Otro ¿Cuál?</label>
                         <div class="input-group">
-                            <input  type="text" class="form-control" id="basic-url">
+                            <input [(ngModel)]="formularioEconomiaPopular.otroCualSeccion3" name="otroCualSeccion3"  type="text" class="form-control" id="basic-url">
                         </div>
                     </div>
                 </div>
@@ -348,7 +348,7 @@
             <hr class="my-2">
             <div class="container">
                 <div class="form-floating">
-                    <textarea  class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea [(ngModel)]="formularioEconomiaPopular.actividadesProductivasSeccion4" name="actividadesProductivasSeccion4"  class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Describir rubro...</label>
                 </div>
             </div>
@@ -368,7 +368,7 @@
                         <div class="mb-3">
                             <label class="form-label">Calle:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.calleSeccion5" name="calleSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -376,7 +376,7 @@
                         <div class="mb-3">
                             <label class="form-label">N°:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.numeroCalleSeccion5" name="numeroCalleSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -384,7 +384,7 @@
                         <div class="mb-3">
                             <label class="form-label">CP.:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.cpSeccion5" name="cpSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -394,7 +394,7 @@
                         <div class="mb-3">
                             <label class="form-label">Barrio:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="formularioEconomiaPopular.barrioSeccion5" name="barrioSeccion5"  type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -402,7 +402,7 @@
                         <div class="mb-3">
                             <label class="form-label">Localidad:</label>
                             <div class="input-group">
-                                <input  type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.localidadSeccion5" name="localidadSeccion5"   type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -410,7 +410,7 @@
                         <div class="mb-3">
                             <label class="form-label">Departamento:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.departamentoSeccion5" name="departamentoSeccion5"  type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -420,7 +420,7 @@
                         <div class="mb-3">
                             <label class="form-label">Correo electrónico:</label>
                             <div class="input-group">
-                                <input  type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="formularioEconomiaPopular.emailSeccion5" name="emailSeccion5" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -428,7 +428,7 @@
                         <div class="mb-3">
                             <label class="form-label">Confirme correo electrónico:</label>
                             <div class="input-group">
-                                <input  type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.confirmeEmailSeccion5" name="confirmeEmailSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -436,7 +436,7 @@
                         <div class="mb-3">
                             <label class="form-label">Teléfono</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.telefonoSeccion5" name="telefonoSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -444,7 +444,7 @@
                         <div class="mb-3">
                             <label class="form-label">Cantidad de asociados que trabajan en la sede productiva:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.cantidadAsociadosSeccion5" name="cantidadAsociadosSeccion5" type="text" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -455,11 +455,11 @@
                 </div>
                 <div class="d-flex ">
                     <div class="form-check mx-3">
-                        <input  (click)="cambioDomicilioPredioProductivoSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
+                        <input [(ngModel)]="formularioEconomiaPopular.domicilioPredioProductivoSeccion5" name="domicilioPredioProductivoSeccion5"  (click)="cambioDomicilioPredioProductivoSi()" class="form-check-input" type="radio"  id="flexRadioDefault1" value="True">
                         <label class="form-check-label" for="flexRadioDefault1">Si</label>
                     </div>
                     <div class="form-check mx-3">
-                        <input  (click)="cambioDomicilioPredioProductivoNo()" class="form-check-input" type="radio"  id="flexRadioDefault2" value="False">
+                        <input [(ngModel)]="formularioEconomiaPopular.domicilioPredioProductivoSeccion5" name="domicilioPredioProductivoSeccion5"  (click)="cambioDomicilioPredioProductivoNo()" class="form-check-input" type="radio"  id="flexRadioDefault2" value="False">
                         <label class="form-check-label" for="flexRadioDefault2">No</label>
                     </div>
                 </div>
@@ -469,7 +469,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Calle:</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.callePredioProductivoSeccion5" name="callePredioProductivoSeccion5"  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -477,7 +477,7 @@
                             <div class="mb-3">
                                 <label class="form-label">N°:</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.nroCallePredProdSeccion5" name="nroCallePredProdSeccion5"  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -485,7 +485,7 @@
                             <div class="mb-3">
                                 <label class="form-label">CP.:</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.cpPredProdSeccion5" name="cpPredProdSeccion5" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -495,7 +495,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Barrio:</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.barrioPredProdSeccion5" name="barrioPredProdSeccion5"  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -503,7 +503,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Localidad:</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input  [(ngModel)]="formularioEconomiaPopular.localidadPredProdSeccion5" name="localidadPredProdSeccion5" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -511,7 +511,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Departamento:</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.departamentoPredioProdSeccion5" name="departamentoPredioProdSeccion5"  type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -521,7 +521,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Correo electrónico:</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.emailPredProdSeccion5" name="emailPredProdSeccion5" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -529,7 +529,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Teléfono</label>
                                 <div class="input-group">
-                                    <input  type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.telefonoPredProdSeccion5" name="telefonoPredProdSeccion5" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -553,57 +553,57 @@
                     <div class="border shadow-lg bg-body-tertiary rounded p-3 my-3 mx-3 col-lg-4">
                         <h6>I.V.A</h6>
                         <div class="form-check">
-                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.ivaSeccion6" name="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
                         </div>
                         <div class="form-check">
-                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.ivaSeccion6" name="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable Exento</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.ivaSeccion6" name="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Monotributista</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.ivaSeccion6" name="ivaSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">No inscripto</label>
                         </div>
                     </div>
                     <div class="border shadow-lg bg-body-tertiary rounded p-3 mx-3 my-3 col-lg-4 ">
                         <h6>Ingresos Brutos</h6>
                         <div class="form-check">
-                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.ingresosBrutosSeccion6" name="ingresosBrutosSeccion6"  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
                         </div>
                         <div class="form-check">
-                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.ingresosBrutosSeccion6" name="ingresosBrutosSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable Exento</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.ingresosBrutosSeccion6" name="ingresosBrutosSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Monotributista</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.ingresosBrutosSeccion6" name="ingresosBrutosSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">No inscripto</label>
                         </div>
                     </div>
                     <div class="border shadow-lg bg-body-tertiary rounded p-3 mx-3 my-3 col-lg-4 ">
                         <h6>Tasa Comercio e Industria Municipal</h6>
                         <div class="form-check">
-                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.tasaComercioSeccion6" name="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable inscripto</label>
                         </div>
                         <div class="form-check">
-                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.tasaComercioSeccion6" name="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Responsable Exento</label>
                         </div>
                         <div class="form-check">
-                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.tasaComercioSeccion6" name="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">Monotributista</label>
                         </div>
                         <div class="form-check">
-                            <input  class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                            <input [(ngModel)]="formularioEconomiaPopular.tasaComercioSeccion6" name="tasaComercioSeccion6" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">No inscripto</label>
                         </div>
                     </div>
@@ -634,7 +634,7 @@
                         <div class="mb-3">
                             <label class="form-label">Nombres</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.nombreSeccion7" name="nombreSeccion7" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -642,7 +642,7 @@
                         <div class="mb-3">
                             <label class="form-label">Tipo de Documento</label>
                             <div class="input-group">
-                                <select class="form-select">
+                                <select [(ngModel)]="d.tipoDeDocumentoSeccion7" name="tipoDeDocumentoSeccion7" class="form-select">
                                     <option selected>-</option>
                                     <option value="AGRUPACION">AGRUPACION</option>
                                     <option value="CEDULA DE IDENTIDAD">CEDULA DE IDENTIDAD</option>
@@ -670,7 +670,7 @@
                         <div class="mb-3">
                             <label class="form-label">N° de Documento</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.nroDocumentoSeccion7" name="nroDocumentoSeccion7" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -679,11 +679,11 @@
                             <label class="form-label">¿Tiene CiDi?</label>
                             <div class="input-group">
                                 <div class="form-check mx-3">
-                                    <input class="form-check-input" type="radio" id="tieneCiDiSi" value="Si" (click)="setTieneCiDi(true)">
+                                    <input [(ngModel)]="d.tieneCiDiSeccion7" name="tieneCiDiSeccion7" class="form-check-input" type="radio" id="tieneCiDiSi" value="Si" (click)="setTieneCiDi(true)">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check mx-3">
-                                    <input class="form-check-input" type="radio" id="tieneCiDiNo" value="No" (click)="setTieneCiDi(false)">
+                                    <input [(ngModel)]="d.tieneCiDiSeccion7" name="tieneCiDiSeccion7" class="form-check-input" type="radio" id="tieneCiDiNo" value="No" (click)="setTieneCiDi(false)">
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </div>
@@ -693,7 +693,7 @@
                         <div class="mb-3">
                             <label class="form-label">Nivel de CiDi</label>
                             <div class="input-group">
-                                <select class="form-select">
+                                <select [(ngModel)]="d.nivelCiDiSeccion7" name="nivelCiDiSeccion7" class="form-select">
                                     <option selected>-</option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
