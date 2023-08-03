@@ -27,48 +27,48 @@
                 <small>(Indicar el casillero correspondiente) Obligatorio</small>
             </div>
             <hr class="my-2">
-            <div class="container radio-container border shadow-lg bg-body-tertiary rounded p-3" *ngFor="let rep of formularioEconomiaPopular; let i = index">
+            <div class="container radio-container border shadow-lg bg-body-tertiary rounded p-3">
                 <div class="form-check">
-                    <input [(ngModel)]="rep.cooperativaConMatricula" name="cooperativaConMatricula" [ngModelOptions]="{standalone: true}"  (click)="UnidadesAsociativasProductivas()"  class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
+                    <input name="cooperativaConMatricula"   (click)="UnidadesAsociativasProductivas()"  class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="rep.asociacionCivilFundacionInscriptaIPJ" name="asociaciónCivilFundaciónInscriptaIPJ" [ngModelOptions]="{standalone: true}"  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
+                    <input  name="asociaciónCivilFundaciónInscriptaIPJ"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
                     <label class="form-check-label" for="inlineRadio2">Asociación Civil - Fundación Inscripta en IPJ</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="rep.unidadProductivaAsociativaInformal" name="unidadProductivaAsociativaInformal" [ngModelOptions]="{standalone: true}"  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
+                    <input name="unidadProductivaAsociativaInformal"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio3">Unidad Productiva Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="rep.unidadProductivaFamiliar" name="unidadProductivaFamiliar" [ngModelOptions]="{standalone: true}"  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Familiar">
+                    <input name="unidadProductivaFamiliar"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Familiar">
                     <label class="form-check-label" for="inlineRadio4">Unidad Productiva Familiar</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="rep.cooperativaenFormacion" name="cooperativaenFormacion" [ngModelOptions]="{standalone: true}"  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio4" value="Cooperativa en Formación">
+                    <input name="cooperativaenFormacion"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio4" value="Cooperativa en Formación">
                     <label class="form-check-label" for="inlineRadio5">Cooperativa en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="rep.asociacionCivilFundacionFormacion" name="asociacionCivilFundacionFormacion" [ngModelOptions]="{standalone: true}"  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio5" value="Asociación Civil - Fundación en Formación">
+                    <input name="asociacionCivilFundacionFormacion"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio5" value="Asociación Civil - Fundación en Formación">
                     <label class="form-check-label" for="inlineRadio6">Asociación Civil - Fundación en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="rep.asociacionSolidariaAsociativaInformal" name="asociacionSolidariaAsociativaInformal" [ngModelOptions]="{standalone: true}"  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio6" value="Asociación Solidaria Asociativa Informal">
+                    <input name="asociacionSolidariaAsociativaInformal"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio6" value="Asociación Solidaria Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio7">Asociación Solidaria Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="rep.personaFisicaUnidadProductivaUnipersonal" name="personaFisicaUnidadProductivaUnipersonal" [ngModelOptions]="{standalone: true}"  (click)="unidadProductivaUnipersonal()" class="form-check-input minimal" type="radio" id="inlineRadio7" value="Persona Física (Unidad Productiva Unipersonal)">
+                    <input name="personaFisicaUnidadProductivaUnipersonal"   (click)="unidadProductivaUnipersonal()" class="form-check-input minimal" type="radio" id="inlineRadio7" value="Persona Física (Unidad Productiva Unipersonal)">
                     <label class="form-check-label" for="inlineRadio8">Persona Física (Unidad Productiva Unipersonal)</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="rep.caracterUnidadProductivaOtraSeccion1" name="caracterUnidadProductivaOtraSeccion1" [ngModelOptions]="{standalone: true}"  (click)="changeInputsectionOne()" (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio8" value="Otra">
+                    <input name="caracterUnidadProductivaOtraSeccion1"   (click)="changeInputsectionOne()" (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio8" value="Otra">
                     <label class="form-check-label" for="inlineRadio9">Otra</label>
                 </div>
             </div>
             <div *ngIf="inputSectionOneValue" class="my-3">
                 <label class="form-label">¿Cuál?</label>
-                <div class="input-group" *ngFor="let rep of formularioEconomiaPopular; let i = index">
-                    <input [(ngModel)]="rep.caracterUnidadProductivaOtraInputSeccion1" [ngModelOptions]="{standalone: true}" name="caracterUnidadProductivaOtraInputSeccion1" type="text" class="form-control" id="basic-url">
+                <div class="input-group">
+                    <input name="caracterUnidadProductivaOtraInputSeccion1" type="text" class="form-control" id="basic-url">
                 </div>
             </div>
         </div>
@@ -97,7 +97,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Apellido</label>
                                 <div class="input-group">
-                                    <input type="text"  class="form-control" id="basic-url">
+                                    <input type="text" [(ngModel)]="formularioEconomiaPopular.apellidoSeccion21" name="apellidoSeccion21"  class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombres</label>
                                 <div class="input-group">
-                                    <input type="text"  class="form-control" id="basic-url">
+                                    <input  [(ngModel)]="formularioEconomiaPopular.nombreSeccion21" name="nombreSeccion21" type="text"  class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -626,7 +626,7 @@
                         <div class="mb-3">
                             <label class="form-label">Apellido</label>
                             <div class="input-group">
-                                <input [(ngModel)]="d.apellidoSeccion7" type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.apellidoSeccion7" name="apellidoSeccion7" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -735,14 +735,14 @@
                 <h5 class="mr-3">9 - PERSONAS RESPONSABLES DE LA INSCRIPCIÓN</h5>
                 <small>Se responsabilizan de la veracidad de la información consignada y a facilitar su verificación. Repetir los datos si es persona física.</small>
             </div>
-            <div class="container container-9" *ngFor="let personaFisica of personasFisicas, let i as index ">
+            <div class="container container-9" *ngFor="let d of formularioEconomiaPopular.formularioSeccion9">
                 <hr class="my-2">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3">
                             <label class="form-label">Nombre del Responsable</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.nombreResponsableSeccion9" name="nombreResponsableSeccion9" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -786,6 +786,7 @@
                 <div class="col-md-4">
                     <button (click)="agregarNuevoResponsableSection9()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
                 </div>
+                
             </div>
             <hr class="my-2">
 
@@ -801,7 +802,7 @@
                     <h5 class="mr-3">Para las personas físicas</h5>
                     <small>Datos del grupo conviviente (identificar todas las personas que conviven en ese domicilio y comparten comida, incluido el postulante)</small>
                 </div>
-                <div class="container container-9b" *ngFor="let personaFisica of formularioEconomiaPopular, let i as index ">
+                <div class="container container-9b">
                 <hr class="my-2">
                     <div class="row">
                         <div class="col-md-2 col-sm-4 col-lg-6">

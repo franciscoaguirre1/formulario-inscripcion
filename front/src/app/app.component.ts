@@ -1,6 +1,4 @@
 import { Component, OnInit} from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
 
 
 //import { FormBuilder, FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
@@ -41,13 +39,28 @@ export class AppComponent implements OnInit{
                 nroDocumentoSeccion7: '',
                 tieneCiDiSeccion7: '',
                 nivelCiDiSeccion7: ''                
-                })
+            });
         }
         agregarNuevoResponsableSection9() {
-            this.personas.push("")
+            this.formularioEconomiaPopular.formularioSeccion9.push({
+                nombreResponsableSeccion9: '',
+                dniSeccion9: '',
+                cargoSeccion9: '',
+                telefonoSeccion9: '',
+                emailSeccion9: '',
+            });
         }
         agregarPersonaFisicaSection9b() {
-            this.personasFisicas.push("")
+            this.formularioEconomiaPopular.formularioSeccion9b.push({
+                apellidoSeccion9b: '',
+                nombreSeccion9b: '',
+                documentoSeccion9b: '',
+                fechaNacSeccion9b: '',
+                vinculoSeccion9b: '',
+                escolaridadSeccion9b: '',
+                estaCursandoSeccion9b: '',
+                ocupacionSeccion9b: '',
+            })
         }
     
 
@@ -152,15 +165,17 @@ export class AppComponent implements OnInit{
             textInputSeccion8: '',
         
         //9.- PERSONAS RESPONSABLES DE LA INSCRIPCIÓN
-
+        formularioSeccion9: [{
             nombreResponsableSeccion9: '',
             dniSeccion9: '',
             cargoSeccion9: '',
             telefonoSeccion9: '',
             emailSeccion9: '',
+        }],
         
         //9b Para las personas físicas
 
+        formularioSeccion9b: [{
             apellidoSeccion9b: '',
             nombreSeccion9b: '',
             documentoSeccion9b: '',
@@ -169,6 +184,8 @@ export class AppComponent implements OnInit{
             escolaridadSeccion9b: '',
             estaCursandoSeccion9b: '',
             ocupacionSeccion9b: '',
+        }],
+
 
         //9c Cursos de Capacitación laboral realizados por el titular
             cursosRealizadosSeccion9c: '',
@@ -212,22 +229,6 @@ export class AppComponent implements OnInit{
     };
 
 
-
-
-
-
-
-    
-
-
-
-
-
-
-
-
-
-
     constructor() {
 
     }
@@ -239,7 +240,7 @@ export class AppComponent implements OnInit{
     // consologuear formulario
 
     consologuearFormulario() {
-        console.log(this.formularioEconomiaPopular);        
+        console.log(this.formularioEconomiaPopular);
     }
 
 
