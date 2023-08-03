@@ -1,4 +1,8 @@
 import { Component, OnInit} from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
+
+
 //import { FormBuilder, FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 
@@ -30,7 +34,14 @@ export class AppComponent implements OnInit{
         //  métdos para agregar nuevos campos del mismo tipo
 
         agregarNuevoRepresentanteSection7() {
-            this.representantes.push("")
+            this.formularioEconomiaPopular.formularioSeccion7.push({
+                apellidoSeccion7: '',
+                nombreSeccion7: '',
+                tipoDeDocumentoSeccion7: '',
+                nroDocumentoSeccion7: '',
+                tieneCiDiSeccion7: '',
+                nivelCiDiSeccion7: ''                
+                })
         }
         agregarNuevoResponsableSection9() {
             this.personas.push("")
@@ -43,17 +54,24 @@ export class AppComponent implements OnInit{
     // array del formulario de economía popular
 
     formularioEconomiaPopular: any = {
-
         // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
     
-        formularioSeccion1 : {
-            caracterUnidadProductivaSolicitanteSeccion1: '',
-            caracterUnidadProductivaOtraInputSeccion1: ''
-        },
+     
+            cooperativaConMatricula: '',
+            asociacionCivilFundacionInscriptaIPJ: '',
+            unidadProductivaAsociativaInformal: '',
+            unidadProductivaFamiliar: '',
+            cooperativaenFormacion: '',
+            asociacionCivilFundaciónFormacion: '',
+            asociaciónSolidariaAsociativaInformal: '',
+            personaFisicaUnidadProductivaUnipersonal: '',
+            caracterUnidadProductivaOtraSeccion1: '',
+            caracterUnidadProductivaOtraInputSeccion1: '',
+            
             // 2.- DATOS DE IDENTIFICACIÓN        
             // 2.1.- Unidad Productiva Unipersonal
-
-        formularioseccion21: {
+    
+        
             apellidoSeccion21: '',
             nombreSeccion21: '',
             tipoDocumentoSeccion21: '',
@@ -64,17 +82,17 @@ export class AppComponent implements OnInit{
             emailSeccion21: '',
             telefonoSeccion21: '',
             asociacionCooperativaSeccion21: '',
-        },
-
+        
+    
             // 2.- DATOS DE IDENTIFICACIÓN
             // 2.2.- Unidades Asociativas Productivas (incluye las familiares)
-        formularioSeccion22: {
+        
             nombreInstitucionPersonaSeccion22: '',
             nombreFantasiaSeccion22: '',
             asociacionCooperativaSeccion22: ''            
-        },
+        ,
         // 3.- INSCRIPCIONES LEGALES
-        formularioSeccion3: {
+         
             inscripcionesLegalesSeccion3: '',
             tieneRegistroSeccion3: '',
             nroInscripcionMatriculaSeccion3: '',
@@ -84,14 +102,14 @@ export class AppComponent implements OnInit{
             marcasYSeñalesSeccion3: '',
             renafSeccion3: '',
             otroCualSeccion3: ''
-
-        },
+    
+        ,
         // 4.- OBJETO SOCIAL
-        formularioSeccion4: {
+        
             actividadesProductivasSeccion4: ''
-        },
+        ,
         //5.- DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL
-        formularioSeccion5: {
+        
             calleSeccion5: '',
             numeroCalleSeccion5: '',
             cpSeccion5: '',
@@ -111,36 +129,38 @@ export class AppComponent implements OnInit{
             departamentoPredioProdSeccion5: '',
             emailPredProdSeccion5: '',
             telefonoPredProdSeccion5: '',
-        },
+        
         //6.- CONDICIÓN FISCAL
-        formularioSeccion6: {
+
             ivaSeccion6: '',
             ingresosBrutosSeccion6: '',
-            tasaComercioSeccion6: ''
-        },
+            tasaComercioSeccion6: '',
+
         // 7.- REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL
-        formularioSeccion7: {
+
+            formularioSeccion7: [{
             apellidoSeccion7: '',
             nombreSeccion7: '',
             tipoDeDocumentoSeccion7: '',
             nroDocumentoSeccion7: '',
             tieneCiDiSeccion7: '',
-            nivelCiDiSeccion7: ''
-        },
-        //8.- INFORMACIÓN COMPLEMENTARIA
-        formularioSeccion8: {
-            textInputSeccion8: '' 
-        },
+            nivelCiDiSeccion7: ''                
+            }],
+
+            //8.- INFORMACIÓN COMPLEMENTARIA
+
+            textInputSeccion8: '',
+        
         //9.- PERSONAS RESPONSABLES DE LA INSCRIPCIÓN
-        formularioSeccion9: {
+
             nombreResponsableSeccion9: '',
             dniSeccion9: '',
             cargoSeccion9: '',
             telefonoSeccion9: '',
-            emailSeccion9: ''
-        },
+            emailSeccion9: '',
+        
         //9b Para las personas físicas
-        formularioSeccion9b: {
+
             apellidoSeccion9b: '',
             nombreSeccion9b: '',
             documentoSeccion9b: '',
@@ -148,34 +168,26 @@ export class AppComponent implements OnInit{
             vinculoSeccion9b: '',
             escolaridadSeccion9b: '',
             estaCursandoSeccion9b: '',
-            ocupacionSeccion9b: ''
-        },
+            ocupacionSeccion9b: '',
+
         //9c Cursos de Capacitación laboral realizados por el titular
-        formularioSeccion9c: {
-            cursosRealizadosSeccion9c: ''
-        },
+            cursosRealizadosSeccion9c: '',
+
         //9d Obra Social
-        formularioSeccion9d: {
             poseeObraSocialSeccion9d: '',
-            cubreGrupoSeccion9d: ''
-        },
+            cubreGrupoSeccion9d: '',
         //9e Situación habitacional
-        formularioSeccion9e: {
             posesionViviendaSeccion9e: '',
             bañoSeccion9e: '',
             dormitoriosSeccion9e: '',
             techosSeccion9e: '',
             murosSeccion9e: '',
-            pisosSeccion9e: ''
-        },
+            pisosSeccion9e: '',
         //9f Acceso a servicios
-        formularioSeccion9f: {
             aguaSeccion9f: '',
             luzSeccion9f: '',
-            gasSeccion9f: ''
-        },
+            gasSeccion9f: '',
         //9g Datos referidos al predio y actividad productiva (solo productos agropecuarios)
-        formularioSeccion9g: {
             totalHectareasSeccion9g: '',
             hectareasEnSecanoSeccion9g: '',
             hectareasConRiegoSeccion9g: '',
@@ -188,21 +200,23 @@ export class AppComponent implements OnInit{
             hectareasHortalizasSeccion9g: '',
             hectareasGranosSeccion9g: '',
             otraSeccion9g: '',
-            otraHectareasSeccion9g: ''
-        },
+            otraHectareasSeccion9g: '',
         //9h Cantidad de Animales
-        formularioSeccion9h: {
             vacunosSeccion9h: '',
             caprinosSeccion9h: '',
             porcinosSeccion9h: '',
             ovinosSeccion9h: '',
             pollosParrillerosSeccion9h: '',
             gallinasPonedorasSeccion9h: '',
-            apiculturaSeccion9h: ''
-        }
-
-
+            apiculturaSeccion9h: '',
     };
+
+
+
+
+
+
+
     
 
 

@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
+import { CommonModule } from '@angular/common';
 // import { MatFormField, MatLabel } from '@angular/material/form-field';
 
 @NgModule({
@@ -16,6 +17,8 @@ import { MatDatepickerModule } from '@angular/material/datepicker';
     ReactiveFormsModule,
     FormsModule,
     MatDatepickerModule,
+    BrowserModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
