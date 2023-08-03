@@ -266,8 +266,11 @@ export class AppComponent implements OnInit{
     cambioActividadAgropecuariaNo() {
         this.esActividadAgropecuaria = false
     }
-    setTieneCiDi(value: boolean) {
-        this.tieneCiDi = value;
+    setTieneCiDiSi() {
+        this.tieneCiDi = true;
+    }
+    setTieneCiDiNo() {
+        this.tieneCiDi = false;
     }
 
     
