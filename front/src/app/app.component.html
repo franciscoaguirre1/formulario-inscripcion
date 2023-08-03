@@ -29,7 +29,7 @@
             <hr class="my-2">
             <div class="container radio-container border shadow-lg bg-body-tertiary rounded p-3">
                 <div class="form-check">
-                    <input  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
+                    <input  (click)="UnidadesAsociativasProductivas()"  class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
                 </div>
                 <div class="form-check">
@@ -734,8 +734,8 @@
                 <h5 class="mr-3">9 - PERSONAS RESPONSABLES DE LA INSCRIPCIÓN</h5>
                 <small>Se responsabilizan de la veracidad de la información consignada y a facilitar su verificación. Repetir los datos si es persona física.</small>
             </div>
-            <hr class="my-2">
-            <div class="container container-9">
+            <div class="container container-9" *ngFor="let persona of personas">
+                <hr class="my-2">
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3">
@@ -800,8 +800,8 @@
                     <h5 class="mr-3">Para las personas físicas</h5>
                     <small>Datos del grupo conviviente (identificar todas las personas que conviven en ese domicilio y comparten comida, incluido el postulante)</small>
                 </div>
+                <div class="container container-9b" *ngFor="let personaFisica of personasFisicas">
                 <hr class="my-2">
-                <div class="container container-9b">
                     <div class="row">
                         <div class="col-md-2 col-sm-4 col-lg-6">
                             <div class="mb-3">
@@ -920,7 +920,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-4 col-lg-6">
-                            <button (click)="agregarPersonaFisica9b()" class="btn btn-primary">Agregar nuevo<i class="fa-sharp fa-solid fa-plus"></i></button>
+                            <button (click)="agregarPersonaFisicaSection9b()" class="btn btn-primary">Agregar nuevo<i class="fa-sharp fa-solid fa-plus"></i></button>
                         </div>
                     </div>
                 </div>
