@@ -100,7 +100,7 @@ export class AppComponent implements OnInit{
             reparticionSeccion3: '',
             esActividadAgropecuariaSeccion3: '',
             renspaNroSeccion3: '',
-            marcasYSeñalesSeccion3: '',
+            marcasYSenalesSeccion3: '',
             renafSeccion3: '',
             otroCualSeccion3: ''
     
@@ -183,7 +183,7 @@ export class AppComponent implements OnInit{
             cubreGrupoSeccion9d: '',
         //9e Situación habitacional
             posesionViviendaSeccion9e: '',
-            bañoSeccion9e: '',
+            banoSeccion9e: '',
             dormitoriosSeccion9e: '',
             techosSeccion9e: '',
             murosSeccion9e: '',

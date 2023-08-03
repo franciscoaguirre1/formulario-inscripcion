@@ -721,7 +721,7 @@
             <hr class="my-2">
             <div class="container">
                 <div class="form-floating">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <textarea [(ngModel)]="formularioEconomiaPopular.textInputSeccion8" name="textInputSeccion8" class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
                     <label for="floatingTextarea2">Describir rubro...</label>
                 </div>
             </div>
@@ -750,7 +750,7 @@
                         <div class="mb-3">
                             <label class="form-label">DNI</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.dniSeccion9" name="dniSeccion9" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -758,7 +758,7 @@
                         <div class="mb-3">
                             <label class="form-label">Cargo</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.cargoSeccion9" name="cargoSeccion9" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -768,7 +768,7 @@
                         <div class="mb-3">
                             <label class="form-label">Teléfono</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.telefonoSeccion9" name="telefonoSeccion9" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -776,7 +776,7 @@
                         <div class="mb-3">
                             <label class="form-label">Correo para recibir notificaciones</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.emailSeccion9" name="emailSeccion9" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -802,14 +802,14 @@
                     <h5 class="mr-3">Para las personas físicas</h5>
                     <small>Datos del grupo conviviente (identificar todas las personas que conviven en ese domicilio y comparten comida, incluido el postulante)</small>
                 </div>
-                <div class="container container-9b">
+                <div class="container container-9b" *ngFor="let d of formularioEconomiaPopular.formularioSeccion9b">
                 <hr class="my-2">
                     <div class="row">
                         <div class="col-md-2 col-sm-4 col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label">Apellido</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="d.apellidoSeccion9b" name="apellidoSeccion9b" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -817,7 +817,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Nombre</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="d.nombreSeccion9b" name="nombreSeccion9b" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -825,21 +825,21 @@
                             <div class="mb-3">
                                 <label class="form-label">Documento</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="d.documentoSeccion9b" name="documentoSeccion9b" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-4 col-lg-6">
                             <label for="date" class="col-form-label">Fecha de nacimiento:</label>
                             <div class="input-group date" id="datepicker">
-                                <input type="date" class="form-control" id="date"/>
+                                <input [(ngModel)]="d.fechaNacSeccion9b" name="fechaNacSeccion9b" type="date" class="form-control" id="date"/>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-4 col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label">Vínculo</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="d.vinculoSeccion9b" name="vinculoSeccion9b" class="form-select">
                                         <option selected>-</option>
                                         <option value="ABUELO/A">ABUELO/A</option>
                                         <option value="ADHERENTE">ADHERENTE</option>
@@ -870,7 +870,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Escolaridad</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="d.escolaridadSeccion9b" name="escolaridadSeccion9b" class="form-select">
                                         <option selected>-</option>
                                         <option value="Inicial y Preescolar">Inicial y Preescolar</option>
                                         <option value="Primaria incompleta">Primaria incompleta</option>
@@ -891,11 +891,11 @@
                                     <label class="form-label">Está cursando?</label>
                                     <div class="input-group">
                                         <div class="form-check mx-3">
-                                            <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                                            <input [(ngModel)]="d.estaCursandoSeccion9b" name="estaCursandoSeccion9b" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                                             <label class="form-check-label" for="inlineRadio1">Si</label>
                                         </div>
                                         <div class="form-check mx-3">
-                                            <input class="form-check-input" type="radio" id="inlineRadio2" value="option2">
+                                            <input [(ngModel)]="d.estaCursandoSeccion9b" name="estaCursandoSeccion9b" class="form-check-input" type="radio" id="inlineRadio2" value="option2">
                                             <label class="form-check-label" for="inlineRadio2">No</label>
                                         </div>
                                     </div>
@@ -905,7 +905,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Ocupación</label>
                                     <div class="input-group">
-                                        <select class="form-select">
+                                        <select [(ngModel)]="d.ocupacionSeccion9b" name="ocupacionSeccion9b" class="form-select">
                                             <option selected>-</option>
                                             <option value="Empleado">Empleado</option>
                                             <option value="Desocupado">Desocupado</option>
@@ -930,14 +930,14 @@
                 <hr class="my-2">
 
 
-                <!--Cursos de Capacitación laboral realizados por el titular -->
+                <!-- 9c -- Cursos de Capacitación laboral realizados por el titular -->
 
                 <div class="container my-3">
                     <div class="subheading-title mt-3">
                         <p>Cursos de capacitación laboral realizados por el titular:</p>
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Cursos..." id="floatingTextarea2" style="height: 100px"></textarea>
+                        <textarea [(ngModel)]="formularioEconomiaPopular.cursosRealizadosSeccion9c" name="cursosRealizadosSeccion9c" class="form-control" placeholder="Cursos..." id="floatingTextarea2" style="height: 100px"></textarea>
                         <label for="floatingTextarea2">Cursos...</label>
                     </div>
                 </div>
@@ -946,7 +946,7 @@
 
 
 
-                <!-- Posee Obra Social -->
+                <!-- 9d -- Posee Obra Social -->
 
                 <div class="container my-3">
                     <div class="subheading-title">
@@ -954,11 +954,11 @@
                     </div>
                     <div class="d-flex">
                         <div class="form-check mx-3">
-                            <input (click)="tieneObraSocialSi()" class="form-check-input minimal" type="radio" id="flexRadioDefault1" value="True">
+                            <input [(ngModel)]="formularioEconomiaPopular.poseeObraSocialSeccion9d" name="poseeObraSocialSeccion9d" (click)="tieneObraSocialSi()" class="form-check-input minimal" type="radio" id="flexRadioDefault1" value="True">
                             <label class="form-check-label" for="flexRadioDefault1">Si</label>
                         </div>
                         <div class="form-check mx-3">
-                            <input (click)="tieneObraSocialNo()" class="form-check-input minimal" type="radio" id="flexRadioDefault2" value="False">
+                            <input [(ngModel)]="formularioEconomiaPopular.poseeObraSocialSeccion9d" name="poseeObraSocialSeccion9d" (click)="tieneObraSocialNo()" class="form-check-input minimal" type="radio" id="flexRadioDefault2" value="False">
                             <label class="form-check-label" for="flexRadioDefault2">No</label>
                         </div>
                     </div>
@@ -969,11 +969,11 @@
                         <div class="d-flex">
                             <div class="input-group">
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" id="inlineRadio1" value="option1">
+                                    <input [(ngModel)]="formularioEconomiaPopular.cubreGrupoSeccion9d" name="cubreGrupoSeccion9d" class="form-check-input" type="radio" id="inlineRadio1" value="option1">
                                     <label class="form-check-label" for="inlineRadio1">Si</label>
                                 </div>
                                 <div class="form-check mx-3">
-                                    <input class="form-check-input" type="radio" id="inlineRadio2" value="option2">
+                                    <input [(ngModel)]="formularioEconomiaPopular.cubreGrupoSeccion9d" name="cubreGrupoSeccion9d" class="form-check-input" type="radio" id="inlineRadio2" value="option2">
                                     <label class="form-check-label" for="inlineRadio2">No</label>
                                 </div>
                             </div>
@@ -985,7 +985,7 @@
 
 
 
-                <!--Situación Habitacional -->
+                <!-- 9e -- Situación Habitacional -->
 
                 <div class="subheading-title my-3">
                     <p class="mr-3 my-3">Situación Habitacional</p>
@@ -999,7 +999,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Posesión de la Vivienda</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="formularioEconomiaPopular.posesionViviendaSeccion9e" name="posesionViviendaSeccion9e" class="form-select">
                                         <option selected>-</option>
                                         <option value="Propio">Propio</option>
                                         <option value="Alquilado">Alquilado</option>
@@ -1013,7 +1013,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Baño</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="formularioEconomiaPopular.banoSeccion9e" name="banoSeccion9e" class="form-select">
                                         <option selected>-</option>
                                         <option value="Inodoro con botón - mochila - cadena - y arrastre de agua">Inodoro con botón - mochila - cadena - y arrastre de agua</option>
                                         <option value="Inodoro sin botón - cadena - y con arrastre de agua (a balde)">Inodoro sin botón - cadena - y con arrastre de agua (a balde)</option>
@@ -1026,7 +1026,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Cantidad de dormitorios</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.dormitoriosSeccion9e" name="dormitoriosSeccion9e" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1034,7 +1034,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Techos</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="formularioEconomiaPopular.techosSeccion9e" name="techosSeccion9e" class="form-select">
                                         <option selected>-</option>
                                         <option value="Loza - Fibrocemento">Loza - Fibrocemento</option>
                                         <option value="Zinc">Zinc</option>
@@ -1048,7 +1048,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Muros</label>
                                     <div class="input-group">
-                                        <select class="form-select">
+                                        <select [(ngModel)]="formularioEconomiaPopular.murosSeccion9e" name="murosSeccion9e" class="form-select">
                                             <option selected>-</option>
                                             <option value="Ladrillo - Bloque">Ladrillo - Bloque</option>
                                             <option value="Chapa - Adobe">Chapa - Adobe</option>
@@ -1061,7 +1061,7 @@
                                 <div class="mb-3">
                                     <label class="form-label">Pisos</label>
                                     <div class="input-group">
-                                        <select class="form-select">
+                                        <select [(ngModel)]="formularioEconomiaPopular.pisosSeccion9e" name="pisosSeccion9e" class="form-select">
                                             <option selected>-</option>
                                             <option value="Cerámico - Mosaico - Madera">Cerámico - Mosaico - Madera</option>
                                             <option value="Cemento">Cemento</option>
@@ -1078,7 +1078,7 @@
 
 
 
-                <!--Acceso a servicios -->
+                <!-- 9f -- Acceso a servicios -->
 
                 <div class="subheading-title my-3">
                     <p class="mr-3">Acceso a servicios</p>
@@ -1091,7 +1091,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Agua</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="formularioEconomiaPopular.aguaSeccion9f" name="aguaSeccion9f" class="form-select">
                                         <option selected>-</option>
                                         <option value="Red">Red</option>
                                         <option value="Pico Externo">Pico Externo</option>
@@ -1105,7 +1105,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Luz</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="formularioEconomiaPopular.luzSeccion9f" name="luzSeccion9f" class="form-select">
                                         <option selected>-</option>
                                         <option value="Eléctrica">Eléctrica</option>
                                         <option value="Generador - Velas - Gas">Generador - Velas - Gas</option>
@@ -1118,7 +1118,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Gas</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="formularioEconomiaPopular.gasSeccion9f" name="gasSeccion9f" class="form-select">
                                         <option selected>-</option>
                                         <option value="Gas Natural">Gas Natural</option>
                                         <option value="Garrafa - Tubo">Garrafa - Tubo</option>
@@ -1133,7 +1133,7 @@
 
 
 
-            <!--Datos referidos al predio y actividad productiva (solo productos agropecuarios) -->
+            <!-- 9g -- Datos referidos al predio y actividad productiva (solo productos agropecuarios) -->
 
             <div class="border shadow-lg bg-body-tertiary rounded p-5 my-3">
                 <div class="subheading-title my-3">
@@ -1148,7 +1148,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Total hectáreas</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.totalHectareasSeccion9g" name="totalHectareasSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1156,7 +1156,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas en secano</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasEnSecanoSeccion9g" name="hectareasEnSecanoSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1164,7 +1164,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas con riego</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasConRiegoSeccion9g" name="hectareasConRiegoSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1174,7 +1174,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas agrícola</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasAgricolaSeccion9g" name="hectareasAgricolaSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1182,7 +1182,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas monte</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasMonteSeccion9g" name="hectareasMonteSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1190,7 +1190,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas chacra en secano</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareaschacraEnSecanoSeccion9g" name="hectareaschacraEnSecanoSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1200,7 +1200,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas pasturas naturales</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasPasturasNaturalesSeccion9g" name="hectareasPasturasNaturalesSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1208,7 +1208,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas pasturas implantadas</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasPasturasImplantadasSeccion9g" name="hectareasPasturasImplantadasSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1216,7 +1216,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas granja mixta</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasGranjaMixtaSeccion9g" name="hectareasGranjaMixtaSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1226,7 +1226,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas hortalizas</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasHortalizasSeccion9g" name="hectareasHortalizasSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1234,7 +1234,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Hectáreas granos</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.hectareasGranosSeccion9g" name="hectareasGranosSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1242,11 +1242,11 @@
                             <div class="mb-3">
                                 <label class="form-label">Otra</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.otraSeccion9g" name="otraSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                                 <label class="form-label">Hectáreas</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.otraHectareasSeccion9g" name="otraHectareasSeccion9g" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1257,7 +1257,7 @@
 
 
 
-            <!-- Cantidad de Animales -->
+            <!-- 9h -- Cantidad de Animales -->
 
 
             <div class="border shadow-lg bg-body-tertiary rounded p-5 my-3">
@@ -1272,7 +1272,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Vacunos</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.vacunosSeccion9h" name="vacunosSeccion9h" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1280,7 +1280,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Caprinos</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.caprinosSeccion9h" name="caprinosSeccion9h" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1288,7 +1288,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Porcinos</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.porcinosSeccion9h" name="porcinosSeccion9h" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1296,7 +1296,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Ovinos</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.ovinosSeccion9h" name="ovinosSeccion9h" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1306,7 +1306,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Pollos parrilleros</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.pollosParrillerosSeccion9h" name="pollosParrillerosSeccion9h" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1314,7 +1314,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Gallinas ponedores</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.gallinasPonedorasSeccion9h" name="gallinasPonedorasSeccion9h" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
@@ -1322,7 +1322,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Apicultura</label>
                                 <div class="input-group">
-                                    <input type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.apiculturaSeccion9h" name="apiculturaSeccion9h" type="text" class="form-control" id="basic-url">
                                 </div>
                             </div>
                         </div>
