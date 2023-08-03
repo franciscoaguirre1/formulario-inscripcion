@@ -272,21 +272,19 @@ export class AppComponent implements OnInit{
 
     
     changeInputsectionOne() {
-    this.inputSectionOneValue = !this.inputSectionOneValue
+    this.inputSectionOneValue = true
 
     }
 
     unidadProductivaUnipersonal() {
 
         this.esPersonaFisica = true
-        this.esUnidadAsociativaProductiva = false
-    
+        this.esUnidadAsociativaProductiva = false    
         }
     
         UnidadesAsociativasProductivas() {
         this.esUnidadAsociativaProductiva = true
-        this.esPersonaFisica = false
-    
+        this.esPersonaFisica = false    
         }
 
 
