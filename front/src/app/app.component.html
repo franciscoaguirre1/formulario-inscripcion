@@ -29,46 +29,46 @@
             <hr class="my-2">
             <div class="container radio-container border shadow-lg bg-body-tertiary rounded p-3">
                 <div class="form-check">
-                    <input name="cooperativaConMatricula"   (click)="UnidadesAsociativasProductivas()"  class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="UnidadesAsociativasProductivas()"  class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
                 </div>
                 <div class="form-check">
-                    <input  name="asociaciónCivilFundaciónInscriptaIPJ"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
+                    <input  [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio2" value="Asociación Civil - Fundación Inscripta en IPJ">
                     <label class="form-check-label" for="inlineRadio2">Asociación Civil - Fundación Inscripta en IPJ</label>
                 </div>
                 <div class="form-check">
-                    <input name="unidadProductivaAsociativaInformal"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio3">Unidad Productiva Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input name="unidadProductivaFamiliar"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Familiar">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="unidadProductivaFamiliar"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Familiar">
                     <label class="form-check-label" for="inlineRadio4">Unidad Productiva Familiar</label>
                 </div>
                 <div class="form-check">
-                    <input name="cooperativaenFormacion"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio4" value="Cooperativa en Formación">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio4" value="Cooperativa en Formación">
                     <label class="form-check-label" for="inlineRadio5">Cooperativa en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input name="asociacionCivilFundacionFormacion"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio5" value="Asociación Civil - Fundación en Formación">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio5" value="Asociación Civil - Fundación en Formación">
                     <label class="form-check-label" for="inlineRadio6">Asociación Civil - Fundación en Formación</label>
                 </div>
                 <div class="form-check">
-                    <input name="asociacionSolidariaAsociativaInformal"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio6" value="Asociación Solidaria Asociativa Informal">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"  (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio6" value="Asociación Solidaria Asociativa Informal">
                     <label class="form-check-label" for="inlineRadio7">Asociación Solidaria Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input name="personaFisicaUnidadProductivaUnipersonal"   (click)="unidadProductivaUnipersonal()" class="form-check-input minimal" type="radio" id="inlineRadio7" value="Persona Física (Unidad Productiva Unipersonal)">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="unidadProductivaUnipersonal()" class="form-check-input minimal" type="radio" id="inlineRadio7" value="Persona Física (Unidad Productiva Unipersonal)">
                     <label class="form-check-label" for="inlineRadio8">Persona Física (Unidad Productiva Unipersonal)</label>
                 </div>
                 <div class="form-check">
-                    <input name="caracterUnidadProductivaOtraSeccion1"   (click)="changeInputsectionOne()" (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio8" value="Otra">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="changeInputsectionOne()" (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio8" value="Otra">
                     <label class="form-check-label" for="inlineRadio9">Otra</label>
                 </div>
             </div>
             <div *ngIf="inputSectionOneValue" class="my-3">
                 <label class="form-label">¿Cuál?</label>
                 <div class="input-group">
-                    <input name="caracterUnidadProductivaOtraInputSeccion1" type="text" class="form-control" id="basic-url">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitanteOtra" name="caracterUnidadProductivaSolicitanteOtra" type="text" class="form-control" id="basic-url">
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Tipo de Documento</label>
                                 <div class="input-group">
-                                    <select class="form-select">
+                                    <select [(ngModel)]="formularioEconomiaPopular.tipoDocumentoSeccion21" name="tipoDocumentoSeccion21" class="form-select">
                                         <option selected>-</option>
                                         <option value="AGRUPACION">AGRUPACION</option>
                                         <option value="CEDULA DE IDENTIDAD">CEDULA DE IDENTIDAD</option>

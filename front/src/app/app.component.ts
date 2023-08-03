@@ -1,13 +1,12 @@
 import { Component, OnInit} from '@angular/core';
 
 
-//import { FormBuilder, FormGroup, Validators, FormControl, ReactiveFormsModule } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit{
 
@@ -23,13 +22,8 @@ export class AppComponent implements OnInit{
     arrayRadioButtonsSection1!: any
     contadorCampos: number = 0
 
-    // para agregar campos a los ya existentes
 
-    representantes = [""]
-    personas = [""]
-    personasFisicas = [""]
-
-        //  métdos para agregar nuevos campos del mismo tipo
+        //  métdos para agregar nuevos campos
 
         agregarNuevoRepresentanteSection7() {
             this.formularioEconomiaPopular.formularioSeccion7.push({
@@ -64,12 +58,14 @@ export class AppComponent implements OnInit{
         }
     
 
-    // array del formulario de economía popular
+    
+    
+        // objeto del formulario de economía popular
 
     formularioEconomiaPopular: any = {
         // 1.- CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE
     
-     
+    
             cooperativaConMatricula: '',
             asociacionCivilFundacionInscriptaIPJ: '',
             unidadProductivaAsociativaInformal: '',
@@ -81,7 +77,7 @@ export class AppComponent implements OnInit{
             caracterUnidadProductivaOtraSeccion1: '',
             caracterUnidadProductivaOtraInputSeccion1: '',
             
-            // 2.- DATOS DE IDENTIFICACIÓN        
+            // 2.- DATOS DE IDENTIFICACIÓN
             // 2.1.- Unidad Productiva Unipersonal
     
         
@@ -105,7 +101,7 @@ export class AppComponent implements OnInit{
             asociacionCooperativaSeccion22: ''            
         ,
         // 3.- INSCRIPCIONES LEGALES
-         
+        
             inscripcionesLegalesSeccion3: '',
             tieneRegistroSeccion3: '',
             nroInscripcionMatriculaSeccion3: '',
@@ -304,299 +300,6 @@ export class AppComponent implements OnInit{
 
 
 }
-
-
-
-    // antiguos métodos para agregar nuevos campos del mismo tipo
-
-
-
-
-// agregarNuevoRepresentanteSection7() {
-//     const newRowDiv = document.createElement("div");
-//     newRowDiv.classList.add("row");
-  
-//     const inputGroup = `
-//     <hr>
-//     <div class="col-4">
-//         <div class="mb-3">
-//             <label  class="form-label">Apellido</label>
-//             <div class="input-group">                        
-//                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-4">
-//         <div class="mb-3">
-//             <label  class="form-label">Nombres</label>
-//             <div class="input-group">                        
-//                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-4">
-//         <div class="mb-3">
-//             <label  class="form-label">Tipo de Documento</label>
-//             <div class="input-group">                        
-//                 <select class="form-select" aria-label="Default select example">
-//                     <option selected>-</option>
-//                     <option value="AGRUPACION">AGRUPACION</option>
-//                     <option value="CEDULA DE IDENTIDAD">CEDULA DE IDENTIDAD</option>
-//                     <option value="CERTIFICADO MIGRATORIO">CERTIFICADO MIGRATORIO</option>
-//                     <option value="CUIL">CUIL</option>
-//                     <option value="CUIT">CUIT</option>
-//                     <option value="DOCUMENTO NACIONAL DE IDENTIDAD">DOCUMENTO NACIONAL DE IDENTIDAD</option>
-//                     <option value="EXTRANJERO CON CERTIF. DE POLICIA">EXTRANJERO CON CERTIF. DE POLICIA</option>
-//                     <option value="EXTRANJERO SIN DOCUMENTO">EXTRANJERO SIN DOCUMENTO</option>
-//                     <option value="IDENTIFICACION EMPRESA M4">IDENTIFICACION EMPRESA M4</option>
-//                     <option value="INDOCUMENTADO">INDOCUMENTADO</option>
-//                     <option value="LIBRETA CIVICA">LIBRETA CIVICA</option>
-//                     <option value="LIBRETA DE ENROLAMIENTO">LIBRETA DE ENROLAMIENTO</option>
-//                     <option value="NRO. DNRP">NRO. DNRP</option>
-//                     <option value="NUMEROS ESPECIALES">NUMEROS ESPECIALES</option>
-//                     <option value="PASAPORTE">PASAPORTE</option>
-//                     <option value="POLICIA FEDERAL">POLICIA FEDERAL</option>
-//                 </select>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-4">
-//         <div class="mb-3">
-//             <label  class="form-label">N° de Documento</label>
-//             <div class="input-group">                        
-//                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-4">
-//         <div class="mb-3">
-//             <label class="form-label">¿Tiene CiDi?</label>
-//             <div class="input-group">                        
-//                 <div class="form-check mx-3">
-//                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tieneCiDiSi" value="Si" (click)="setTieneCiDi(true)">
-//                     <label class="form-check-label" for="inlineRadio1">Si</label>
-//                 </div>
-//                 <div class="form-check mx-3">
-//                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="tieneCiDiNo" value="No" (click)="setTieneCiDi(false)">
-//                     <label class="form-check-label" for="inlineRadio2">No</label>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-4">
-//         <div class="mb-3">
-//             <label class="form-label">Nivel de CiDi</label>
-//             <div class="input-group">                        
-//                 <select [disabled]="!tieneCiDi" class="form-select" aria-label="Default select example">
-//                     <option selected>-</option>
-//                     <option value="1">1</option>
-//                     <option value="2">2</option>
-//                 </select>
-//             </div>
-//         </div>
-//     </div>
-//     `;
-  
-//     newRowDiv.innerHTML = inputGroup;
-//     const container = document.querySelector(".container-7");
-//      // Check if the container element exists before appending the new row
-//     if (container) {
-//       container.appendChild(newRowDiv);
-//     } else {
-//       console.error("Container with class 'container-7' not found.");
-//     }
-//   }
-
-
-  
-//   agregarNuevoResponsableSection9() {
-//       const newRowDiv = document.createElement("div");
-//       newRowDiv.classList.add("row");      
-//       const inputGroup = `
-//       <hr>
-//       <div class="col-4">
-//           <div class="mb-3">
-//               <label for="basic-url" class="form-label">Nombre del Responsable</label>
-//               <div class="input-group">                        
-//                   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//               </div>                        
-//           </div>
-//       </div>
-//       <div class="col-4">
-//           <div class="mb-3">
-//               <label for="basic-url" class="form-label">DNI</label>
-//               <div class="input-group">                        
-//                   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//               </div>                        
-//           </div>
-//       </div>
-//       <div class="col-4">
-//           <div class="mb-3">
-//               <label for="basic-url" class="form-label">Cargo</label>
-//               <div class="input-group">                        
-//                   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//               </div>                        
-//           </div>
-//       </div>
-//       <div class="col-4">
-//           <div class="mb-3">
-//               <label for="basic-url" class="form-label">Teléfono</label>
-//               <div class="input-group">                        
-//                   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//               </div>                        
-//           </div>
-//       </div>
-//       <div class="col-4">
-//           <div class="mb-3">
-//               <label for="basic-url" class="form-label">Correo para recibir notificaciones</label>
-//               <div class="input-group">                        
-//                   <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//               </div>                        
-//           </div>
-//       </div>
-//       `;
-    
-//       newRowDiv.innerHTML = inputGroup;
-//       const container = document.querySelector(".container-9");
-//        // Check if the container element exists before appending the new row
-//       if (container) {
-//         container.appendChild(newRowDiv);
-//       } else {
-//         console.error("Container with class 'container-9' not found.");
-//       }
-//   }
-
-
-
-//   agregarPersonaFisica9b() {
-//     const newRowDiv = document.createElement("div");
-//     newRowDiv.classList.add("row");
-  
-//     const inputGroup = `
-//     <hr>
-//     <div class="col-2">
-//         <div class="mb-3">
-//             <label for="basic-url" class="form-label">Apellido</label>
-//             <div class="input-group">                        
-//                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//             </div>                        
-//         </div>
-//     </div>
-//     <div class="col-2">
-//         <div class="mb-3">
-//             <label for="basic-url" class="form-label">Nombre</label>
-//             <div class="input-group">                        
-//                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//             </div>                        
-//         </div>
-//     </div>
-//     <div class="col-2">
-//         <div class="mb-3">
-//             <label for="basic-url" class="form-label">Documento</label>
-//             <div class="input-group">                        
-//                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//             </div>                        
-//         </div>
-//     </div>
-//     <div class="col-2">
-//         <div class="mb-3">
-//             <label for="basic-url" class="form-label">Fecha de Nacimiento</label>
-//             <div class="input-group">                        
-//                 <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4">
-//             </div>                        
-//         </div>
-//     </div>
-//     <div class="col-2">
-//         <div class="mb-3">
-//             <label for="basic-url" class="form-label">Vínculo</label>
-//             <div class="input-group">                        
-//                 <select class="form-select" aria-label="Default select example">
-//                     <option selected>-</option>
-//                     <option value="ABUELO/A">ABUELO/A</option>
-//                     <option value="ADHERENTE">ADHERENTE</option>
-//                     <option value="ADOPCION">ADOPCION</option>
-//                     <option value="CONVIVIENTE (CONCUBINO)">CONVIVIENTE (CONCUBINO)</option>
-//                     <option value="CONYUGE">CONYUGE</option>
-//                     <option value="DESCONOCIDO">DESCONOCIDO</option>
-//                     <option value="HERMANO/A">HERMANO/A</option>
-//                     <option value="HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.">HIJO DEL CONYUGE SOL.DE 21 A 25 A.EST.</option>
-//                     <option value="HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.">HIJO DEL CONYUGE SOLTERO MENOR DE 21 A.</option>
-//                     <option value="HIJO/A">HIJO/A</option>
-//                     <option value="JEFE/A FAMILIA">JEFE/A FAMILIA</option>
-//                     <option value="MENOR BAJO GUARDA O TUTELA">MENOR BAJO GUARDA O TUTELA</option>
-//                     <option value="NIETO/A">NIETO/A</option>
-//                     <option value="OTROS FAMILIARES">OTROS FAMILIARES</option>
-//                     <option value="OTROS NO FAMILIARES">OTROS NO FAMILIARES</option>
-//                     <option value="PADRE/MADRE">PADRE/MADRE</option>
-//                     <option value="PRENATAL">PRENATAL</option>
-//                     <option value="SOBRINO/A">SOBRINO/A</option>
-//                     <option value="TIO/A">TIO/A</option>
-//                     <option value="TITULAR EXCLUSIVAMENTE">TITULAR EXCLUSIVAMENTE</option>
-//                     <option value="TUTOR/A">TUTOR/A</option>
-//                 </select>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-2">
-//         <div class="mb-3">
-//             <label for="basic-url" class="form-label">Escolaridad</label>
-//             <div class="input-group">                        
-//                 <select class="form-select" aria-label="Default select example">
-//                     <option selected>-</option>
-//                     <option value="Inicial y Preescolar">Inicial y Preescolar</option>
-//                     <option value="Primaria incompleta">Primaria incompleta</option>
-//                     <option value="Primaria completa">Primaria completa</option>
-//                     <option value="Secundaria incompleta">Secundaria incompleta</option>
-//                     <option value="Secundaria completa">Secundaria completa</option>
-//                     <option value="Terciaria incompleta">Terciaria incompleta</option>
-//                     <option value="Terciaria completa">Terciaria completa</option>
-//                     <option value="Universitaria incompleta">Universitaria incompleta</option>
-//                     <option value="Universitaria completa">Universitaria completa</option>
-//                 </select>
-//             </div>                            
-//         </div>
-//     </div>
-//     <div class="col-2">
-//         <div class="mb-3">
-//             <label class="form-label">Está cursando?</label>
-//             <div class="input-group">                        
-//                 <div class="form-check mx-3">
-//                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-//                     <label class="form-check-label" for="inlineRadio1">Si</label>
-//                 </div>
-//                 <div class="form-check mx-3">
-//                     <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-//                     <label class="form-check-label" for="inlineRadio2">No</label>
-//                 </div>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="col-2">
-//         <div class="mb-3">
-//             <label for="basic-url" class="form-label">Ocupación</label>
-//             <div class="input-group">                        
-//                 <select class="form-select" aria-label="Default select example">
-//                     <option selected>-</option>
-//                     <option value="Empleado">Empleado</option>
-//                     <option value="Desocupado">Desocupado</option>
-//                     <option value="Autoempleo (emprendimiento)">Autoempleo (emprendimiento)</option>
-//                     <option value="Jubilado - Pensionado">Jubilado - Pensionado</option>
-//                     <option value="No trabaja">No trabaja</option>
-//                 </select>
-//             </div>
-//         </div>
-//     </div>
-//     `;
-  
-//     newRowDiv.innerHTML = inputGroup;
-//     const container = document.querySelector(".container-9b");
-//      // Check if the container element exists before appending the new row
-//     if (container) {
-//       container.appendChild(newRowDiv);
-//     } else {
-//       console.error("Container with class 'container-7' not found.");
-//     }
-//   }
 
 
 
