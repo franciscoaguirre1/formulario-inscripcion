@@ -230,30 +230,26 @@ export class AppComponent implements OnInit{
         // validaciones del formulario
 
     validarFormularioCompleto(formularioEconomiaPopular: any) {
-
-            //creo variable de validacion
-            let formularioEsValido : boolean = false
-
             // validar seccion 1
 
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == ""
                 || formularioEconomiaPopular.caracterUnidadProductivaSolicitante == null) {
-                    formularioEsValido = false;
+                    return false
                 }
 
             // validar seccion 2.2
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == !'Persona Física (Unidad Productiva Unipersonal)' 
-                && formularioEconomiaPopular.nombreInstitucionPersonaSeccion22 == '' 
+                && (formularioEconomiaPopular.nombreInstitucionPersonaSeccion22 == '' 
                 || formularioEconomiaPopular.nombreFantasiaSeccion22 == '' 
                 || formularioEconomiaPopular.nroCuilCuitSeccion22 == '' 
-                || formularioEconomiaPopular.asociacionCooperativaSeccion22 == '') {
-                formularioEsValido = false
+                || formularioEconomiaPopular.asociacionCooperativaSeccion22 == '')) {
+                return false
             }
 
             // validar seccion 2.1
 
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == 'Persona Física (Unidad Productiva Unipersonal)' 
-                && formularioEconomiaPopular.apellidoSeccion21 == ''
+                && (formularioEconomiaPopular.apellidoSeccion21 == ''
                 || formularioEconomiaPopular.nombreSeccion21 == ''
                 || formularioEconomiaPopular.tipoDocumentoSeccion21 == ''
                 || formularioEconomiaPopular.nroDocumentoSeccion21 == '' 
@@ -262,31 +258,31 @@ export class AppComponent implements OnInit{
                 || formularioEconomiaPopular.cuilSeccion21 == '' 
                 || formularioEconomiaPopular.emailSeccion21 == '' 
                 || formularioEconomiaPopular.telefonoSeccion21 == '' 
-                || formularioEconomiaPopular.asociacionCooperativaSeccion21 == '') {
-                formularioEsValido = false
+                || formularioEconomiaPopular.asociacionCooperativaSeccion21 == '')) {
+                return false
             }
     
             // validar seccion 3
     
             if (formularioEconomiaPopular.tieneRegistroSeccion3 == 'True'
-            || formularioEconomiaPopular.nroInscripcionMatriculaSeccion3 == ''
+            && (formularioEconomiaPopular.nroInscripcionMatriculaSeccion3 == ''
             || formularioEconomiaPopular.reparticionSeccion3 == ''
-            || formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == '') {
+            || formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == '')) {
                 if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'True'
-                && formularioEconomiaPopular.renspaNroSeccion3 == ''
-                && formularioEconomiaPopular.marcasYSenalesSeccion3 == ''
-                && formularioEconomiaPopular.renafSeccion3 == ''
-                && formularioEconomiaPopular.otroCualSeccion3 == ''){
-                    formularioEsValido = false
+                && (formularioEconomiaPopular.renspaNroSeccion3 == ''
+                ||formularioEconomiaPopular.marcasYSenalesSeccion3 == ''
+                || formularioEconomiaPopular.renafSeccion3 == ''
+                || formularioEconomiaPopular.otroCualSeccion3 == '')){
+                    return false
                 } if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'False') {
-                    formularioEsValido = false
-                } formularioEsValido = false
+                    return false
+                } return false
             }
 
             // validar seccion 4
 
             if (formularioEconomiaPopular.actividadesProductivasSeccion4 == '') {
-                formularioEsValido = false
+                return false
             }
 
             // validar seccion 5
@@ -302,43 +298,98 @@ export class AppComponent implements OnInit{
                 || formularioEconomiaPopular.telefonoSeccion5 == ''
                 || formularioEconomiaPopular.departamentoSeccion5 == ''
                 || formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == '') {
-                    formularioEsValido = false
                     if (formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == 'False'
-                    && formularioEconomiaPopular.callePredioProductivoSeccion5 == ''
-                    && formularioEconomiaPopular.nroCallePredProdSeccion5 == ''
-                    && formularioEconomiaPopular.cpPredProdSeccion5 == ''
-                    && formularioEconomiaPopular.barrioPredProdSeccion5 == ''
-                    && formularioEconomiaPopular.localidadPredProdSeccion5 == ''
-                    && formularioEconomiaPopular.departamentoPredioProdSeccion5 == ''
-                    && formularioEconomiaPopular.emailPredProdSeccion5 == ''
-                    && formularioEconomiaPopular.telefonoPredProdSeccion5 == '') {
-                    formularioEsValido = false
-                    }
+                    && (formularioEconomiaPopular.callePredioProductivoSeccion5 == ''
+                    || formularioEconomiaPopular.nroCallePredProdSeccion5 == ''
+                    || formularioEconomiaPopular.cpPredProdSeccion5 == ''
+                    || formularioEconomiaPopular.barrioPredProdSeccion5 == ''
+                    || formularioEconomiaPopular.localidadPredProdSeccion5 == ''
+                    || formularioEconomiaPopular.departamentoPredioProdSeccion5 == ''
+                    || formularioEconomiaPopular.emailPredProdSeccion5 == ''
+                    || formularioEconomiaPopular.telefonoPredProdSeccion5 == '')) {
+                        return false
+                    } return false
+
+                }
                     
-
+                    
                     //seccion 6
-
+                    
                     if (formularioEconomiaPopular.ivaSeccion6 == "" 
                     || formularioEconomiaPopular.ingresosBrutosSeccion6 == ""
                     || formularioEconomiaPopular.tasaComercioSeccion6 == "") {
-                        formularioEsValido = false
+                        return false
                     }
                     
-                    //Seccion 7
-                    if (formularioEconomiaPopular.)
+                    //Seccion 7 que pueden ser múltiples arrays
+                    for (let i = 0; i < this.formularioEconomiaPopular.formularioSeccion7.length; i++) {
+                        
+                        if (formularioEconomiaPopular.formularioSeccion7[i].apellidoSeccion7 == ''
+                        || formularioEconomiaPopular.formularioSeccion7[i].nombreSeccion7 == ''
+                        || formularioEconomiaPopular.formularioSeccion7[i].tipoDeDocumentoSeccion7 == ''
+                        || formularioEconomiaPopular.formularioSeccion7[i].nroDocumentoSeccion7 == ''
+                        || formularioEconomiaPopular.formularioSeccion7[i].tieneCiDiSeccion7 == '') {
+                            if(formularioEconomiaPopular.formularioSeccion7[i].tieneCiDiSeccion7 != ''
+                            && formularioEconomiaPopular.formularioSeccion7[i].nivelCiDiSeccion7 == '') {
+                                return false
+                            }
+                            
+                        }
+                        
+                    }
 
-                }
+
+                    //Validación Seccion 9 que pueden ser múltiples arrays
+
+                    for (let i = 0; i < formularioEconomiaPopular.formularioSeccion9.length; i++) {
+                        
+                        if(formularioEconomiaPopular.formularioSeccion9[i]
+                            && (formularioEconomiaPopular.formularioSeccion9[i].nombreResponsableSeccion9 == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].dniSeccion9 == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].cargoSeccion9 == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].telefonoSeccion9 == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].emailSeccion9 == '')) {
+                                return false    
+                        }
+                    }
+                    //Validación Seccion 9b Para las personas físicas
+
+                    for (let i = 0; i < formularioEconomiaPopular.formularioSeccion9b.length; i++) {
+                        
+                        if(formularioEconomiaPopular.formularioSeccion9b[i]
+                            && (formularioEconomiaPopular.formularioSeccion9[i].apellidoSeccion9b == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].nombreSeccion9b == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].documentoSeccion9b == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].fechaNacSeccion9b == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].vinculoSeccion9b == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].escolaridadSeccion9b == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].estaCursandoSeccion9b == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].ocupacionSeccion9b == '')) {
+                                return false    
+                        }
+                    }
 
 
-            return formularioEsValido
-    
-    }
 
-        //6.- CONDICIÓN FISCAL
+                    return true
+                    
+        }
 
-        // ivaSeccion6: '',
-        // ingresosBrutosSeccion6: '',
-        // tasaComercioSeccion6: '',
+
+
+                //9b Para las personas físicas
+
+                // formularioSeccion9b: [{
+                //     apellidoSeccion9b: '',
+                //     nombreSeccion9b: '',
+                //     documentoSeccion9b: '',
+                //     fechaNacSeccion9b: '',
+                //     vinculoSeccion9b: '',
+                //     escolaridadSeccion9b: '',
+                //     estaCursandoSeccion9b: '',
+                //     ocupacionSeccion9b: '',
+                // }],
+
 
 
 
