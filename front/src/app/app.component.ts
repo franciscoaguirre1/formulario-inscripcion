@@ -230,14 +230,14 @@ export class AppComponent implements OnInit{
         // validaciones del formulario
 
     validarFormularioCompleto(formularioEconomiaPopular: any) {
-            // validar seccion 1
+            // Validación seccion 1
 
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == ""
                 || formularioEconomiaPopular.caracterUnidadProductivaSolicitante == null) {
                     return false
                 }
 
-            // validar seccion 2.2
+            // Validación seccion 2.2
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == !'Persona Física (Unidad Productiva Unipersonal)' 
                 && (formularioEconomiaPopular.nombreInstitucionPersonaSeccion22 == '' 
                 || formularioEconomiaPopular.nombreFantasiaSeccion22 == '' 
@@ -246,7 +246,7 @@ export class AppComponent implements OnInit{
                 return false
             }
 
-            // validar seccion 2.1
+            // Validación seccion 2.1
 
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == 'Persona Física (Unidad Productiva Unipersonal)' 
                 && (formularioEconomiaPopular.apellidoSeccion21 == ''
@@ -262,7 +262,7 @@ export class AppComponent implements OnInit{
                 return false
             }
     
-            // validar seccion 3
+            // Validación seccion 3
     
             if (formularioEconomiaPopular.tieneRegistroSeccion3 == 'True'
             && (formularioEconomiaPopular.nroInscripcionMatriculaSeccion3 == ''
@@ -279,13 +279,13 @@ export class AppComponent implements OnInit{
                 } return false
             }
 
-            // validar seccion 4
+            // Validación seccion 4
 
             if (formularioEconomiaPopular.actividadesProductivasSeccion4 == '') {
                 return false
             }
 
-            // validar seccion 5
+            // Validación seccion 5
 
             if (formularioEconomiaPopular.calleSeccion5  == ''
                 || formularioEconomiaPopular.numeroCalleSeccion5 == ''
@@ -313,7 +313,7 @@ export class AppComponent implements OnInit{
                 }
                     
                     
-                    //seccion 6
+                    //Validación seccion 6
                     
                     if (formularioEconomiaPopular.ivaSeccion6 == "" 
                     || formularioEconomiaPopular.ingresosBrutosSeccion6 == ""
@@ -321,8 +321,9 @@ export class AppComponent implements OnInit{
                         return false
                     }
                     
-                    //Seccion 7 que pueden ser múltiples arrays
+                    // Validación Seccion 7 que pueden ser múltiples arrays
                     for (let i = 0; i < this.formularioEconomiaPopular.formularioSeccion7.length; i++) {
+                
                         
                         if (formularioEconomiaPopular.formularioSeccion7[i].apellidoSeccion7 == ''
                         || formularioEconomiaPopular.formularioSeccion7[i].nombreSeccion7 == ''
@@ -343,12 +344,11 @@ export class AppComponent implements OnInit{
 
                     for (let i = 0; i < formularioEconomiaPopular.formularioSeccion9.length; i++) {
                         
-                        if(formularioEconomiaPopular.formularioSeccion9[i]
-                            && (formularioEconomiaPopular.formularioSeccion9[i].nombreResponsableSeccion9 == ''
+                        if(formularioEconomiaPopular.formularioSeccion9[i].nombreResponsableSeccion9 == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].dniSeccion9 == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].cargoSeccion9 == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].telefonoSeccion9 == ''
-                            || formularioEconomiaPopular.formularioSeccion9[i].emailSeccion9 == '')) {
+                            || formularioEconomiaPopular.formularioSeccion9[i].emailSeccion9 == '') {
                                 return false    
                         }
                     }
@@ -356,41 +356,81 @@ export class AppComponent implements OnInit{
 
                     for (let i = 0; i < formularioEconomiaPopular.formularioSeccion9b.length; i++) {
                         
-                        if(formularioEconomiaPopular.formularioSeccion9b[i]
-                            && (formularioEconomiaPopular.formularioSeccion9[i].apellidoSeccion9b == ''
+                        if(formularioEconomiaPopular.formularioSeccion9[i].apellidoSeccion9b == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].nombreSeccion9b == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].documentoSeccion9b == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].fechaNacSeccion9b == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].vinculoSeccion9b == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].escolaridadSeccion9b == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].estaCursandoSeccion9b == ''
-                            || formularioEconomiaPopular.formularioSeccion9[i].ocupacionSeccion9b == '')) {
+                            || formularioEconomiaPopular.formularioSeccion9[i].ocupacionSeccion9b == '') {
                                 return false    
                         }
                     }
 
+                    // Validación 9d Obra Social
+
+                    if (formularioEconomiaPopular.poseeObraSocialSeccion9d == ''
+                    || formularioEconomiaPopular.cubreGrupoSeccion9d == '') {
+                        return false
+                    }
+                    
+                    //Validación 9e Situación habitacional
+
+                    if (formularioEconomiaPopular.posesionViviendaSeccion9e == ''
+                    || formularioEconomiaPopular.banoSeccion9e == ''
+                    || formularioEconomiaPopular.dormitoriosSeccion9e == ''
+                    || formularioEconomiaPopular.murosSeccion9e == ''
+                    || formularioEconomiaPopular.pisosSeccion9e == '') {
+                        return false
+                    }
+
+                    //Validación 9e Situación habitacional
 
 
+                    if (formularioEconomiaPopular.aguaSeccion9f == ''
+                    || formularioEconomiaPopular.luzSeccion9f == ''
+                    || formularioEconomiaPopular.gasSeccion9f == '') {
+                        return false
+                    }
+
+                    //Validación 9e Situación habitacional
+
+                    if (formularioEconomiaPopular.totalHectareasSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasEnSecanoSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasConRiegoSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasAgricolaSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasMonteSeccion9g == ''
+                    || formularioEconomiaPopular.hectareaschacraEnSecanoSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasPasturasNaturalesSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasPasturasImplantadasSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasGranjaMixtaSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasHortalizasSeccion9g == ''
+                    || formularioEconomiaPopular.hectareasGranosSeccion9g == ''
+                    || formularioEconomiaPopular.otraSeccion9g == ''
+                    || formularioEconomiaPopular.otraHectareasSeccion9g == ''
+                    
+                    ) {
+                        return false
+                    }
+
+                    //Validación 9e Situación habitacional
+
+                    if (formularioEconomiaPopular.vacunosSeccion9h == ''
+                    || formularioEconomiaPopular.caprinosSeccion9h == ''
+                    || formularioEconomiaPopular.porcinosSeccion9h == ''
+                    || formularioEconomiaPopular.ovinosSeccion9h == '' 
+                    || formularioEconomiaPopular.pollosParrillerosSeccion9h == ''
+                    || formularioEconomiaPopular.gallinasPonedorasSeccion9h == '' 
+                    || formularioEconomiaPopular.apiculturaSeccion9h == '') {
+                        return false
+                    }
+                    
+                    
+                    
                     return true
                     
         }
-
-
-
-                //9b Para las personas físicas
-
-                // formularioSeccion9b: [{
-                //     apellidoSeccion9b: '',
-                //     nombreSeccion9b: '',
-                //     documentoSeccion9b: '',
-                //     fechaNacSeccion9b: '',
-                //     vinculoSeccion9b: '',
-                //     escolaridadSeccion9b: '',
-                //     estaCursandoSeccion9b: '',
-                //     ocupacionSeccion9b: '',
-                // }],
-
-
 
 
 
