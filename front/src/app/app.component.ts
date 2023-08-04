@@ -229,19 +229,19 @@ export class AppComponent implements OnInit{
 
         // validaciones del formulario
 
-    validarFormulario(formularioEconomiaPopular: any) {
+    validarFormularioCompleto(formularioEconomiaPopular: any) {
 
             //creo variable de validacion
             let formularioEsValido : boolean = false
 
             // validar seccion 1
 
-            if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == null
-                || formularioEconomiaPopular.caracterUnidadProductivaSolicitante == "") {
+            if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == ""
+                || formularioEconomiaPopular.caracterUnidadProductivaSolicitante == null) {
                     formularioEsValido = false;
                 }
 
-            // validar seccion 2.1
+            // validar seccion 2.2
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == !'Persona Física (Unidad Productiva Unipersonal)' 
                 && formularioEconomiaPopular.nombreInstitucionPersonaSeccion22 == '' 
                 || formularioEconomiaPopular.nombreFantasiaSeccion22 == '' 
@@ -253,9 +253,9 @@ export class AppComponent implements OnInit{
             // validar seccion 2.1
 
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == 'Persona Física (Unidad Productiva Unipersonal)' 
-                && formularioEconomiaPopular.apellidoSeccion21 == '' 
-                || formularioEconomiaPopular.nombreSeccion21 == '' 
-                || formularioEconomiaPopular.tipoDocumentoSeccion21 == '' 
+                && formularioEconomiaPopular.apellidoSeccion21 == ''
+                || formularioEconomiaPopular.nombreSeccion21 == ''
+                || formularioEconomiaPopular.tipoDocumentoSeccion21 == ''
                 || formularioEconomiaPopular.nroDocumentoSeccion21 == '' 
                 || formularioEconomiaPopular.tieneCiDiSeccion21 == '' 
                 || formularioEconomiaPopular.nivelCiDiSeccion21 == '' 
@@ -280,26 +280,68 @@ export class AppComponent implements OnInit{
                     formularioEsValido = false
                 } if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'False') {
                     formularioEsValido = false
-                }
+                } formularioEsValido = false
             }
+
+            // validar seccion 4
+
+            if (formularioEconomiaPopular.actividadesProductivasSeccion4 == '') {
+                formularioEsValido = false
+            }
+
+            // validar seccion 5
+
+            if (formularioEconomiaPopular.calleSeccion5  == ''
+                || formularioEconomiaPopular.numeroCalleSeccion5 == ''
+                || formularioEconomiaPopular.cpSeccion5 == ''
+                || formularioEconomiaPopular.barrioSeccion5 == ''
+                || formularioEconomiaPopular.localidadSeccion5 == ''
+                || formularioEconomiaPopular.departamentoSeccion5 == ''
+                || formularioEconomiaPopular.emailSeccion5 == ''
+                || formularioEconomiaPopular.confirmeEmailSeccion5 == ''
+                || formularioEconomiaPopular.telefonoSeccion5 == ''
+                || formularioEconomiaPopular.departamentoSeccion5 == ''
+                || formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == '') {
+                    formularioEsValido = false
+                    if (formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == 'False'
+                    && formularioEconomiaPopular.callePredioProductivoSeccion5 == ''
+                    && formularioEconomiaPopular.nroCallePredProdSeccion5 == ''
+                    && formularioEconomiaPopular.cpPredProdSeccion5 == ''
+                    && formularioEconomiaPopular.barrioPredProdSeccion5 == ''
+                    && formularioEconomiaPopular.localidadPredProdSeccion5 == ''
+                    && formularioEconomiaPopular.departamentoPredioProdSeccion5 == ''
+                    && formularioEconomiaPopular.emailPredProdSeccion5 == ''
+                    && formularioEconomiaPopular.telefonoPredProdSeccion5 == '') {
+                    formularioEsValido = false
+                    }
+                    
+
+                    //seccion 6
+
+                    if (formularioEconomiaPopular.ivaSeccion6 == "" 
+                    || formularioEconomiaPopular.ingresosBrutosSeccion6 == ""
+                    || formularioEconomiaPopular.tasaComercioSeccion6 == "") {
+                        formularioEsValido = false
+                    }
+                    
+                    //Seccion 7
+                    if (formularioEconomiaPopular.)
+
+                }
 
 
             return formularioEsValido
     
     }
 
+        //6.- CONDICIÓN FISCAL
 
-            // 3.- INSCRIPCIONES LEGALES
-        
-            // inscripcionesLegalesSeccion3: '',
-            // tieneRegistroSeccion3: '',
-            // nroInscripcionMatriculaSeccion3: '',
-            // reparticionSeccion3: '',
-            // esActividadAgropecuariaSeccion3: '',
-            // renspaNroSeccion3: '',
-            // marcasYSenalesSeccion3: '',
-            // renafSeccion3: '',
-            // otroCualSeccion3: ''
+        // ivaSeccion6: '',
+        // ingresosBrutosSeccion6: '',
+        // tasaComercioSeccion6: '',
+
+
+
 
 
 
