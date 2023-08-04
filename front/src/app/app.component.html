@@ -620,6 +620,7 @@
             </div>
             <div class="container container-7" *ngFor="let d of formularioEconomiaPopular.formularioSeccion7; let i = index">
                 <hr class="my-2">
+                <button class="btn btn-warning" *ngIf="formularioEconomiaPopular.formularioSeccion7.length > 1" (click)="quitarNuevoRepresentanteSection7(i)"><i class="fa-solid fa-trash"></i></button>
                 <div class="row">
                     <p>Integrante nro {{i+1}}</p>
                     <div class="col-md-4">
@@ -705,7 +706,7 @@
             </div>
             <div class="row">
                 <div class="col-md-4">
-                    <button (click)="agregarNuevoRepresentanteSection7()" class="btn btn-primary">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
+                    <button (click)="agregarNuevoRepresentanteSection7()" class="btn btn-primary mx-3">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
                 </div>
             </div>
         </div>
@@ -735,8 +736,9 @@
                 <h5 class="mr-3">9 - PERSONAS RESPONSABLES DE LA INSCRIPCIÓN</h5>
                 <small>Se responsabilizan de la veracidad de la información consignada y a facilitar su verificación. Repetir los datos si es persona física.</small>
             </div>
-            <div class="container container-9" *ngFor="let d of formularioEconomiaPopular.formularioSeccion9">
+            <div class="container container-9" *ngFor="let d of formularioEconomiaPopular.formularioSeccion9; let i = index">
                 <hr class="my-2">
+                <button class="btn btn-warning" *ngIf="formularioEconomiaPopular.formularioSeccion9.length > 1" (click)="quitarNuevoResponsableSection9(i)"><i class="fa-solid fa-trash"></i></button>
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3">
@@ -802,8 +804,9 @@
                     <h5 class="mr-3">Para las personas físicas</h5>
                     <small>Datos del grupo conviviente (identificar todas las personas que conviven en ese domicilio y comparten comida, incluido el postulante)</small>
                 </div>
-                <div class="container container-9b" *ngFor="let d of formularioEconomiaPopular.formularioSeccion9b">
-                <hr class="my-2">
+                <div class="container container-9b" *ngFor="let d of formularioEconomiaPopular.formularioSeccion9b; let i = index">
+                <hr class="my-2">                
+                <button class="btn btn-warning" *ngIf="formularioEconomiaPopular.formularioSeccion9b.length > 1" (click)="quitarPersonaFisicaSection9b(i)"><i class="fa-solid fa-trash"></i></button>
                     <div class="row">
                         <div class="col-md-2 col-sm-4 col-lg-6">
                             <div class="mb-3">

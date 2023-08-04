@@ -56,6 +56,15 @@ export class AppComponent implements OnInit{
                 ocupacionSeccion9b: '',
             })
         }
+        quitarNuevoRepresentanteSection7(i: number) {
+            this.formularioEconomiaPopular.formularioSeccion7.splice(i,1)
+        }
+        quitarNuevoResponsableSection9(i: number) {
+            this.formularioEconomiaPopular.formularioSeccion9.splice(i,1)
+        }
+        quitarPersonaFisicaSection9b(i: number) {
+            this.formularioEconomiaPopular.formularioSeccion9b.splice(i,1)
+        }
     
 
     
