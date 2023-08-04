@@ -23,7 +23,7 @@ export class AppComponent implements OnInit{
     contadorCampos: number = 0
 
 
-        //  métdos para agregar nuevos campos
+        //  métdos para agregar y quitar nuevos campos
 
         agregarNuevoRepresentanteSection7() {
             this.formularioEconomiaPopular.formularioSeccion7.push({
@@ -32,7 +32,7 @@ export class AppComponent implements OnInit{
                 tipoDeDocumentoSeccion7: '',
                 nroDocumentoSeccion7: '',
                 tieneCiDiSeccion7: '',
-                nivelCiDiSeccion7: ''                
+                nivelCiDiSeccion7: ''              
             });
         }
         agregarNuevoResponsableSection9() {
@@ -99,6 +99,7 @@ export class AppComponent implements OnInit{
         
             nombreInstitucionPersonaSeccion22: '',
             nombreFantasiaSeccion22: '',
+            nroCuilCuitSeccion22: '',
             asociacionCooperativaSeccion22: ''            
         ,
         // 3.- INSCRIPCIONES LEGALES
@@ -226,6 +227,83 @@ export class AppComponent implements OnInit{
     };
 
 
+        // validaciones del formulario
+
+    validarFormulario(formularioEconomiaPopular: any) {
+
+            //creo variable de validacion
+            let formularioEsValido : boolean = false
+
+            // validar seccion 1
+
+            if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == null
+                || formularioEconomiaPopular.caracterUnidadProductivaSolicitante == "") {
+                    formularioEsValido = false;
+                }
+
+            // validar seccion 2.1
+            if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == !'Persona Física (Unidad Productiva Unipersonal)' 
+                && formularioEconomiaPopular.nombreInstitucionPersonaSeccion22 == '' 
+                || formularioEconomiaPopular.nombreFantasiaSeccion22 == '' 
+                || formularioEconomiaPopular.nroCuilCuitSeccion22 == '' 
+                || formularioEconomiaPopular.asociacionCooperativaSeccion22 == '') {
+                formularioEsValido = false
+            }
+
+            // validar seccion 2.1
+
+            if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == 'Persona Física (Unidad Productiva Unipersonal)' 
+                && formularioEconomiaPopular.apellidoSeccion21 == '' 
+                || formularioEconomiaPopular.nombreSeccion21 == '' 
+                || formularioEconomiaPopular.tipoDocumentoSeccion21 == '' 
+                || formularioEconomiaPopular.nroDocumentoSeccion21 == '' 
+                || formularioEconomiaPopular.tieneCiDiSeccion21 == '' 
+                || formularioEconomiaPopular.nivelCiDiSeccion21 == '' 
+                || formularioEconomiaPopular.cuilSeccion21 == '' 
+                || formularioEconomiaPopular.emailSeccion21 == '' 
+                || formularioEconomiaPopular.telefonoSeccion21 == '' 
+                || formularioEconomiaPopular.asociacionCooperativaSeccion21 == '') {
+                formularioEsValido = false
+            }
+    
+            // validar seccion 3
+    
+            if (formularioEconomiaPopular.tieneRegistroSeccion3 == 'True'
+            || formularioEconomiaPopular.nroInscripcionMatriculaSeccion3 == ''
+            || formularioEconomiaPopular.reparticionSeccion3 == ''
+            || formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == '') {
+                if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'True'
+                && formularioEconomiaPopular.renspaNroSeccion3 == ''
+                && formularioEconomiaPopular.marcasYSenalesSeccion3 == ''
+                && formularioEconomiaPopular.renafSeccion3 == ''
+                && formularioEconomiaPopular.otroCualSeccion3 == ''){
+                    formularioEsValido = false
+                } if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'False') {
+                    formularioEsValido = false
+                }
+            }
+
+
+            return formularioEsValido
+    
+    }
+
+
+            // 3.- INSCRIPCIONES LEGALES
+        
+            // inscripcionesLegalesSeccion3: '',
+            // tieneRegistroSeccion3: '',
+            // nroInscripcionMatriculaSeccion3: '',
+            // reparticionSeccion3: '',
+            // esActividadAgropecuariaSeccion3: '',
+            // renspaNroSeccion3: '',
+            // marcasYSenalesSeccion3: '',
+            // renafSeccion3: '',
+            // otroCualSeccion3: ''
+
+
+
+
     constructor() {
 
     }
@@ -298,6 +376,7 @@ export class AppComponent implements OnInit{
         this.esUnidadAsociativaProductiva = true
         this.esPersonaFisica = false    
         }
+
 
 
 
