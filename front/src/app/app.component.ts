@@ -18,6 +18,7 @@ export class AppComponent implements OnInit{
     esUnidadAsociativaProductiva: boolean = false
     esActividadAgropecuaria: boolean = false
     tieneCiDi: boolean = false
+    tieneCiDiSeccion21: boolean = false
     tieneObraSocial: boolean = false
     arrayRadioButtonsSection1!: any
     contadorCampos: number = 0
@@ -497,6 +498,12 @@ export class AppComponent implements OnInit{
     }
     setTieneCiDiNo() {
         this.tieneCiDi = false;
+    }
+    setTieneCiDiSeccion21Si() {
+        this.tieneCiDiSeccion21 = true;
+    }
+    setTieneCiDiSeccion21No() {
+        this.tieneCiDiSeccion21 = false;
     }
 
     
