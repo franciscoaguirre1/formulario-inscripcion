@@ -78,8 +78,9 @@
 
 
         <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3 my-3">
-            <div class="subheading-title d-flex">
+            <div class="subheading-title">
                 <h5 class="mr-3">2 - DATOS DE IDENTIFICACIÓN</h5>
+                <small>(todos los campos son obligatorios)</small>
             </div>
             <hr class="my-2">
 
@@ -88,8 +89,9 @@
 
 
             <div *ngIf="esPersonaFisica" class="section-2-1">
-                <div class="subheading-title d-flex">
+                <div class="subheading-title">
                     <h5 class="mr-3 my-3">2.1 - Unidad Productiva Unipersonal</h5>
+                    <small>(todos los campos son obligatorios)</small>
                 </div>
                 <div class="container container-2-1 my-3">
                     <div class="row">
@@ -139,9 +141,9 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="mb-3">
-                                <label class="form-label">N° de Documento</label>
+                                <label class="form-label">N° de Documento (sin puntos ni guiones)</label>
                                 <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.nroDocumentoSeccion21" name="nroDocumentoSeccion21"  type="text" class="form-control" id="basic-url" >
+                                    <input maxlength="8" [(ngModel)]="formularioEconomiaPopular.nroDocumentoSeccion21" name="nroDocumentoSeccion21"  type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -176,9 +178,9 @@
                     <div class="row">
                         <div class="col-4">
                             <div class="mb-3">
-                                <label class="form-label">CUIL</label>
+                                <label class="form-label">CUIL (sin puntos ni guiones)</label>
                                 <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.cuilSeccion21" name="cuilSeccion21" type="text" class="form-control" id="basic-url" >
+                                    <input maxlength="11" [(ngModel)]="formularioEconomiaPopular.cuilSeccion21" name="cuilSeccion21" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -186,7 +188,7 @@
                             <div class="mb-3">
                                 <label class="form-label">Dirección de correo electrónico</label>
                                 <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.emailSeccion21" name="emailSeccion21"  type="text" class="form-control" id="basic-url" >
+                                    <input [(ngModel)]="formularioEconomiaPopular.emailSeccion21" name="emailSeccion21"  type="email" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -215,14 +217,15 @@
             <!-- Sección 2.2 -->
 
             <div *ngIf="esUnidadAsociativaProductiva" class="section-2-2">
-                <div class="subheading-title d-flex">
+                <div class="subheading-title">
                     <h5 class="mr-3 my-3">2.2 Unidades Asociativas Productivas (incluye las familiares)</h5>
+                    <small>(todos los campos son obligatorios)</small>                    
                 </div>
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
                             <div class="mb-3">
-                                <label class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona (Obligatoria)</label>
+                                <label class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona</label>
                                 <div class="input-group">
                                     <input [(ngModel)]="formularioEconomiaPopular.nombreInstitucionPersonaSeccion22" name="nombreInstitucionPersonaSeccion22" type="text" class="form-control" id="basic-url">
                                 </div>
@@ -238,9 +241,9 @@
                         </div>
                         <div class="col-12">
                             <div class="mb-3">
-                                <label class="form-label">N° CUIL o CUIT (Obligatorio)</label>
+                                <label class="form-label">N° CUIL o CUIT (sin puntos ni guiones)</label>
                                 <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.nroCuilCuitSeccion22" name="nroCuilCuitSeccion22" type="text" class="form-control" id="basic-url" >
+                                    <input maxlength="11" [(ngModel)]="formularioEconomiaPopular.nroCuilCuitSeccion22" name="nroCuilCuitSeccion22" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -266,6 +269,7 @@
         <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3 my-3">
             <div class="subheading-title">
                 <h5 class="mr-3">3 - INSCRIPCIONES LEGALES (INAE - IPJ - Otros)</h5>
+                <small>(todos los campos son obligatorios)</small>
             </div>
             <hr class="my-2">
             <div class="d-flex ">
@@ -352,6 +356,7 @@
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">4 - OBJETO SOCIAL</h5>
                 <p>Actividades Productivas</p>
+                <small>(todos los campos son obligatorios)</small>
             </div>
             <hr class="my-2">
             <div class="container">
@@ -366,8 +371,9 @@
 
 
         <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
-            <div class="subheading-title d-flex mt-3">
+            <div class="subheading-title mt-3">
                 <h5 class="mr-3">5 - DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
+                <small>(todos los campos son obligatorios)</small>
             </div>
             <hr>
             <div class="container">
@@ -428,7 +434,7 @@
                         <div class="mb-3">
                             <label class="form-label">Correo electrónico:</label>
                             <div class="input-group">
-                                <input [(ngModel)]="formularioEconomiaPopular.emailSeccion5" name="emailSeccion5" type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="formularioEconomiaPopular.emailSeccion5" name="emailSeccion5" type="email" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -436,8 +442,9 @@
                         <div class="mb-3">
                             <label class="form-label">Confirme correo electrónico:</label>
                             <div class="input-group">
-                                <input [(ngModel)]="formularioEconomiaPopular.confirmeEmailSeccion5" name="confirmeEmailSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.confirmeEmailSeccion5" name="confirmeEmailSeccion5" type="email" class="form-control" id="basic-url" >
                             </div>
+                            <small *ngIf="formularioEconomiaPopular.emailSeccion5 !=formularioEconomiaPopular.confirmeEmailSeccion5" style="color: red;">los emails declarados no coinciden</small>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -452,7 +459,7 @@
                         <div class="mb-3">
                             <label class="form-label">Cantidad de asociados que trabajan en la sede productiva:</label>
                             <div class="input-group">
-                                <input [(ngModel)]="formularioEconomiaPopular.cantidadAsociadosSeccion5" name="cantidadAsociadosSeccion5" type="text" class="form-control" id="basic-url" >
+                                <input [(ngModel)]="formularioEconomiaPopular.cantidadAsociadosSeccion5" name="cantidadAsociadosSeccion5" type="number" class="form-control" id="basic-url" >
                             </div>
                         </div>
                     </div>
@@ -529,8 +536,17 @@
                             <div class="mb-3">
                                 <label class="form-label">Correo electrónico:</label>
                                 <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.emailPredProdSeccion5" name="emailPredProdSeccion5" type="text" class="form-control" id="basic-url">
+                                    <input [(ngModel)]="formularioEconomiaPopular.emailPredProdSeccion5" name="emailPredProdSeccion5" type="email" class="form-control" id="basic-url">
                                 </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="mb-3">
+                                <label class="form-label">Confirme correo electrónico:</label>
+                                <div class="input-group">
+                                    <input [(ngModel)]="formularioEconomiaPopular.confirmeemailPredProdSeccion5" name="confirmeemailPredProdSeccion5" type="email" class="form-control" id="basic-url">
+                                </div>
+                                <small *ngIf="formularioEconomiaPopular.emailPredProdSeccion5 != formularioEconomiaPopular.confirmeemailPredProdSeccion5" style="color: red;">mails no coinciden</small>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -625,6 +641,8 @@
             <div class="subheading-title  mt-3">
                 <h5 class="mr-3">7 - REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
                 <small>(Si es persona física por favor repetir los datos del titular)</small>
+                <br>
+                <small>(todos los campos son obligatorios)</small>
             </div>
             <div class="container container-7" *ngFor="let d of formularioEconomiaPopular.formularioSeccion7; let i = index">
                 <hr class="my-2">
@@ -677,9 +695,9 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="mb-3">
-                            <label class="form-label">N° de Documento</label>
+                            <label class="form-label">N° de Documento (sin puntos ni guiones)</label>
                             <div class="input-group">
-                                <input [(ngModel)]="d.nroDocumentoSeccion7" name="nroDocumentoSeccion7" type="text" class="form-control" id="basic-url">
+                                <input maxlength="8" [(ngModel)]="d.nroDocumentoSeccion7" name="nroDocumentoSeccion7" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -726,6 +744,8 @@
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">8 - INFORMACIÓN COMPLEMENTARIA</h5>
                 <small>Espacio para efectuar las aclaraciones y ampliaciones que se consideren necesarias</small>
+                <br>
+                <small>(todos los campos son obligatorios)</small>
             </div>
             <hr class="my-2">
             <div class="container">
@@ -743,6 +763,8 @@
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">9 - PERSONAS RESPONSABLES DE LA INSCRIPCIÓN</h5>
                 <small>Se responsabilizan de la veracidad de la información consignada y a facilitar su verificación. Repetir los datos si es persona física.</small>
+                <br>
+                <small>(todos los campos son obligatorios)</small>
             </div>
             <div class="container container-9" *ngFor="let d of formularioEconomiaPopular.formularioSeccion9; let i = index">
                 <hr class="my-2">
@@ -758,9 +780,9 @@
                     </div>
                     <div class="col-md-4">
                         <div class="mb-3">
-                            <label class="form-label">DNI</label>
+                            <label class="form-label">DNI (sin puntos ni guiones)</label>
                             <div class="input-group">
-                                <input [(ngModel)]="d.dniSeccion9" name="dniSeccion9" type="text" class="form-control" id="basic-url">
+                                <input maxlength="8" [(ngModel)]="d.dniSeccion9" name="dniSeccion9" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -786,8 +808,18 @@
                         <div class="mb-3">
                             <label class="form-label">Correo para recibir notificaciones</label>
                             <div class="input-group">
-                                <input [(ngModel)]="d.emailSeccion9" name="emailSeccion9" type="text" class="form-control" id="basic-url">
+                                <input [(ngModel)]="d.emailSeccion9" name="emailSeccion9" type="email" class="form-control" id="basic-url">
                             </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="mb-3">
+                            <label class="form-label">Confirme correo electrónico</label>
+                            <div class="input-group">
+                                <input [(ngModel)]="d.confirmeEmailSeccion9" name="confirmeEmailSeccion9" type="email" class="form-control" id="basic-url">
+                            </div>
+                            <small *ngIf="d.emailSeccion9 !=d.confirmeEmailSeccion9" style="color: red;">los emails declarados no coinciden</small>
+
                         </div>
                     </div>
                 </div>

@@ -42,6 +42,7 @@ export class AppComponent implements OnInit{
                 cargoSeccion9: '',
                 telefonoSeccion9: '',
                 emailSeccion9: '',
+                confirmeEmailSeccion9: '',
             });
         }
         agregarPersonaFisicaSection9b() {
@@ -139,6 +140,7 @@ export class AppComponent implements OnInit{
             localidadPredProdSeccion5: '',
             departamentoPredioProdSeccion5: '',
             emailPredProdSeccion5: '',
+            confirmeemailPredProdSeccion5: '',
             telefonoPredProdSeccion5: '',
         
         //6.- CONDICIÓN FISCAL
@@ -169,6 +171,7 @@ export class AppComponent implements OnInit{
             cargoSeccion9: '',
             telefonoSeccion9: '',
             emailSeccion9: '',
+            confirmeEmailSeccion9: '',
         }],
         
         //9b Para las personas físicas
@@ -241,8 +244,8 @@ export class AppComponent implements OnInit{
             if (formularioEconomiaPopular.caracterUnidadProductivaSolicitante == !'Persona Física (Unidad Productiva Unipersonal)' 
                 && (formularioEconomiaPopular.nombreInstitucionPersonaSeccion22 == '' 
                 || formularioEconomiaPopular.nombreFantasiaSeccion22 == '' 
-                || formularioEconomiaPopular.nroCuilCuitSeccion22 == '' 
-                || formularioEconomiaPopular.asociacionCooperativaSeccion22 == '')) {
+                || formularioEconomiaPopular.nroCuilCuitSeccion22 == '' // 
+                || formularioEconomiaPopular.nroCuilCuitSeccion22.length > 11)) { // verificar la cantidad de caracteres // tambien limitado en el html
                 return false
             }
 
@@ -252,13 +255,14 @@ export class AppComponent implements OnInit{
                 && (formularioEconomiaPopular.apellidoSeccion21 == ''
                 || formularioEconomiaPopular.nombreSeccion21 == ''
                 || formularioEconomiaPopular.tipoDocumentoSeccion21 == ''
-                || formularioEconomiaPopular.nroDocumentoSeccion21 == '' 
+                || formularioEconomiaPopular.nroDocumentoSeccion21 == ''
+                || formularioEconomiaPopular.nroDocumentoSeccion21.length > 8 // verificar la cantidad de caracteres // tambien limitado en el html
                 || formularioEconomiaPopular.tieneCiDiSeccion21 == '' 
                 || formularioEconomiaPopular.nivelCiDiSeccion21 == '' 
                 || formularioEconomiaPopular.cuilSeccion21 == '' 
-                || formularioEconomiaPopular.emailSeccion21 == '' 
-                || formularioEconomiaPopular.telefonoSeccion21 == '' 
-                || formularioEconomiaPopular.asociacionCooperativaSeccion21 == '')) {
+                || formularioEconomiaPopular.cuilSeccion21.length > 11 // verificar la cantidad de caracteres // tambien limitado en el html
+                || formularioEconomiaPopular.emailSeccion21 == '' // está condicionado en el html que tiene que ser de tipo email el input
+                || formularioEconomiaPopular.telefonoSeccion21 == '')) {
                 return false
             }
     
@@ -271,12 +275,12 @@ export class AppComponent implements OnInit{
                 if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'True'
                 && (formularioEconomiaPopular.renspaNroSeccion3 == ''
                 ||formularioEconomiaPopular.marcasYSenalesSeccion3 == ''
-                || formularioEconomiaPopular.renafSeccion3 == ''
-                || formularioEconomiaPopular.otroCualSeccion3 == '')){
-                    return false
-                } if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'False') {
+                || formularioEconomiaPopular.renafSeccion3 == '')){
                     return false
                 } return false
+            } if(formularioEconomiaPopular.tieneRegistroSeccion3 == 'False'
+            && formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == '') {
+                return false
             }
 
             // Validación seccion 4
@@ -293,10 +297,10 @@ export class AppComponent implements OnInit{
                 || formularioEconomiaPopular.barrioSeccion5 == ''
                 || formularioEconomiaPopular.localidadSeccion5 == ''
                 || formularioEconomiaPopular.departamentoSeccion5 == ''
-                || formularioEconomiaPopular.emailSeccion5 == ''
-                || formularioEconomiaPopular.confirmeEmailSeccion5 == ''
+                || formularioEconomiaPopular.emailSeccion5 == '' // limitado en el html para que sea email
+                || formularioEconomiaPopular.confirmeEmailSeccion5 == '' // limitado en el html para que sea email y para que coincidan los emails
                 || formularioEconomiaPopular.telefonoSeccion5 == ''
-                || formularioEconomiaPopular.departamentoSeccion5 == ''
+                || formularioEconomiaPopular.cantidadAsociadosSeccion5 == ''
                 || formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == '') {
                     if (formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == 'False'
                     && (formularioEconomiaPopular.callePredioProductivoSeccion5 == ''
@@ -306,6 +310,7 @@ export class AppComponent implements OnInit{
                     || formularioEconomiaPopular.localidadPredProdSeccion5 == ''
                     || formularioEconomiaPopular.departamentoPredioProdSeccion5 == ''
                     || formularioEconomiaPopular.emailPredProdSeccion5 == ''
+                    || formularioEconomiaPopular.confirmeemailPredProdSeccion5 == ''
                     || formularioEconomiaPopular.telefonoPredProdSeccion5 == '')) {
                         return false
                     } return false
@@ -321,7 +326,7 @@ export class AppComponent implements OnInit{
                         return false
                     }
                     
-                    // Validación Seccion 7 que pueden ser múltiples arrays
+                    // Validación Seccion 7 que pueden ser múltiples personas
                     for (let i = 0; i < this.formularioEconomiaPopular.formularioSeccion7.length; i++) {
                 
                         
@@ -333,14 +338,13 @@ export class AppComponent implements OnInit{
                             if(formularioEconomiaPopular.formularioSeccion7[i].tieneCiDiSeccion7 != ''
                             && formularioEconomiaPopular.formularioSeccion7[i].nivelCiDiSeccion7 == '') {
                                 return false
-                            }
-                            
+                            }                            
                         }
                         
                     }
 
 
-                    //Validación Seccion 9 que pueden ser múltiples arrays
+                    //Validación Seccion 9 que pueden ser múltiples personas
 
                     for (let i = 0; i < formularioEconomiaPopular.formularioSeccion9.length; i++) {
                         
@@ -348,11 +352,12 @@ export class AppComponent implements OnInit{
                             || formularioEconomiaPopular.formularioSeccion9[i].dniSeccion9 == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].cargoSeccion9 == ''
                             || formularioEconomiaPopular.formularioSeccion9[i].telefonoSeccion9 == ''
-                            || formularioEconomiaPopular.formularioSeccion9[i].emailSeccion9 == '') {
+                            || formularioEconomiaPopular.formularioSeccion9[i].emailSeccion9 == ''
+                            || formularioEconomiaPopular.formularioSeccion9[i].confirmeemailSeccion9 == '') {
                                 return false    
                         }
                     }
-                    //Validación Seccion 9b Para las personas físicas
+                    //Validación Seccion 9b Para las personas físicas que pueden ser múltiples
 
                     for (let i = 0; i < formularioEconomiaPopular.formularioSeccion9b.length; i++) {
                         
