@@ -268,17 +268,17 @@ export class AppComponent implements OnInit{
     
             // Validación seccion 3
     
-            if (formularioEconomiaPopular.tieneRegistroSeccion3 == 'True'
+            if (formularioEconomiaPopular.tieneRegistroSeccion3 == 'Si'
             && (formularioEconomiaPopular.nroInscripcionMatriculaSeccion3 == ''
             || formularioEconomiaPopular.reparticionSeccion3 == ''
             || formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == '')) {
-                if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'True'
+                if (formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'Si'
                 && (formularioEconomiaPopular.renspaNroSeccion3 == ''
                 ||formularioEconomiaPopular.marcasYSenalesSeccion3 == ''
                 || formularioEconomiaPopular.renafSeccion3 == '')){
                     return false
                 } return false
-            } if(formularioEconomiaPopular.tieneRegistroSeccion3 == 'False'
+            } if(formularioEconomiaPopular.tieneRegistroSeccion3 == 'No'
             && formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == '') {
                 return false
             }
@@ -302,7 +302,7 @@ export class AppComponent implements OnInit{
                 || formularioEconomiaPopular.telefonoSeccion5 == ''
                 || formularioEconomiaPopular.cantidadAsociadosSeccion5 == ''
                 || formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == '') {
-                    if (formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == 'False'
+                    if (formularioEconomiaPopular.domicilioPredioProductivoSeccion5 == 'No'
                     && (formularioEconomiaPopular.callePredioProductivoSeccion5 == ''
                     || formularioEconomiaPopular.nroCallePredProdSeccion5 == ''
                     || formularioEconomiaPopular.cpPredProdSeccion5 == ''
@@ -514,6 +514,15 @@ export class AppComponent implements OnInit{
         this.esUnidadAsociativaProductiva = true
         this.esPersonaFisica = false    
         }
+
+
+        // métodos generales
+
+
+        
+
+
+        
 
 
 
