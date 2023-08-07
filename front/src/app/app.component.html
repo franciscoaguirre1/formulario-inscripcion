@@ -844,6 +844,7 @@
                     <h5 class="mr-3">Para las personas físicas</h5>
                     <small>Datos del grupo conviviente (identificar todas las personas que conviven en ese domicilio y comparten comida, incluido el postulante)</small>
                 </div>
+                <small>(todos los campos son obligatorios)</small>
                 <div class="container container-9b" *ngFor="let d of formularioEconomiaPopular.formularioSeccion9b; let i = index">
                 <hr class="my-2">                
                 <button class="btn btn-warning" *ngIf="formularioEconomiaPopular.formularioSeccion9b.length > 1" (click)="quitarPersonaFisicaSection9b(i)"><i class="fa-solid fa-trash"></i></button>
@@ -1178,11 +1179,12 @@
 
             <!-- 9g -- Datos referidos al predio y actividad productiva (solo productos agropecuarios) -->
 
-            <div class="border shadow-lg bg-body-tertiary rounded p-5 my-3">
+            <div *ngIf="formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'Si'" class="border shadow-lg bg-body-tertiary rounded p-5 my-3">
                 <div class="subheading-title my-3">
                     <h5 class="mr-3">Datos referidos al predio y actividad productiva</h5>
                     <small>(solo productores agropecuarios)</small>
                 </div>
+                <small>(todos los campos son obligatorios)</small>
                 <hr class="my-2">
 
                 <div class="container">
@@ -1294,87 +1296,80 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-
-
-
-            <!-- 9h -- Cantidad de Animales -->
-
-
-            <div class="border shadow-lg bg-body-tertiary rounded p-5 my-3">
-                <div class="subheading-title my-3">
-                    <h5 class="mr-3">Cantidad de Animales</h5>
-                </div>
-                <hr class="my-2">
-
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="mb-3">
-                                <label class="form-label">Vacunos</label>
-                                <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.vacunosSeccion9h" name="vacunosSeccion9h" type="text" class="form-control" id="basic-url">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3">
-                                <label class="form-label">Caprinos</label>
-                                <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.caprinosSeccion9h" name="caprinosSeccion9h" type="text" class="form-control" id="basic-url">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3">
-                                <label class="form-label">Porcinos</label>
-                                <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.porcinosSeccion9h" name="porcinosSeccion9h" type="text" class="form-control" id="basic-url">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3">
-                                <label class="form-label">Ovinos</label>
-                                <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.ovinosSeccion9h" name="ovinosSeccion9h" type="text" class="form-control" id="basic-url">
-                                </div>
-                            </div>
-                        </div>
+                    <div class="subheading-title my-3">
+                        <h5 class="mr-3">Cantidad de Animales</h5>
                     </div>
-                    <div class="row">
-                        <div class="col-md-3">
-                            <div class="mb-3">
-                                <label class="form-label">Pollos parrilleros</label>
-                                <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.pollosParrillerosSeccion9h" name="pollosParrillerosSeccion9h" type="text" class="form-control" id="basic-url">
+                    <hr class="my-2">
+
+                    
+                    
+                    <!-- 9h Cantidad de Animales-->
+
+
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Vacunos</label>
+                                    <div class="input-group">
+                                        <input [(ngModel)]="formularioEconomiaPopular.vacunosSeccion9h" name="vacunosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Caprinos</label>
+                                    <div class="input-group">
+                                        <input [(ngModel)]="formularioEconomiaPopular.caprinosSeccion9h" name="caprinosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Porcinos</label>
+                                    <div class="input-group">
+                                        <input [(ngModel)]="formularioEconomiaPopular.porcinosSeccion9h" name="porcinosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Ovinos</label>
+                                    <div class="input-group">
+                                        <input [(ngModel)]="formularioEconomiaPopular.ovinosSeccion9h" name="ovinosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-3">
-                            <div class="mb-3">
-                                <label class="form-label">Gallinas ponedores</label>
-                                <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.gallinasPonedorasSeccion9h" name="gallinasPonedorasSeccion9h" type="text" class="form-control" id="basic-url">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Pollos parrilleros</label>
+                                    <div class="input-group">
+                                        <input [(ngModel)]="formularioEconomiaPopular.pollosParrillerosSeccion9h" name="pollosParrillerosSeccion9h" type="text" class="form-control" id="basic-url">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-3">
-                            <div class="mb-3">
-                                <label class="form-label">Apicultura</label>
-                                <div class="input-group">
-                                    <input [(ngModel)]="formularioEconomiaPopular.apiculturaSeccion9h" name="apiculturaSeccion9h" type="text" class="form-control" id="basic-url">
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Gallinas ponedores</label>
+                                    <div class="input-group">
+                                        <input [(ngModel)]="formularioEconomiaPopular.gallinasPonedorasSeccion9h" name="gallinasPonedorasSeccion9h" type="text" class="form-control" id="basic-url">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="mb-3">
+                                    <label class="form-label">Apicultura</label>
+                                    <div class="input-group">
+                                        <input [(ngModel)]="formularioEconomiaPopular.apiculturaSeccion9h" name="apiculturaSeccion9h" type="text" class="form-control" id="basic-url">
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
-
-
 
         </div>
 

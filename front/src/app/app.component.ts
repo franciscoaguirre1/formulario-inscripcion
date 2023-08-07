@@ -401,35 +401,39 @@ export class AppComponent implements OnInit{
 
                     //Validación 9e Situación habitacional
 
-                    if (formularioEconomiaPopular.totalHectareasSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasEnSecanoSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasConRiegoSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasAgricolaSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasMonteSeccion9g == ''
-                    || formularioEconomiaPopular.hectareaschacraEnSecanoSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasPasturasNaturalesSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasPasturasImplantadasSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasGranjaMixtaSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasHortalizasSeccion9g == ''
-                    || formularioEconomiaPopular.hectareasGranosSeccion9g == ''
-                    || formularioEconomiaPopular.otraSeccion9g == ''
-                    || formularioEconomiaPopular.otraHectareasSeccion9g == ''
-                    
-                    ) {
-                        return false
+                    if(formularioEconomiaPopular.esActividadAgropecuariaSeccion3 == 'Si') {
+
+                        if (formularioEconomiaPopular.totalHectareasSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasEnSecanoSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasConRiegoSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasAgricolaSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasMonteSeccion9g == ''
+                        || formularioEconomiaPopular.hectareaschacraEnSecanoSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasPasturasNaturalesSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasPasturasImplantadasSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasGranjaMixtaSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasHortalizasSeccion9g == ''
+                        || formularioEconomiaPopular.hectareasGranosSeccion9g == ''
+                        || formularioEconomiaPopular.otraSeccion9g == ''
+                        || formularioEconomiaPopular.otraHectareasSeccion9g == ''
+                        
+                        ) {
+                            return false
+                        }
+    
+                        //Validación 9e Situación habitacional
+    
+                        if (formularioEconomiaPopular.vacunosSeccion9h == ''
+                        || formularioEconomiaPopular.caprinosSeccion9h == ''
+                        || formularioEconomiaPopular.porcinosSeccion9h == ''
+                        || formularioEconomiaPopular.ovinosSeccion9h == '' 
+                        || formularioEconomiaPopular.pollosParrillerosSeccion9h == ''
+                        || formularioEconomiaPopular.gallinasPonedorasSeccion9h == '' 
+                        || formularioEconomiaPopular.apiculturaSeccion9h == '') {
+                            return false
+                        }
                     }
 
-                    //Validación 9e Situación habitacional
-
-                    if (formularioEconomiaPopular.vacunosSeccion9h == ''
-                    || formularioEconomiaPopular.caprinosSeccion9h == ''
-                    || formularioEconomiaPopular.porcinosSeccion9h == ''
-                    || formularioEconomiaPopular.ovinosSeccion9h == '' 
-                    || formularioEconomiaPopular.pollosParrillerosSeccion9h == ''
-                    || formularioEconomiaPopular.gallinasPonedorasSeccion9h == '' 
-                    || formularioEconomiaPopular.apiculturaSeccion9h == '') {
-                        return false
-                    }
                     
                     
                     
