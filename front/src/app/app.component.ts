@@ -1,4 +1,4 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit, Renderer2} from '@angular/core';
 
 
 
@@ -443,10 +443,7 @@ export class AppComponent implements OnInit{
 
 
 
-
-
-
-    constructor() {
+    constructor(private renderer: Renderer2) {
 
     }
 
@@ -520,18 +517,19 @@ export class AppComponent implements OnInit{
         }
 
 
-        // métodos generales
+        // para que te indique el campo que es necesario completar
 
 
-        
+        completarCampo() {
 
+        }
 
-        
 
 
 
 
 }
+
 
 
 
