@@ -9,6 +9,7 @@ import { Component, OnInit, Renderer2} from '@angular/core';
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit{
+[x: string]: any;
 
     title = 'front';
     inputSectionOneValue:boolean = false
@@ -158,7 +159,7 @@ export class AppComponent implements OnInit{
             tipoDeDocumentoSeccion7: '',
             nroDocumentoSeccion7: '',
             tieneCiDiSeccion7: '',
-            nivelCiDiSeccion7: ''                
+            nivelCiDiSeccion7: ''           
             }],
 
             //8.- INFORMACIÓN COMPLEMENTARIA
@@ -493,19 +494,6 @@ export class AppComponent implements OnInit{
     cambioActividadAgropecuariaNo() {
         this.esActividadAgropecuaria = false
     }
-    setTieneCiDiSi() {
-        this.tieneCiDi = true;
-    }
-    setTieneCiDiNo() {
-        this.tieneCiDi = false;
-    }
-    setTieneCiDiSeccion21Si() {
-        this.tieneCiDiSeccion21 = true;
-    }
-    setTieneCiDiSeccion21No() {
-        this.tieneCiDiSeccion21 = false;
-    }
-
     
     changeInputsectionOne() {
     this.inputSectionOneValue = true
@@ -524,12 +512,23 @@ export class AppComponent implements OnInit{
         }
 
 
-        // para que te indique el campo que es necesario completar
+        // funciones que quedaron obsoletas
+
+            
+    // setTieneCiDiSi(i:any) {
+    //     this.tieneCiDi = true;
+    // }
+    // setTieneCiDiNo(i:any) {
+    //     this.tieneCiDi = false;
+    // }
+    // setTieneCiDiSeccion21Si(i:any) {
+    //     this.tieneCiDiSeccion21 = true;
+    // }
+    // setTieneCiDiSeccion21No(i:any) {
+    //     this.tieneCiDiSeccion21 = false;
+    // }
 
 
-        completarCampo() {
-
-        }
 
 
 

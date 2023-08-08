@@ -1,4 +1,4 @@
-<div class="container my-5">
+<div class="container justify-content-center my-5">
     <nav>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -22,15 +22,15 @@
         
         <!-- Sección 1 -->
 
-        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3 my-3">
+        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3">
             <div class="subheading-title">
                 <h5 class="mr-3">1 - CARÁCTER DE LA UNIDAD PRODUCTIVA SOLICITANTE</h5>
                 <small>(Indicar el casillero correspondiente) Obligatorio</small>
             </div>
             <hr class="my-2">
-            <div class="container radio-container border shadow-lg bg-body-tertiary rounded p-3">
+            <div  class="container radio-container border shadow-lg bg-body-tertiary rounded p-3 form-check">
                 <div class="form-check">
-                    <input  [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="UnidadesAsociativasProductivas()"  class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
+                    <input required [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="UnidadesAsociativasProductivas()"  class="form-check-input minimal" type="radio" id="inlineRadio1" value="Cooperativa con Matrícula">
                     <label class="form-check-label" for="inlineRadio1">Cooperativa con Matrícula</label>
                 </div>
                 <div class="form-check">
@@ -42,7 +42,7 @@
                     <label class="form-check-label" for="inlineRadio3">Unidad Productiva Asociativa Informal</label>
                 </div>
                 <div class="form-check">
-                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="unidadProductivaFamiliar"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Familiar">
+                    <input [(ngModel)]="formularioEconomiaPopular.caracterUnidadProductivaSolicitante" name="caracterUnidadProductivaSolicitante"   (click)="UnidadesAsociativasProductivas()" class="form-check-input minimal" type="radio" id="inlineRadio3" value="Unidad Productiva Familiar">
                     <label class="form-check-label" for="inlineRadio4">Unidad Productiva Familiar</label>
                 </div>
                 <div class="form-check">
@@ -78,7 +78,7 @@
         <!-- Sección 2 -->
 
 
-        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3 my-3">
+        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3">
             <div class="subheading-title">
                 <h5 class="mr-3">2 - DATOS DE IDENTIFICACIÓN</h5>
                 <small>(todos los campos son obligatorios)</small>
@@ -153,11 +153,11 @@
                                 <label class="form-label">¿Tiene CiDi?</label>
                                 <div class="input-group">
                                     <div class="form-check mx-3">
-                                        <input required [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21" (click)="setTieneCiDiSeccion21Si()" name="tieneCiDiSeccion21"  class="form-check-input" type="radio" id="inlineRadio1" value="Si">
+                                        <input required [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21" name="tieneCiDiSeccion21"  class="form-check-input" type="radio" id="inlineRadio1" value="Si">
                                         <label class="form-check-label" for="inlineRadio1">Si</label>
                                     </div>
                                     <div class="form-check mx-3">
-                                        <input required [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21" (click)="setTieneCiDiSeccion21No()" name="tieneCiDiSeccion21" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
+                                        <input required [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21"  name="tieneCiDiSeccion21" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
                                         <label class="form-check-label" for="inlineRadio2">No</label>
                                     </div>
                                 </div>
@@ -181,7 +181,7 @@
                             <div class="mb-3">
                                 <label class="form-label">CUIL (sin puntos ni guiones)</label>
                                 <div class="input-group">
-                                    <input required maxlength="11" [(ngModel)]="formularioEconomiaPopular.cuilSeccion21" name="cuilSeccion21" type="text" class="form-control" id="basic-url" >
+                                    <input required maxlength="11" minlength="10" [(ngModel)]="formularioEconomiaPopular.cuilSeccion21" name="cuilSeccion21" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -244,7 +244,7 @@
                             <div class="mb-3">
                                 <label class="form-label">N° CUIL o CUIT (sin puntos ni guiones)</label>
                                 <div class="input-group">
-                                    <input required maxlength="11" [(ngModel)]="formularioEconomiaPopular.nroCuilCuitSeccion22" name="nroCuilCuitSeccion22" type="text" class="form-control" id="basic-url" >
+                                    <input required maxlength="11" minlength="10" [(ngModel)]="formularioEconomiaPopular.nroCuilCuitSeccion22" name="nroCuilCuitSeccion22" type="text" class="form-control" id="basic-url" >
                                 </div>
                             </div>
                         </div>
@@ -267,7 +267,7 @@
         <!-- Sección 3 -->
 
 
-        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3 my-3">
+        <div class="input-section my-5 shadow-lg bg-body-tertiary rounded p-3">
             <div class="subheading-title">
                 <h5 class="mr-3">3 - INSCRIPCIONES LEGALES (INAE - IPJ - Otros)</h5>
                 <small>(todos los campos son obligatorios)</small>
@@ -353,7 +353,7 @@
         <!-- Sección 4 -->
 
 
-        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3">
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">4 - OBJETO SOCIAL</h5>
                 <p>Actividades Productivas</p>
@@ -371,7 +371,7 @@
         <!-- Sección 5 -->
 
 
-        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3">
             <div class="subheading-title mt-3">
                 <h5 class="mr-3">5 - DOMICILIO PERSONAL O DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
                 <small>(todos los campos son obligatorios)</small>
@@ -567,7 +567,7 @@
         <!-- Sección 6 -->
 
 
-        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3">
             <div class="subheading-title mt-3">
                 <h5>6 - CONDICIÓN FISCAL</h5>
                 <small>(Obligatoria)</small>
@@ -638,7 +638,7 @@
 
         <!-- Sección 7 -->
 
-        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3 my-3">
+        <div class="input-section my-5 border shadow-lg bg-body-tertiary rounded p-3">
             <div class="subheading-title  mt-3">
                 <h5 class="mr-3">7 - REPRESENTANTES DE LA ASOCIACIÓN FORMAL O INFORMAL</h5>
                 <small>(Si es persona física por favor repetir los datos del titular)</small>
@@ -698,7 +698,7 @@
                         <div class="mb-3">
                             <label class="form-label">N° de Documento (sin puntos ni guiones)</label>
                             <div class="input-group">
-                                <input required maxlength="8" [(ngModel)]="d.nroDocumentoSeccion7" name="nroDocumentoSeccion7" type="text" class="form-control" id="basic-url">
+                                <input required maxlength="8" minlength="7" [(ngModel)]="d.nroDocumentoSeccion7" name="nroDocumentoSeccion7" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
@@ -706,22 +706,19 @@
                         <div class="mb-3">
                             <label class="form-label">¿Tiene CiDi?</label>
                             <div class="input-group">
-                                <div class="form-check mx-3">
-                                    <input required [(ngModel)]="d.tieneCiDiSeccion7" name="tieneCiDiSeccion7" class="form-check-input" type="radio" id="tieneCiDiSi" value="Si" (click)="setTieneCiDiSi()">
-                                    <label class="form-check-label" for="inlineRadio1">Si</label>
-                                </div>
-                                <div class="form-check mx-3">
-                                    <input required [(ngModel)]="d.tieneCiDiSeccion7" name="tieneCiDiSeccion7" class="form-check-input" type="radio" id="tieneCiDiNo" value="No" (click)="setTieneCiDiNo()">
-                                    <label class="form-check-label" for="inlineRadio2">No</label>
-                                </div>
+                                    <select required [(ngModel)]="d.tieneCiDiSeccion7" name="tieneCiDiSeccion7" class="form-select">
+                                        <option selected></option>
+                                        <option value="Si">Si</option>
+                                        <option value="No">No</option>
+                                    </select>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div *ngIf="d.tieneCiDiSeccion7 == 'Si'" class="col-md-4">
                         <div class="mb-3">
                             <label class="form-label">Nivel de CiDi</label>
                             <div class="input-group">
-                                <select required [(ngModel)]="d.nivelCiDiSeccion7" [disabled]="!tieneCiDi" name="nivelCiDiSeccion7" class="form-select">
+                                <select required [(ngModel)]="d.nivelCiDiSeccion7" name="nivelCiDiSeccion7" class="form-select">
                                     <option selected></option>
                                     <option value="1">1</option>
                                     <option value="2">2</option>
@@ -730,10 +727,10 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <button (click)="agregarNuevoRepresentanteSection7()" class="btn btn-primary mx-3">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
+                <div class="row">
+                    <div class="col-md-4">
+                        <button (click)="agregarNuevoRepresentanteSection7()" class="btn btn-primary mx-3">Agregar nuevo <i class="fa-sharp fa-solid fa-plus"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -783,7 +780,7 @@
                         <div class="mb-3">
                             <label class="form-label">DNI (sin puntos ni guiones)</label>
                             <div class="input-group">
-                                <input required maxlength="8" [(ngModel)]="d.dniSeccion9" name="dniSeccion9" type="text" class="form-control" id="basic-url">
+                                <input required maxlength="8" minlength="7" [(ngModel)]="d.dniSeccion9" name="dniSeccion9" type="text" class="form-control" id="basic-url">
                             </div>
                         </div>
                     </div>
