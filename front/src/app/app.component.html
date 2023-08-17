@@ -96,7 +96,7 @@
                 </div>
                 <div class="container container-2-1 my-3">
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label for="validationDefault01" class="form-label">Apellido</label>
                                 <div class="input-group">
@@ -104,7 +104,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label" for="validationCustom02">Nombres</label>
                                 <div class="input-group">
@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">Tipo de Documento</label>
                                 <div class="input-group">
@@ -140,7 +140,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">N° de Documento (sin puntos ni guiones)</label>
                                 <div class="input-group">
@@ -148,26 +148,23 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">¿Tiene CiDi?</label>
                                 <div class="input-group">
-                                    <div class="form-check mx-3">
-                                        <input required [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21" name="tieneCiDiSeccion21"  class="form-check-input" type="radio" id="inlineRadio1" value="Si">
-                                        <label class="form-check-label" for="inlineRadio1">Si</label>
-                                    </div>
-                                    <div class="form-check mx-3">
-                                        <input required [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21"  name="tieneCiDiSeccion21" class="form-check-input" type="radio"  id="inlineRadio2" value="No">
-                                        <label class="form-check-label" for="inlineRadio2">No</label>
-                                    </div>
+                                        <select required [(ngModel)]="formularioEconomiaPopular.tieneCiDiSeccion21" name="tieneCiDiSeccion21" class="form-select">
+                                            <option selected></option>
+                                            <option value="Si">Si</option>
+                                            <option value="No">No</option>
+                                        </select>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div *ngIf="formularioEconomiaPopular.tieneCiDiSeccion21 == 'Si'" class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">Nivel de CiDi</label>
                                 <div class="input-group">
-                                    <select required [disabled]="!tieneCiDiSeccion21" [(ngModel)]="formularioEconomiaPopular.nivelCiDiSeccion21" name="nivelCiDiSeccion21"  class="form-select">
+                                    <select required  [(ngModel)]="formularioEconomiaPopular.nivelCiDiSeccion21" name="nivelCiDiSeccion21"  class="form-select">
                                         <option selected></option>
                                         <option value="1">1</option>
                                         <option value="2">2</option>
@@ -177,7 +174,7 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">CUIL (sin puntos ni guiones)</label>
                                 <div class="input-group">
@@ -185,7 +182,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">Dirección de correo electrónico</label>
                                 <div class="input-group">
@@ -193,7 +190,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">Teléfono</label>
                                 <div class="input-group">
@@ -201,7 +198,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-md-6 col-lg-4">
                             <div class="mb-3">
                                 <label class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
                                 <div class="input-group">
@@ -220,11 +217,11 @@
             <div *ngIf="esUnidadAsociativaProductiva" class="section-2-2">
                 <div class="subheading-title">
                     <h5 class="mr-3 my-3">2.2 Unidades Asociativas Productivas (incluye las familiares)</h5>
-                    <small>(todos los campos son obligatorios)</small>                    
+                    <small>(todos los campos son obligatorios)</small>                 
                 </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-md-12 col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label">Nombre de la Institución o Nombre y Apellido de la Persona</label>
                                 <div class="input-group">
@@ -232,7 +229,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-md-12 col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label">Nombre de Fantasía:</label>
                                 <div class="input-group">
@@ -240,7 +237,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-md-12 col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label">N° CUIL o CUIT (sin puntos ni guiones)</label>
                                 <div class="input-group">
@@ -248,7 +245,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-md-12 col-lg-6">
                             <div class="mb-3">
                                 <label class="form-label">Si pertenece a alguna asociación, comunidad o cooperativa, por favor indique cuál</label>
                                 <div class="input-group">
